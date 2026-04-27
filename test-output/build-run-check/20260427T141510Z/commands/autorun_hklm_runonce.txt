@@ -1,0 +1,7 @@
+# command
+Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\RunOnce 2>&1
+
+# stdout
+
+
+# stderr

@@ -1,0 +1,400 @@
+{
+  "collector_version": "0.1.0",
+  "started_at_utc": "2026-04-26T13:27:57.916905+00:00",
+  "finished_at_utc": "2026-04-26T13:28:34.511807300+00:00",
+  "host": "DESKTOP-0DLR5GA",
+  "os": "windows",
+  "case_name": "case2",
+  "output_dir": "test-output\\case2\\20260426T132757Z",
+  "command_results": [
+    {
+      "name": "time_info",
+      "command": "Get-Date; Get-TimeZone",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\time_info.txt",
+      "sha256": "d4bd2dae877f623d00ee48743d255f8dfe8cb046149a08b442337274f4deb772",
+      "error": null
+    },
+    {
+      "name": "system_info",
+      "command": "systeminfo",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\system_info.txt",
+      "sha256": "348bb412bd16051a18dff49154c7e2ebb7a4cf90371fda66f1675062953845f9",
+      "error": null
+    },
+    {
+      "name": "users_sessions",
+      "command": "query user 2>&1; qwinsta 2>&1",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\users_sessions.txt",
+      "sha256": "0903cd156080636e3ed4666ae9bdb6dd4559bb16feb795e5c8ea2bdd15e292b8",
+      "error": null
+    },
+    {
+      "name": "processes",
+      "command": "Get-CimInstance Win32_Process | Select-Object ProcessId,ParentProcessId,Name,CommandLine,ExecutablePath | Format-List",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\processes.txt",
+      "sha256": "e423625458555fadbbacea52cf070e1b23e4fc17c2fe947760b2493a1fffc120",
+      "error": null
+    },
+    {
+      "name": "services",
+      "command": "Get-CimInstance Win32_Service | Select-Object Name,State,StartMode,PathName | Format-List",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\services.txt",
+      "sha256": "201c6136f4f7c19bc63155514fb81c379f925eccfcaaca8cc6298ecfed7e747d",
+      "error": null
+    },
+    {
+      "name": "drivers",
+      "command": "Get-CimInstance Win32_SystemDriver | Select-Object Name,State,PathName | Format-List",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\drivers.txt",
+      "sha256": "283a5b32f51a1d0b6ce95251d3292e19c40f9211435d74b1ebb2f1eed03d4ae6",
+      "error": null
+    },
+    {
+      "name": "network_connections",
+      "command": "netstat -ano",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\network_connections.txt",
+      "sha256": "05224ddd93140991f3b396b8dd7ed753891c033a8fb96e0a052322e26e15bc4d",
+      "error": null
+    },
+    {
+      "name": "routes",
+      "command": "route print",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\routes.txt",
+      "sha256": "5dcd3344ae0975bb25ba2bc9bffe75a87afd32ad289a443fe46f9d90589da71b",
+      "error": null
+    },
+    {
+      "name": "arp",
+      "command": "arp -a",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\arp.txt",
+      "sha256": "06480653150535df877d9590a441157b698ac8d7c788fd0875c9c34524724025",
+      "error": null
+    },
+    {
+      "name": "dns_cache",
+      "command": "Get-DnsClientCache | Format-List",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\dns_cache.txt",
+      "sha256": "56760739ae269fcbd0665fa888ff281e2370f69592870acacbbd54e3ea78be7d",
+      "error": null
+    },
+    {
+      "name": "firewall_rules",
+      "command": "Get-NetFirewallRule | Where-Object {$_.Enabled -eq 'True'} | Format-List",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\firewall_rules.txt",
+      "sha256": "960727ae44c9719f0fe73b6f811bf858e2a1835ccbc0a63afdf61b08db71d88d",
+      "error": null
+    },
+    {
+      "name": "firewall_status",
+      "command": "netsh advfirewall show allprofiles",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\firewall_status.txt",
+      "sha256": "754cb9cea8be44f98e3e65fdbd5dc56f3ff16092b8e246c50d92ac35e838f84d",
+      "error": null
+    },
+    {
+      "name": "scheduled_tasks",
+      "command": "schtasks /query /fo LIST /v",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\scheduled_tasks.txt",
+      "sha256": "a6a89a943ad43ec02db9c3d797be4c4220ae43306f6993419471d866ad9d7bdf",
+      "error": null
+    },
+    {
+      "name": "local_users",
+      "command": "Get-LocalUser | Format-List",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\local_users.txt",
+      "sha256": "c8bd1618cc6f652d9efe3942467b6eec1c2bcf1ed0cac45f8c8121c78c090c73",
+      "error": null
+    },
+    {
+      "name": "local_groups",
+      "command": "Get-LocalGroup | Format-List; net localgroup administrators",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\local_groups.txt",
+      "sha256": "cb76cc1a3cc8e97f04982279bc646220c79cb81c583e15e8133f6aca48a56762",
+      "error": null
+    },
+    {
+      "name": "autorun_hklm_run",
+      "command": "Get-ItemProperty HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\autorun_hklm_run.txt",
+      "sha256": "456ab062c51eac04e0ce7cf96282cd026091ee2a028997e10432b636fa7f173a",
+      "error": null
+    },
+    {
+      "name": "autorun_hkcu_run",
+      "command": "Get-ItemProperty HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\autorun_hkcu_run.txt",
+      "sha256": "0ad6ce62160e978c748c80cbb9fbc3528d9cc066db1a3342d38f5a9f8521129f",
+      "error": null
+    },
+    {
+      "name": "autorun_hklm_runonce",
+      "command": "Get-ItemProperty HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce 2>&1",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\autorun_hklm_runonce.txt",
+      "sha256": "5b75d2d9668a1a5189a72571a8c759975a26aabd81d8d64692ec55c4a070efca",
+      "error": null
+    },
+    {
+      "name": "startup_folders",
+      "command": "Get-ChildItem -Path 'C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\StartUp', \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\" -ErrorAction SilentlyContinue | Format-List",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\startup_folders.txt",
+      "sha256": "e35ad80dcc0af00a0df9e72ef928f2c46fe3b393a1c2bbc7546b8b1fd8c88479",
+      "error": null
+    },
+    {
+      "name": "installed_software",
+      "command": "Get-ItemProperty HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\* | Select-Object DisplayName,DisplayVersion,InstallDate,Publisher | Format-Table -AutoSize",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\installed_software.txt",
+      "sha256": "57023858062a9d193f4a9bc9c318704a5f10b4fd44bca001642bbfeb4fd41fda",
+      "error": null
+    },
+    {
+      "name": "shares",
+      "command": "net share",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\shares.txt",
+      "sha256": "2fae89a222098c41b2800113965d922f72c29c4c9011645a86210b19fdcd9865",
+      "error": null
+    },
+    {
+      "name": "defender_status",
+      "command": "Get-MpComputerStatus",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\defender_status.txt",
+      "sha256": "6314ddbc187a0ca4bc6001c06be77206fa803492f38e17fda8c7e88cddb1241f",
+      "error": null
+    },
+    {
+      "name": "logon_sessions",
+      "command": "Get-CimInstance Win32_LogonSession | Format-List",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\logon_sessions.txt",
+      "sha256": "4c0a990703641f4e307c095e42491f419db728bbd3cd2f60755c2e1dc46dfc75",
+      "error": null
+    },
+    {
+      "name": "named_pipes",
+      "command": "[System.IO.Directory]::GetFiles('\\\\.\\pipe') | Format-Table",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\named_pipes.txt",
+      "sha256": "9329e151b2af4a835bc128ac65e5854ea97b45419179e7d4c4ed2f513ec2f8b7",
+      "error": null
+    },
+    {
+      "name": "env_vars",
+      "command": "Get-ChildItem Env:",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\env_vars.txt",
+      "sha256": "829979c207ac48a149c16b91bbdffd267d01ed3cff17264c1dcd0bec2809005a",
+      "error": null
+    },
+    {
+      "name": "hosts_file",
+      "command": "Get-Content C:\\Windows\\System32\\drivers\\etc\\hosts",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\case2\\20260426T132757Z\\commands\\hosts_file.txt",
+      "sha256": "eb2155930cd8f2665c7b216285f4532416790320ac8bf8d64719108154e9c44b",
+      "error": null
+    }
+  ],
+  "copied_artifacts": [
+    {
+      "source": "C:/Windows/Prefetch",
+      "destination": "test-output\\case2\\20260426T132757Z\\artifacts\\C__Windows_Prefetch",
+      "status": "empty_or_unreadable",
+      "sha256": null,
+      "error": null
+    },
+    {
+      "source": "C:/Windows/System32/drivers/etc/hosts",
+      "destination": "test-output\\case2\\20260426T132757Z\\artifacts\\C__Windows_System32_drivers_etc_hosts",
+      "status": "ok",
+      "sha256": "2d6bdfb341be3a6234b24742377f93aa7c7cfb0d9fd64efa9282c87852e57085",
+      "error": null
+    }
+  ],
+  "evtx_exports": [
+    {
+      "source": "Security",
+      "destination": "test-output\\case2\\20260426T132757Z\\evtx\\Security.evtx",
+      "status": "error",
+      "sha256": null,
+      "error": "wevtutil epl Security failed (code 5): Security �α׸� �������� ���߽��ϴ�.\r\n�׼����� �źεǾ����ϴ�."
+    },
+    {
+      "source": "System",
+      "destination": "test-output\\case2\\20260426T132757Z\\evtx\\System.evtx",
+      "status": "ok",
+      "sha256": "3a4a229cda6e3dbbd0cec7ef94b92fd6ee479753604faae947d394df66ea7f88",
+      "error": null
+    },
+    {
+      "source": "Application",
+      "destination": "test-output\\case2\\20260426T132757Z\\evtx\\Application.evtx",
+      "status": "ok",
+      "sha256": "3e13c057495a41abf31acb066b2dfd241ca1190444d88a90538b246a74428a45",
+      "error": null
+    },
+    {
+      "source": "Microsoft-Windows-Sysmon/Operational",
+      "destination": "test-output\\case2\\20260426T132757Z\\evtx\\Sysmon_Operational.evtx",
+      "status": "error",
+      "sha256": null,
+      "error": "wevtutil epl Microsoft-Windows-Sysmon/Operational failed (code 15007): Microsoft-Windows-Sysmon/Operational �α׸� �������� ���߽��ϴ�.\r\n������ ä���� ã�� �� �����ϴ�."
+    },
+    {
+      "source": "Microsoft-Windows-PowerShell/Operational",
+      "destination": "test-output\\case2\\20260426T132757Z\\evtx\\PowerShell_Operational.evtx",
+      "status": "ok",
+      "sha256": "380930379927433c102d32482710628662316bfc1c56e0a4e3517ea238b10ee4",
+      "error": null
+    },
+    {
+      "source": "Windows PowerShell",
+      "destination": "test-output\\case2\\20260426T132757Z\\evtx\\Windows_PowerShell.evtx",
+      "status": "ok",
+      "sha256": "092f35ac3415a420b33b9265c0264bf6072c3bb66cca265b5dba0c04d4e15688",
+      "error": null
+    },
+    {
+      "source": "Microsoft-Windows-TaskScheduler/Operational",
+      "destination": "test-output\\case2\\20260426T132757Z\\evtx\\TaskScheduler_Operational.evtx",
+      "status": "ok",
+      "sha256": "a1e5b2bd9339d9e9495a167c332f0bab3f8504f4f6679a29aaca3e088c3591d6",
+      "error": null
+    },
+    {
+      "source": "Microsoft-Windows-WMI-Activity/Operational",
+      "destination": "test-output\\case2\\20260426T132757Z\\evtx\\WMI_Operational.evtx",
+      "status": "ok",
+      "sha256": "ba197b2c25390b8fea40dbde0fb8be71b0f8eb263b8150cfb8dd67f80d3cb5bf",
+      "error": null
+    },
+    {
+      "source": "Microsoft-Windows-Windows Defender/Operational",
+      "destination": "test-output\\case2\\20260426T132757Z\\evtx\\Defender_Operational.evtx",
+      "status": "ok",
+      "sha256": "6e0a3497c4de25b632a777cda5d75500b48f8440730615120e2b30758b51c42b",
+      "error": null
+    },
+    {
+      "source": "Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational",
+      "destination": "test-output\\case2\\20260426T132757Z\\evtx\\RDP_RemoteConnectionManager.evtx",
+      "status": "ok",
+      "sha256": "a16f74b70e5b5f79d25ef160f88cd947160e78b38eff24ca4f11599e4a04d0dc",
+      "error": null
+    },
+    {
+      "source": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational",
+      "destination": "test-output\\case2\\20260426T132757Z\\evtx\\RDP_LocalSessionManager.evtx",
+      "status": "ok",
+      "sha256": "ca6cac7a62521ff3bb64cbd69dd4dfe026c278e7e7e2891d8407733b589f2062",
+      "error": null
+    },
+    {
+      "source": "Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational",
+      "destination": "test-output\\case2\\20260426T132757Z\\evtx\\RDP_CoreTS.evtx",
+      "status": "ok",
+      "sha256": "ba6aae6b0307e9a2629b8f591a3de1d158e211fffefce27461148467b6c0f980",
+      "error": null
+    },
+    {
+      "source": "Microsoft-Windows-Bits-Client/Operational",
+      "destination": "test-output\\case2\\20260426T132757Z\\evtx\\BITS_Client.evtx",
+      "status": "ok",
+      "sha256": "90617f664372c8b923d73e1a00faf272dff802e557cbb922d78b11872b0056cb",
+      "error": null
+    },
+    {
+      "source": "Microsoft-Windows-DNSClient/Operational",
+      "destination": "test-output\\case2\\20260426T132757Z\\evtx\\DNS_Client.evtx",
+      "status": "error",
+      "sha256": null,
+      "error": "wevtutil epl Microsoft-Windows-DNSClient/Operational failed (code 15007): Microsoft-Windows-DNSClient/Operational �α׸� �������� ���߽��ϴ�.\r\n������ ä���� ã�� �� �����ϴ�."
+    }
+  ],
+  "registry_exports": [
+    {
+      "source": "HKLM\\SAM",
+      "destination": "test-output\\case2\\20260426T132757Z\\registry\\SAM.hiv",
+      "status": "error",
+      "sha256": null,
+      "error": "reg save HKLM\\SAM failed (code 1): ����: Ŭ���̾�Ʈ�� �ʿ��� ������ ������ ���� �ʽ��ϴ�. "
+    },
+    {
+      "source": "HKLM\\SYSTEM",
+      "destination": "test-output\\case2\\20260426T132757Z\\registry\\SYSTEM.hiv",
+      "status": "error",
+      "sha256": null,
+      "error": "reg save HKLM\\SYSTEM failed (code 1): ����: Ŭ���̾�Ʈ�� �ʿ��� ������ ������ ���� �ʽ��ϴ�. "
+    },
+    {
+      "source": "HKLM\\SOFTWARE",
+      "destination": "test-output\\case2\\20260426T132757Z\\registry\\SOFTWARE.hiv",
+      "status": "error",
+      "sha256": null,
+      "error": "reg save HKLM\\SOFTWARE failed (code 1): ����: Ŭ���̾�Ʈ�� �ʿ��� ������ ������ ���� �ʽ��ϴ�. "
+    },
+    {
+      "source": "HKLM\\SECURITY",
+      "destination": "test-output\\case2\\20260426T132757Z\\registry\\SECURITY.hiv",
+      "status": "error",
+      "sha256": null,
+      "error": "reg save HKLM\\SECURITY failed (code 1): ����: �׼����� �źεǾ����ϴ�. "
+    }
+  ],
+  "errors": [
+    "wevtutil epl Security failed (code 5): Security �α׸� �������� ���߽��ϴ�.\r\n�׼����� �źεǾ����ϴ�.",
+    "wevtutil epl Microsoft-Windows-Sysmon/Operational failed (code 15007): Microsoft-Windows-Sysmon/Operational �α׸� �������� ���߽��ϴ�.\r\n������ ä���� ã�� �� �����ϴ�.",
+    "wevtutil epl Microsoft-Windows-DNSClient/Operational failed (code 15007): Microsoft-Windows-DNSClient/Operational �α׸� �������� ���߽��ϴ�.\r\n������ ä���� ã�� �� �����ϴ�.",
+    "reg save HKLM\\SAM failed (code 1): ����: Ŭ���̾�Ʈ�� �ʿ��� ������ ������ ���� �ʽ��ϴ�. ",
+    "reg save HKLM\\SYSTEM failed (code 1): ����: Ŭ���̾�Ʈ�� �ʿ��� ������ ������ ���� �ʽ��ϴ�. ",
+    "reg save HKLM\\SOFTWARE failed (code 1): ����: Ŭ���̾�Ʈ�� �ʿ��� ������ ������ ���� �ʽ��ϴ�. ",
+    "reg save HKLM\\SECURITY failed (code 1): ����: �׼����� �źεǾ����ϴ�. "
+  ]
+}

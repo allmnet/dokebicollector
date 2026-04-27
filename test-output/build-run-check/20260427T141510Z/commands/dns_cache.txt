@@ -1,0 +1,425 @@
+# command
+Get-DnsClientCache | Format-List
+
+# stdout
+
+
+Entry      : add-skill.vercel.sh
+RecordName : add-skill.vercel.sh
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 519
+DataLength : 4
+Data       : 66.33.60.193
+
+Entry      : add-skill.vercel.sh
+RecordName : add-skill.vercel.sh
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 519
+DataLength : 4
+Data       : 66.33.60.194
+
+Entry      : api.github.com
+RecordName : api.github.com
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 9
+DataLength : 4
+Data       : 20.200.245.245
+
+Entry      : raw.githubusercontent.com
+RecordName : raw.githubusercontent.com
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 1203
+DataLength : 16
+Data       : 2606:50c0:8001::154
+
+Entry      : raw.githubusercontent.com
+RecordName : raw.githubusercontent.com
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 1203
+DataLength : 16
+Data       : 2606:50c0:8000::154
+
+Entry      : raw.githubusercontent.com
+RecordName : raw.githubusercontent.com
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 1203
+DataLength : 16
+Data       : 2606:50c0:8002::154
+
+Entry      : raw.githubusercontent.com
+RecordName : raw.githubusercontent.com
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 1203
+DataLength : 16
+Data       : 2606:50c0:8003::154
+
+Entry      : raw.githubusercontent.com
+RecordName : raw.githubusercontent.com
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 2312
+DataLength : 4
+Data       : 185.199.111.133
+
+Entry      : raw.githubusercontent.com
+RecordName : raw.githubusercontent.com
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 2312
+DataLength : 4
+Data       : 185.199.110.133
+
+Entry      : raw.githubusercontent.com
+RecordName : raw.githubusercontent.com
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 2312
+DataLength : 4
+Data       : 185.199.109.133
+
+Entry      : raw.githubusercontent.com
+RecordName : raw.githubusercontent.com
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 2312
+DataLength : 4
+Data       : 185.199.108.133
+
+Entry      : management.azure.com
+RecordName : management.azure.com
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 20
+DataLength : 8
+Data       : management.privatelink.azure.com
+
+Entry      : management.azure.com
+RecordName : management.privatelink.azure.com
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 20
+DataLength : 8
+Data       : arm-frontdoor-edge-geo.trafficmanager.net
+
+Entry      : management.azure.com
+RecordName : arm-frontdoor-edge-geo.trafficmanager.net
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 20
+DataLength : 8
+Data       : edge-management-azure-com.arm-0001.arm-msedge.net
+
+Entry      : management.azure.com
+RecordName : edge-management-azure-com.arm-0001.arm-msedge.net
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 20
+DataLength : 8
+Data       : arm-0001.arm-msedge.net
+
+Entry      : management.azure.com
+RecordName : arm-0001.arm-msedge.net
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 20
+DataLength : 4
+Data       : 4.150.240.10
+
+Entry      : telemetry.individual.githubcopilot.com
+RecordName : telemetry.individual.githubcopilot.com
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 4
+DataLength : 8
+Data       : copilot-telemetry-service.githubusercontent.com
+
+Entry      : telemetry.individual.githubcopilot.com
+RecordName : copilot-telemetry-service.githubusercontent.com
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 4
+DataLength : 8
+Data       : glb-db52c2cf8be544.github.com
+
+Entry      : telemetry.individual.githubcopilot.com
+RecordName : glb-db52c2cf8be544.github.com
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 4
+DataLength : 4
+Data       : 140.82.112.21
+
+Entry      : default.exp-tas.com
+RecordName : default.exp-tas.com
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 46
+DataLength : 8
+Data       : deault-exp-tas-com.e-0014.e-msedge.net
+
+Entry      : default.exp-tas.com
+RecordName : deault-exp-tas-com.e-0014.e-msedge.net
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 46
+DataLength : 8
+Data       : e-0014.e-msedge.net
+
+Entry      : default.exp-tas.com
+RecordName : e-0014.e-msedge.net
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 46
+DataLength : 4
+Data       : 13.107.5.93
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 156
+DataLength : 16
+Data       : 2606:4700::6810:b22
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 156
+DataLength : 16
+Data       : 2606:4700::6810:422
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 156
+DataLength : 16
+Data       : 2606:4700::6810:22
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 156
+DataLength : 16
+Data       : 2606:4700::6810:822
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 156
+DataLength : 16
+Data       : 2606:4700::6810:622
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 156
+DataLength : 16
+Data       : 2606:4700::6810:322
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 156
+DataLength : 16
+Data       : 2606:4700::6810:a22
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 156
+DataLength : 16
+Data       : 2606:4700::6810:922
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 156
+DataLength : 16
+Data       : 2606:4700::6810:722
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 156
+DataLength : 16
+Data       : 2606:4700::6810:522
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 156
+DataLength : 16
+Data       : 2606:4700::6810:222
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 156
+DataLength : 16
+Data       : 2606:4700::6810:122
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 100
+DataLength : 4
+Data       : 104.16.6.34
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 100
+DataLength : 4
+Data       : 104.16.11.34
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 100
+DataLength : 4
+Data       : 104.16.9.34
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 100
+DataLength : 4
+Data       : 104.16.5.34
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 100
+DataLength : 4
+Data       : 104.16.8.34
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 100
+DataLength : 4
+Data       : 104.16.4.34
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 100
+DataLength : 4
+Data       : 104.16.7.34
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 100
+DataLength : 4
+Data       : 104.16.1.34
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 100
+DataLength : 4
+Data       : 104.16.10.34
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 100
+DataLength : 4
+Data       : 104.16.2.34
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 100
+DataLength : 4
+Data       : 104.16.3.34
+
+Entry      : registry.npmjs.org
+RecordName : registry.npmjs.org
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 100
+DataLength : 4
+Data       : 104.16.0.34
+
+
+
+
+
+# stderr

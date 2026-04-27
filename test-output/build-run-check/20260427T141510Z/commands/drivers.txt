@@ -1,0 +1,1834 @@
+# command
+Get-CimInstance Win32_SystemDriver | Select-Object Name,State,PathName | Format-List
+
+# stdout
+
+
+Name     : 1394ohci
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\1394ohci.sys
+
+Name     : 3ware
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\3ware.sys
+
+Name     : ACE-ADVT
+State    : Stopped
+PathName : \??\C:\WINDOWS\system32\drivers\ACE-ADVT.sys
+
+Name     : ACE-BASE
+State    : Stopped
+PathName : \??\C:\WINDOWS\system32\drivers\ACE-BASE.sys
+
+Name     : ACPI
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\ACPI.sys
+
+Name     : AcpiAudioCompositorInbox
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\acpiaudiocompositor.i
+           nf_amd64_047f553a6f70b169\AcpiAudioCompositor.sys
+
+Name     : AcpiDev
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\AcpiDev.sys
+
+Name     : acpiex
+State    : Running
+PathName : C:\WINDOWS\system32\Drivers\acpiex.sys
+
+Name     : acpipagr
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\acpipagr.inf_amd64_d1
+           093347a27ff89c\acpipagr.sys
+
+Name     : AcpiPmi
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\acpipmi.inf_amd64_3ce
+           d06eb61dcc792\acpipmi.sys
+
+Name     : acpitime
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\acpitime.sys
+
+Name     : ACSEHIDRemap
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\ACSEHIDRemap.sys
+
+Name     : ACSEVirtualBus
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\ACSEVirtualBus.sys
+
+Name     : Acx01000
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\Acx01000.sys
+
+Name     : ADP80XX
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\ADP80XX.SYS
+
+Name     : aehd
+State    : Stopped
+PathName : C:\WINDOWS\system32\DRIVERS\aehd.sys
+
+Name     : AFD
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\afd.sys
+
+Name     : afunix
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\afunix.sys
+
+Name     : ahcache
+State    : Running
+PathName : C:\WINDOWS\system32\DRIVERS\ahcache.sys
+
+Name     : AMDAcpBtAudioService
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\amdacpbtacx.inf_amd64
+           _bca7c106691df9b4\amdacpbtacx.sys
+
+Name     : amdacpbus
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\amdacpbus2.inf_amd64_
+           ac033881d3f3b493\amdacpbus2.sys
+
+Name     : amdfendr
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\amdfendr.inf_amd64_d2
+           d4d4a4cf935317\amdfendr.sys
+
+Name     : amdfendrmgr
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\amdfendr.inf_amd64_d2
+           d4d4a4cf935317\amdfendrmgr.sys
+
+Name     : amdgpio2
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\amdgpio2.inf_amd64_e3
+           ba65168b9dbb29\amdgpio2.sys
+
+Name     : amdi2c
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\amdi2c.sys
+
+Name     : AmdK8
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\amdk8.sys
+
+Name     : AmdMicroPEP
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\amdmicropep.inf_amd64
+           _0ee9b60764bf0bba\AmdMicroPEP.sys
+
+Name     : amdpmf
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\amdpmf.sys
+
+Name     : AmdPpkg
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\amdppkg.inf_amd64_f57
+           cfc457aa3e60b\AmdPpkg.sys
+
+Name     : AmdPPM
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\amdppm.sys
+
+Name     : amdpsp
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\amdpsp.sys
+
+Name     : AMDSAFD
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\amdsafd.inf_amd64_d4d
+           e13a10f2586d0\amdsafd.sys
+
+Name     : amdsata
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\amdsata.sys
+
+Name     : amdsbs
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\amdsbs.sys
+
+Name     : amduw23g-198975-8f57807d
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\u0198975.inf_amd64_ca
+           b3843582148687\B025836\amdkmdag.sys
+
+Name     : amdwps
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\amdwps.sys
+
+Name     : amdxata
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\amdxata.sys
+
+Name     : AMDXE
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\amdxe.sys
+
+Name     : amd_dpfc
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\nvami.inf_amd64_2c2a1
+           0115c2556ed\amd_dpfc.sys
+
+Name     : AppID
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\appid.sys
+
+Name     : AppleSSD
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\AppleSSD.sys
+
+Name     : applockerfltr
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\applockerfltr.sys
+
+Name     : AppvStrm
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\AppvStrm.sys
+
+Name     : AppvVemgr
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\AppvVemgr.sys
+
+Name     : AppvVfs
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\AppvVfs.sys
+
+Name     : arcsas
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\arcsas.sys
+
+Name     : Asusgio3
+State    : Running
+PathName : \??\C:\WINDOWS\system32\drivers\AsIO3.sys
+
+Name     : AsusPTPDrv
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\asusptpfilter.inf_amd
+           64_d2e7386fb4cf762c\AsusPTPFilter.sys
+
+Name     : AsusSAIO
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\asussci2.inf_amd64_eb
+           cc5101f0564a1b\ASUSSystemAnalysis\AsusSAIO.sys
+
+Name     : AsyncMac
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\asyncmac.sys
+
+Name     : atapi
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\atapi.sys
+
+Name     : AtiHDAudioService
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\atihdwt6.inf_amd64_76
+           dcade1eff04982\AtihdWT6.sys
+
+Name     : ATKWMIACPIIO
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\asussci2.inf_amd64_eb
+           cc5101f0564a1b\ASUSOptimization\AsusWmiAcpi.sys
+
+Name     : b06bdrv
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\bxvbda.sys
+
+Name     : bam
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\bam.sys
+
+Name     : BasicDisplay
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\basicdisplay.inf_amd6
+           4_2753efdbb0d9a226\BasicDisplay.sys
+
+Name     : BasicRender
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\basicrender.inf_amd64
+           _223b29e9cbd5a3a3\BasicRender.sys
+
+Name     : bcmfn2
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\bcmfn2.sys
+
+Name     : Beep
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\Beep.sys
+
+Name     : bfs
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\bfs.sys
+
+Name     : bindflt
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\bindflt.sys
+
+Name     : bowser
+State    : Running
+PathName : C:\WINDOWS\system32\DRIVERS\bowser.sys
+
+Name     : BthA2dp
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\BthA2dp.sys
+
+Name     : BthEnum
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\BthEnum.sys
+
+Name     : BthHFAud
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\BthHfAud.sys
+
+Name     : BthHFEnum
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\bthhfenum.sys
+
+Name     : BthLEEnum
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\Microsoft.Bluetooth.Legacy.LEEnumerator.
+           sys
+
+Name     : BthMini
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\BTHMINI.sys
+
+Name     : BTHMODEM
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\bthmodem.sys
+
+Name     : BthPan
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\bthpan.sys
+
+Name     : BTHPORT
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\BTHport.sys
+
+Name     : BTHUSB
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\BTHUSB.sys
+
+Name     : bttflt
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\bttflt.sys
+
+Name     : buttonconverter
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\buttonconverter.sys
+
+Name     : CAD
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\CAD.sys
+
+Name     : CDD
+State    : Running
+PathName : C:\WINDOWS\system32\cdd.dll
+
+Name     : cdfs
+State    : Stopped
+PathName : C:\WINDOWS\system32\DRIVERS\cdfs.sys
+
+Name     : cdrom
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\cdrom.sys
+
+Name     : cht4iscsi
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\cht4sx64.sys
+
+Name     : cht4vbd
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\cht4vx64.sys
+
+Name     : CimFS
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\CimFS.sys
+
+Name     : circlass
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\circlass.sys
+
+Name     : CldFlt
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\cldflt.sys
+
+Name     : CLFS
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\CLFS.sys
+
+Name     : CmBatt
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\CmBatt.sys
+
+Name     : CNG
+State    : Running
+PathName : C:\WINDOWS\system32\Drivers\cng.sys
+
+Name     : cnghwassist
+State    : Stopped
+PathName : C:\WINDOWS\system32\DRIVERS\cnghwassist.sys
+
+Name     : CompositeBus
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\compositebus.inf_amd6
+           4_8cf6fa9d3afdfa25\CompositeBus.sys
+
+Name     : condrv
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\condrv.sys
+
+Name     : cpuz160
+State    : Stopped
+PathName : \??\C:\ProgramData\CPUID Software\sdk\FDkDHeaSHP
+
+Name     : csaudio
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\csaudio.inf_amd64_171
+           1aa9be1c7d802\csaudio.sys
+
+Name     : CSC
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\csc.sys
+
+Name     : dam
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\dam.sys
+
+Name     : devmap
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\devmap.inf_amd64_1993
+           197f4612e967\devmap.sys
+
+Name     : Dfsc
+State    : Running
+PathName : C:\WINDOWS\system32\Drivers\dfsc.sys
+
+Name     : disk
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\disk.sys
+
+Name     : DisplayMux
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\displaymux.inf_amd64_
+           da65a70f0c3ce0f3\DisplayMux.sys
+
+Name     : dmvsc
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\dmvsc.sys
+
+Name     : drmkaud
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\drmkaud.sys
+
+Name     : DRTMNull
+State    : Running
+PathName : C:\WINDOWS\system32\DRTMNull2.sys
+
+Name     : DXGKrnl
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\dxgkrnl.sys
+
+Name     : ebdrv
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\evbda.sys
+
+Name     : ebdrv0
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\evbd0a.sys
+
+Name     : EhStorClass
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\EhStorClass.sys
+
+Name     : EhStorTcgDrv
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\EhStorTcgDrv.sys
+
+Name     : ErrDev
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\errdev.sys
+
+Name     : ExecutionContext
+State    : Running
+PathName : C:\WINDOWS\system32\Drivers\ExecutionContext.sys
+
+Name     : exfat
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\exfat.sys
+
+Name     : fastfat
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\fastfat.sys
+
+Name     : fdc
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\fdc.sys
+
+Name     : FileCrypt
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\filecrypt.sys
+
+Name     : FileInfo
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\fileinfo.sys
+
+Name     : Filetrace
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\filetrace.sys
+
+Name     : flpydisk
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\flpydisk.sys
+
+Name     : FltMgr
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\fltmgr.sys
+
+Name     : FsDepends
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\FsDepends.sys
+
+Name     : fvevol
+State    : Running
+PathName : C:\WINDOWS\system32\DRIVERS\fvevol.sys
+
+Name     : gencounter
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\vmgencounter.sys
+
+Name     : genericusbfn
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\genericusbfn.inf_amd6
+           4_71c810ddc0116541\genericusbfn.sys
+
+Name     : GenPass
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\genpass.inf_amd64_0c8
+           2d80c9252c9bd\genpass.sys
+
+Name     : GPIOClx0101
+State    : Running
+PathName : C:\WINDOWS\system32\Drivers\msgpioclx.sys
+
+Name     : HdAudAddService
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\HdAudio.sys
+
+Name     : HDAudBus
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\HDAudBus.sys
+
+Name     : HidBatt
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\HidBatt.sys
+
+Name     : HidBth
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\hidbth.sys
+
+Name     : hidi2c
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\hidi2c.sys
+
+Name     : hidinterrupt
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\hidinterrupt.sys
+
+Name     : HidIr
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\hidir.sys
+
+Name     : hidspi
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\hidspi.sys
+
+Name     : HidSpiCx
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\HidSpiCx.sys
+
+Name     : HidUsb
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\hidusb.sys
+
+Name     : HoYoProtect
+State    : Stopped
+PathName : \??\C:\WINDOWS\system32\HoYoKProtect.sys
+
+Name     : HpSAMD
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\HpSAMD.sys
+
+Name     : Hsp
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\Hsp.sys
+
+Name     : HTTP
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\HTTP.sys
+
+Name     : hvcrash
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\hvcrash.sys
+
+Name     : hvservice
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\hvservice.sys
+
+Name     : HwNClx0101
+State    : Stopped
+PathName : C:\WINDOWS\system32\Drivers\mshwnclx.sys
+
+Name     : hwpolicy
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\hwpolicy.sys
+
+Name     : hyperkbd
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\hyperkbd.sys
+
+Name     : HyperVideo
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\HyperVideo.sys
+
+Name     : I3CHost
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\i3chost.inf_amd64_ddd
+           fc6dc1e7b8e75\i3chost.sys
+
+Name     : i8042prt
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\i8042prt.sys
+
+Name     : iagpio
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\iagpio.sys
+
+Name     : iai2c
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\iai2c.sys
+
+Name     : iaLPSS2i_GPIO2
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\iaLPSS2i_GPIO2.sys
+
+Name     : iaLPSS2i_GPIO2_BXT_P
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\iaLPSS2i_GPIO2_BXT_P.sys
+
+Name     : iaLPSS2i_GPIO2_CNL
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\iaLPSS2i_GPIO2_CNL.sys
+
+Name     : iaLPSS2i_GPIO2_GLK
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\iaLPSS2i_GPIO2_GLK.sys
+
+Name     : iaLPSS2i_I2C
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\iaLPSS2i_I2C.sys
+
+Name     : iaLPSS2i_I2C_BXT_P
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\iaLPSS2i_I2C_BXT_P.sys
+
+Name     : iaLPSS2i_I2C_CNL
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\iaLPSS2i_I2C_CNL.sys
+
+Name     : iaLPSS2i_I2C_GLK
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\iaLPSS2i_I2C_GLK.sys
+
+Name     : iaLPSSi_GPIO
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\iaLPSSi_GPIO.sys
+
+Name     : iaLPSSi_I2C
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\iaLPSSi_I2C.sys
+
+Name     : iaStorAVC
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\iaStorAVC.sys
+
+Name     : iaStorV
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\iaStorV.sys
+
+Name     : ibbus
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\ibbus.sys
+
+Name     : IndirectKmd
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\IndirectKmd.sys
+
+Name     : IntcAzAudAddService
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\hdxacpasus.inf_amd64_
+           8a9c1d40a5fd0ee1\RTKVHD64.sys
+
+Name     : intelide
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\intelide.sys
+
+Name     : intelpep
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\intelpep.sys
+
+Name     : intelpmax
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\intelpmax.sys
+
+Name     : IntelPMT
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\IntelPMT.sys
+
+Name     : intelppm
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\intelppm.sys
+
+Name     : iorate
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\iorate.sys
+
+Name     : IpFilterDriver
+State    : Stopped
+PathName : C:\WINDOWS\system32\DRIVERS\ipfltdrv.sys
+
+Name     : IPMIDRV
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\IPMIDrv.sys
+
+Name     : IPNAT
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\ipnat.sys
+
+Name     : IPT
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\ipt.sys
+
+Name     : IpuMcdmDriver
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\kipudrv.inf_amd64_1a1
+           aa059597c4810\ipustack.sys
+
+Name     : isapnp
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\isapnp.sys
+
+Name     : iScsiPrt
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\msiscsi.sys
+
+Name     : ItSas35i
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\ItSas35i.sys
+
+Name     : JRSKD24
+State    : Stopped
+PathName : \??\C:\WINDOWS\system32\JRSKD24.SYS
+
+Name     : JRSUKD25
+State    : Stopped
+PathName : \??\C:\WINDOWS\system32\JRSUKD25.SYS
+
+Name     : kbdclass
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\kbdclass.sys
+
+Name     : kbdhid
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\kbdhid.sys
+
+Name     : kbldfltr
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\kbldfltr.sys
+
+Name     : kdnic
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\kdnic.sys
+
+Name     : kdnic_legacy
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\kdnic_legacy.sys
+
+Name     : KSecDD
+State    : Running
+PathName : C:\WINDOWS\system32\Drivers\ksecdd.sys
+
+Name     : KSecPkg
+State    : Running
+PathName : C:\WINDOWS\system32\Drivers\ksecpkg.sys
+
+Name     : KslD
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\wd\KslD.sys
+
+Name     : ksthunk
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\ksthunk.sys
+
+Name     : lltdio
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\lltdio.sys
+
+Name     : LSI_SAS
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\lsi_sas.sys
+
+Name     : LSI_SAS2i
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\lsi_sas2i.sys
+
+Name     : LSI_SAS3i
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\lsi_sas3i.sys
+
+Name     : luafv
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\luafv.sys
+
+Name     : mausbhost
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\mausbhost.sys
+
+Name     : mausbip
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\mausbip.sys
+
+Name     : MbbCx
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\MbbCx.sys
+
+Name     : megasas2i
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\MegaSas2i.sys
+
+Name     : megasas35i
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\megasas35i.sys
+
+Name     : megasr
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\megasr.sys
+
+Name     : Microsoft_Bluetooth_AvrcpTransport
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\Microsoft.Bluetooth.AvrcpTransport.sys
+
+Name     : mlx4_bus
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\mlx4_bus.sys
+
+Name     : MMCSS
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\mmcss.sys
+
+Name     : Modem
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\modem.sys
+
+Name     : monitor
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\monitor.sys
+
+Name     : mouclass
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\mouclass.sys
+
+Name     : mouhid
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\mouhid.sys
+
+Name     : mountmgr
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\mountmgr.sys
+
+Name     : mpi3drvi
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\mpi3drvi.sys
+
+Name     : mpsdrv
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\mpsdrv.sys
+
+Name     : MRxDAV
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\mrxdav.sys
+
+Name     : mrxsmb
+State    : Running
+PathName : C:\WINDOWS\system32\DRIVERS\mrxsmb.sys
+
+Name     : mrxsmb20
+State    : Running
+PathName : C:\WINDOWS\system32\DRIVERS\mrxsmb20.sys
+
+Name     : MsBridge
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\bridge.sys
+
+Name     : Msfs
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\Msfs.sys
+
+Name     : msgpiowin32
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\msgpiowin32.sys
+
+Name     : mshidkmdf
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\mshidkmdf.sys
+
+Name     : mshidumdf
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\mshidumdf.sys
+
+Name     : msisadrv
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\msisadrv.sys
+
+Name     : MSKSSRV
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\MSKSSRV.sys
+
+Name     : MsLldp
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\mslldp.sys
+
+Name     : MSPCLOCK
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\MSPCLOCK.sys
+
+Name     : MSPQM
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\MSPQM.sys
+
+Name     : MsQuic
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\msquic.sys
+
+Name     : MsQuicPrev
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\msquicprev.sys
+
+Name     : MsRPC
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\MsRPC.sys
+
+Name     : MsSecCore
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\msseccore.sys
+
+Name     : MsSecFlt
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\mssecflt.sys
+
+Name     : MsSecWfp
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\mssecwfp.sys
+
+Name     : mssmbios
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\mssmbios.sys
+
+Name     : MSTEE
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\MSTEE.sys
+
+Name     : MTConfig
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\MTConfig.sys
+
+Name     : mtkbtacx
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\mtkbtacx.inf_amd64_83
+           b672d8fe91251d\mtkbtacx.sys
+
+Name     : MTKBTFilterx64
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\mtkbtfilter.inf_amd64
+           _7968e94d48e994b9\mtkbtfilterx.sys
+
+Name     : mtkwecx
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\mtkwecx.inf_amd64_872
+           157d8484ca516\mtkwecx.sys
+
+Name     : Mup
+State    : Running
+PathName : C:\WINDOWS\system32\Drivers\mup.sys
+
+Name     : mvumis
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\mvumis.sys
+
+Name     : NativeWifiP
+State    : Running
+PathName : C:\WINDOWS\system32\DRIVERS\nwifi.sys
+
+Name     : ndfltr
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\ndfltr.sys
+
+Name     : NDIS
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\ndis.sys
+
+Name     : NdisCap
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\ndiscap.sys
+
+Name     : NdisImPlatform
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\NdisImPlatform.sys
+
+Name     : NdisTapi
+State    : Running
+PathName : C:\WINDOWS\system32\DRIVERS\ndistapi.sys
+
+Name     : Ndisuio
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\ndisuio.sys
+
+Name     : NdisVirtualBus
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\NdisVirtualBus.sys
+
+Name     : NdisWan
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\ndiswan.sys
+
+Name     : ndiswanlegacy
+State    : Stopped
+PathName : C:\WINDOWS\system32\DRIVERS\ndiswan.sys
+
+Name     : NDKPerf
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\NDKPerf.sys
+
+Name     : NDKPing
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\NDKPing.sys
+
+Name     : ndproxy
+State    : Running
+PathName : C:\WINDOWS\system32\DRIVERS\NDProxy.sys
+
+Name     : Ndu
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\Ndu.sys
+
+Name     : NetAdapterCx
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\netadaptercx.sys
+
+Name     : NetBIOS
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\netbios.sys
+
+Name     : NetBT
+State    : Running
+PathName : C:\WINDOWS\system32\DRIVERS\netbt.sys
+
+Name     : netvsc
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\netvsc.sys
+
+Name     : NetworkPrivacyPolicy
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\networkprivacypolicy.
+           inf_amd64_42abed8762795b20\NetworkPrivacyPolicy.sys
+
+Name     : Npfs
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\Npfs.sys
+
+Name     : npsvctrig
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\npsvctrig.sys
+
+Name     : nsiproxy
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\nsiproxy.sys
+
+Name     : Ntfs
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\Ntfs.sys
+
+Name     : Null
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\Null.sys
+
+Name     : nvdimm
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\nvdimm.sys
+
+Name     : NVHDA
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\nvhda64v.sys
+
+Name     : nvlddmkm
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\nvami.inf_amd64_2c2a1
+           0115c2556ed\nvlddmkm.sys
+
+Name     : nvmedisk
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\nvmedisk.sys
+
+Name     : nvpcf
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\nvpcf.sys
+
+Name     : nvraid
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\nvraid.sys
+
+Name     : nvstor
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\nvstor.sys
+
+Name     : P9Rdr
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\p9rdr.sys
+
+Name     : Parport
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\parport.sys
+
+Name     : partmgr
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\partmgr.sys
+
+Name     : pci
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\pci.sys
+
+Name     : pciide
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\pciide.sys
+
+Name     : pcmcia
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\pcmcia.sys
+
+Name     : pcw
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\pcw.sys
+
+Name     : pdc
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\pdc.sys
+
+Name     : PEAUTH
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\peauth.sys
+
+Name     : percsas2i
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\percsas2i.sys
+
+Name     : percsas3i
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\percsas3i.sys
+
+Name     : PktMon
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\PktMon.sys
+
+Name     : PktMonApi
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\PktMonApi.sys
+
+Name     : PlutonHeci
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\pluton-heci.inf_amd64
+           _640b17f99fa088ee\pluton-heci.sys
+
+Name     : PlutonHsp2
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\plutonhsp2.inf_amd64_
+           380e24eba15adc2d\PlutonHsp2.sys
+
+Name     : pmem
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\pmem.sys
+
+Name     : PNPMEM
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\pnpmem.sys
+
+Name     : portcfg
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\portcfg.sys
+
+Name     : PptpMiniport
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\raspptp.sys
+
+Name     : PRM
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\prm.inf_amd64_7c38475
+           757a1f016\PRM.sys
+
+Name     : Processor
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\processr.sys
+
+Name     : Psched
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\pacer.sys
+
+Name     : pvscsi
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\pvscsii.sys
+
+Name     : QWAVEdrv
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\qwavedrv.sys
+
+Name     : Ramdisk
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\ramdisk.sys
+
+Name     : RasAcd
+State    : Stopped
+PathName : C:\WINDOWS\system32\DRIVERS\rasacd.sys
+
+Name     : RasAgileVpn
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\AgileVpn.sys
+
+Name     : Rasl2tp
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\rasl2tp.sys
+
+Name     : RasPppoe
+State    : Running
+PathName : C:\WINDOWS\system32\DRIVERS\raspppoe.sys
+
+Name     : RasSstp
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\rassstp.sys
+
+Name     : rdbss
+State    : Running
+PathName : C:\WINDOWS\system32\DRIVERS\rdbss.sys
+
+Name     : rdpbus
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\rdpbus.sys
+
+Name     : RDPDR
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\rdpdr.sys
+
+Name     : rdyboost
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\rdyboost.sys
+
+Name     : ReFS
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\ReFS.sys
+
+Name     : ReFSv1
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\ReFSv1.sys
+
+Name     : RFCOMM
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\rfcomm.sys
+
+Name     : rhproxy
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\rhproxy.sys
+
+Name     : rspndr
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\rspndr.sys
+
+Name     : RTSPER
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\RtsPer.sys
+
+Name     : rtucx21x64
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\rtucx21x64.inf_amd64_
+           286645bc82b2f9fb\rtucx21x64.sys
+
+Name     : RzCommon
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\RzCommon.sys
+
+Name     : RzDev_00d0
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\RzDev_00d0.sys
+
+Name     : RzDev_022b
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\RzDev_022b.sys
+
+Name     : s3cap
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\vms3cap.sys
+
+Name     : sbp2port
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\sbp2port.sys
+
+Name     : scfilter
+State    : Stopped
+PathName : C:\WINDOWS\system32\DRIVERS\scfilter.sys
+
+Name     : scmbus
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\scmbus.sys
+
+Name     : sdbus
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\sdbus.sys
+
+Name     : SdcaHidInbox
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\sdcahid.inf_amd64_a4e
+           3cf15548ccfe2\SdcaHid.sys
+
+Name     : SdcaMfdInbox
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\sdcamfd.inf_amd64_0f1
+           42177b658b67c\SdcaMfd.sys
+
+Name     : sdstor
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\sdstor.sys
+
+Name     : SerCx
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\SerCx.sys
+
+Name     : SerCx2
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\SerCx2.sys
+
+Name     : Serenum
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\serenum.sys
+
+Name     : Serial
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\serial.sys
+
+Name     : sermouse
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\sermouse.sys
+
+Name     : sfloppy
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\sfloppy.sys
+
+Name     : SiSRaid2
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\SiSRaid2.sys
+
+Name     : SiSRaid4
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\sisraid4.sys
+
+Name     : SmartSAMD
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\SmartSAMD.sys
+
+Name     : smbdirect
+State    : Stopped
+PathName : C:\WINDOWS\system32\DRIVERS\smbdirect.sys
+
+Name     : spaceparser
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\spaceparser.sys
+
+Name     : spaceport
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\spaceport.sys
+
+Name     : SpbCx
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\SpbCx.sys
+
+Name     : SPVDPort
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\spvdbus.sys
+
+Name     : SPVVEngine
+State    : Running
+PathName : \??\C:\WINDOWS\system32\Drivers\spvve.sys
+
+Name     : srv2
+State    : Running
+PathName : C:\WINDOWS\system32\DRIVERS\srv2.sys
+
+Name     : srvnet
+State    : Running
+PathName : C:\WINDOWS\system32\DRIVERS\srvnet.sys
+
+Name     : stexstor
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\stexstor.sys
+
+Name     : storahci
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\storahci.sys
+
+Name     : storflt
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\vmstorfl.sys
+
+Name     : stornvme
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\stornvme.sys
+
+Name     : storqosflt
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\storqosflt.sys
+
+Name     : storufs
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\storufs.sys
+
+Name     : storvsc
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\storvsc.sys
+
+Name     : swenum
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\swenum.inf_amd64_8b9d
+           d76f362e3ec6\swenum.sys
+
+Name     : Tcpip
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\tcpip.sys
+
+Name     : Tcpip6
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\tcpip.sys
+
+Name     : tcpipreg
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\tcpipreg.sys
+
+Name     : tdx
+State    : Running
+PathName : C:\WINDOWS\system32\DRIVERS\tdx.sys
+
+Name     : terminpt
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\terminpt.sys
+
+Name     : ThermalFilter
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\c_thermal.inf_amd64_b
+           38a77a51a7f05bf\ThermalFilter.sys
+
+Name     : TNXNET_SVR
+State    : Running
+PathName : \??\C:\WINDOWS\TNXNet64.sys
+
+Name     : TPM
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\tpm.sys
+
+Name     : TsUsbFlt
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\tsusbflt.sys
+
+Name     : TsUsbGD
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\TsUsbGD.sys
+
+Name     : tsusbhub
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\tsusbhub.sys
+
+Name     : tunnel
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\tunnel.sys
+
+Name     : UASPStor
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\uaspstor.sys
+
+Name     : UcmCx0101
+State    : Running
+PathName : C:\WINDOWS\system32\Drivers\UcmCx.sys
+
+Name     : UcmTcpciCx0101
+State    : Stopped
+PathName : C:\WINDOWS\system32\Drivers\UcmTcpciCx.sys
+
+Name     : UcmUcsiAcpiClient
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\UcmUcsiAcpiClient.sys
+
+Name     : UcmUcsiCx0101
+State    : Running
+PathName : C:\WINDOWS\system32\Drivers\UcmUcsiCx.sys
+
+Name     : UCPD
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\UCPD.sys
+
+Name     : Ucx01000
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\ucx01000.sys
+
+Name     : UdeCx
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\udecx.sys
+
+Name     : udfs
+State    : Stopped
+PathName : C:\WINDOWS\system32\DRIVERS\udfs.sys
+
+Name     : UEFI
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\uefi.inf_amd64_609b02
+           c2a09b3b3f\UEFI.sys
+
+Name     : UevAgentDriver
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\UevAgentDriver.sys
+
+Name     : Ufx01000
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\ufx01000.sys
+
+Name     : UfxChipidea
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\ufxchipidea.inf_amd64
+           _6e8bb2ed82835828\UfxChipidea.sys
+
+Name     : ufxsynopsys
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\ufxsynopsys.sys
+
+Name     : uiomap
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\uiomap.inf_amd64_f5d5
+           465d1731583d\uiomap.sys
+
+Name     : umbus
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\umbus.inf_amd64_914dd
+           46b4b013b1b\umbus.sys
+
+Name     : UmPass
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\umpass.inf_amd64_06e0
+           16c9ffecbf73\umpass.sys
+
+Name     : UnionFS
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\UnionFS.sys
+
+Name     : UrsChipidea
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\urschipidea.inf_amd64
+           _37fb14618bce547b\urschipidea.sys
+
+Name     : UrsCx01000
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\urscx01000.sys
+
+Name     : UrsSynopsys
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\urssynopsys.inf_amd64
+           _ef0be23d0f063014\urssynopsys.sys
+
+Name     : usb-platformdetection
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\usb-platformdetection
+           .inf_amd64_e243534e8864d658\usb-platformdetection.sys
+
+Name     : Usb4DeviceRouter
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\usb4devicerouter.inf_
+           amd64_cd4d81f2bc6d8fe2\Usb4DeviceRouter.sys
+
+Name     : Usb4HostRouter
+State    : Running
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\usb4hostrouter.inf_am
+           d64_1159012f806838ab\Usb4HostRouter.sys
+
+Name     : usbaudio
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\usbaudio.sys
+
+Name     : usbaudio2
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\usbaudio2.sys
+
+Name     : usbccgp
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\usbccgp.sys
+
+Name     : usbcir
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\usbcir.sys
+
+Name     : usbehci
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\usbehci.sys
+
+Name     : usbhub
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\usbhub.sys
+
+Name     : USBHUB3
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\UsbHub3.sys
+
+Name     : usbohci
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\usbohci.sys
+
+Name     : usbprint
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\usbprint.sys
+
+Name     : usbser
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\usbser.sys
+
+Name     : USBSTOR
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\USBSTOR.SYS
+
+Name     : usbuhci
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\usbuhci.sys
+
+Name     : usbvideo
+State    : Running
+PathName : C:\WINDOWS\system32\Drivers\usbvideo.sys
+
+Name     : USBXHCI
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\USBXHCI.SYS
+
+Name     : vdrvroot
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\vdrvroot.sys
+
+Name     : VerifierExt
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\VerifierExt.sys
+
+Name     : vhdmp
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\vhdmp.sys
+
+Name     : vhf
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\vhf.sys
+
+Name     : Vid
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\Vid.sys
+
+Name     : VirtualRender
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\vrd.inf_amd64_4dd0e6d
+           66a75bb7e\vrd.sys
+
+Name     : vmbus
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\vmbus.sys
+
+Name     : VMBusHID
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\VMBusHID.sys
+
+Name     : vmgid
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\vmgid.sys
+
+Name     : volmgr
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\volmgr.sys
+
+Name     : volmgrx
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\volmgrx.sys
+
+Name     : volsnap
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\volsnap.sys
+
+Name     : volume
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\volume.sys
+
+Name     : vpci
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\vpci.sys
+
+Name     : vsmraid
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\vsmraid.sys
+
+Name     : VSTXRAID
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\vstxraid.sys
+
+Name     : vwifibus
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\netvwifibus.inf_amd64
+           _ab4e111fe8221178\vwifibus.sys
+
+Name     : vwififlt
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\vwififlt.sys
+
+Name     : WacomPen
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\wacompen.sys
+
+Name     : wanarp
+State    : Running
+PathName : C:\WINDOWS\system32\DRIVERS\wanarp.sys
+
+Name     : wanarpv6
+State    : Stopped
+PathName : C:\WINDOWS\system32\DRIVERS\wanarp.sys
+
+Name     : wcifs
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\wcifs.sys
+
+Name     : WdBoot
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\wd\WdBoot.sys
+
+Name     : Wdf01000
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\Wdf01000.sys
+
+Name     : WdFilter
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\wd\WdFilter.sys
+
+Name     : wdiwifi
+State    : Stopped
+PathName : C:\WINDOWS\system32\DRIVERS\wdiwifi.sys
+
+Name     : WdmCompanionFilter
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\WdmCompanionFilter.sys
+
+Name     : WdNisDrv
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\wd\WdNisDrv.sys
+
+Name     : WFPLWFS
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\wfplwfs.sys
+
+Name     : Wificx
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\WifiCx.sys
+
+Name     : WIMMount
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\wimmount.sys
+
+Name     : WinAccelCx0101
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\WinAccelCx.sys
+
+Name     : WindowsTrustedRT
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\WindowsTrustedRT.sys
+
+Name     : WindowsTrustedRTProxy
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\WindowsTrustedRTProxy.sys
+
+Name     : wini3ctarget
+State    : Stopped
+PathName : C:\WINDOWS\system32\DriverStore\FileRepository\wini3ctarget.inf_amd6
+           4_9bda3f893989b4a6\wini3ctarget.sys
+
+Name     : WinMad
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\winmad.sys
+
+Name     : WinNat
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\winnat.sys
+
+Name     : WINUSB
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\WinUsb.sys
+
+Name     : WinVerbs
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\winverbs.sys
+
+Name     : WmiAcpi
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\wmiacpi.sys
+
+Name     : Wof
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\Wof.sys
+
+Name     : WpdUpFltr
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\WpdUpFltr.sys
+
+Name     : ws2ifsl
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\ws2ifsl.sys
+
+Name     : wtd
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\wtd.sys
+
+Name     : WudfPf
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\WudfPf.sys
+
+Name     : WUDFRd
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\WUDFRd.sys
+
+Name     : WUDFWpdFs
+State    : Running
+PathName : C:\WINDOWS\system32\DRIVERS\WUDFRd.sys
+
+Name     : WUDFWpdMtp
+State    : Running
+PathName : C:\WINDOWS\system32\drivers\WUDFRd.sys
+
+Name     : xboxgip
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\xboxgip.sys
+
+Name     : xhunter1
+State    : Stopped
+PathName : \??\C:\WINDOWS\xhunter1.sys
+
+Name     : xinputhid
+State    : Stopped
+PathName : C:\WINDOWS\system32\drivers\xinputhid.sys
+
+
+
+
+
+# stderr

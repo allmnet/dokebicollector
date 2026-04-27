@@ -1,0 +1,200 @@
+# command
+Get-DnsClientCache | Format-List
+
+# stdout
+
+
+Entry      : katalk.kakao.com
+RecordName : katalk.kakao.com
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 3
+DataLength : 8
+Data       : brewery-talk-external-azp9mem5.kgns1.com
+
+Entry      : katalk.kakao.com
+RecordName : brewery-talk-external-azp9mem5.kgns1.com
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 3
+DataLength : 4
+Data       : 211.183.210.21
+
+Entry      : assets.msn.com
+RecordName : assets.msn.com
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 15
+DataLength : 8
+Data       : assets-msn-com-world-atm-default.trafficmanager.net
+
+Entry      : assets.msn.com
+RecordName : assets-msn-com-world-atm-default.trafficmanager.net
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 15
+DataLength : 8
+Data       : assets.msn.com-ion.edgesuite.net
+
+Entry      : assets.msn.com
+RecordName : assets.msn.com-ion.edgesuite.net
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 15
+DataLength : 8
+Data       : a1666.dscr.akamai.net
+
+Entry      : assets.msn.com
+RecordName : a1666.dscr.akamai.net
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 15
+DataLength : 16
+Data       : 2600:1410:6000::173b:4840
+
+Entry      : assets.msn.com
+RecordName : a1666.dscr.akamai.net
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 15
+DataLength : 16
+Data       : 2600:1410:6000::173b:484a
+
+Entry      : assets.msn.com
+RecordName : a1666.dscr.akamai.net
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 15
+DataLength : 16
+Data       : 2600:1410:6000::173b:484b
+
+Entry      : assets.msn.com
+RecordName : a1666.dscr.akamai.net
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 15
+DataLength : 16
+Data       : 2600:1410:6000::173b:4850
+
+Entry      : assets.msn.com
+RecordName : a1666.dscr.akamai.net
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 15
+DataLength : 16
+Data       : 2600:1410:6000::173b:4841
+
+Entry      : assets.msn.com
+RecordName : assets.msn.com
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 16
+DataLength : 8
+Data       : assets-msn-com-world-atm-default.trafficmanager.net
+
+Entry      : assets.msn.com
+RecordName : assets-msn-com-world-atm-default.trafficmanager.net
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 16
+DataLength : 8
+Data       : assets.msn.com-ion.edgesuite.net
+
+Entry      : assets.msn.com
+RecordName : assets.msn.com-ion.edgesuite.net
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 16
+DataLength : 8
+Data       : a1666.dscr.akamai.net
+
+Entry      : assets.msn.com
+RecordName : a1666.dscr.akamai.net
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 16
+DataLength : 4
+Data       : 23.206.175.177
+
+Entry      : assets.msn.com
+RecordName : a1666.dscr.akamai.net
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 16
+DataLength : 4
+Data       : 23.206.175.168
+
+Entry      : assets.msn.com
+RecordName : a1666.dscr.akamai.net
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 16
+DataLength : 4
+Data       : 23.206.175.186
+
+Entry      : telemetry.individual.githubcopilot.com
+RecordName : telemetry.individual.githubcopilot.com
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 13
+DataLength : 8
+Data       : copilot-telemetry-service.githubusercontent.com
+
+Entry      : telemetry.individual.githubcopilot.com
+RecordName : copilot-telemetry-service.githubusercontent.com
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 13
+DataLength : 8
+Data       : glb-db52c2cf8be544.github.com
+
+Entry      : telemetry.individual.githubcopilot.com
+RecordName : glb-db52c2cf8be544.github.com
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 13
+DataLength : 4
+Data       : 140.82.113.22
+
+Entry      : c.pki.goog
+RecordName : c.pki.goog
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 80
+DataLength : 8
+Data       : pki-goog.l.google.com
+
+Entry      : c.pki.goog
+RecordName : pki-goog.l.google.com
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 80
+DataLength : 16
+Data       : 2404:6800:400a:1009::5e
+
+
+
+
+
+# stderr

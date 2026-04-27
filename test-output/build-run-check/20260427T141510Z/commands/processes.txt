@@ -1,0 +1,2901 @@
+# command
+Get-CimInstance Win32_Process | Select-Object ProcessId,ParentProcessId,Name,CommandLine,ExecutablePath | Format-List
+
+# stdout
+
+
+ProcessId       : 0
+ParentProcessId : 0
+Name            : System Idle Process
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 4
+ParentProcessId : 0
+Name            : System
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 332
+ParentProcessId : 4
+Name            : Secure System
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 376
+ParentProcessId : 4
+Name            : Registry
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 992
+ParentProcessId : 4
+Name            : smss.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 1676
+ParentProcessId : 1232
+Name            : csrss.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 1900
+ParentProcessId : 1232
+Name            : wininit.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 1908
+ParentProcessId : 1892
+Name            : csrss.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 1976
+ParentProcessId : 1900
+Name            : services.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 1996
+ParentProcessId : 1900
+Name            : LsaIso.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 2004
+ParentProcessId : 1900
+Name            : lsass.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 1236
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 1120
+ParentProcessId : 1900
+Name            : fontdrvhost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 2056
+ParentProcessId : 1976
+Name            : WUDFHost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 2144
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 2196
+ParentProcessId : 1976
+Name            : WUDFCompanionHost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 2248
+ParentProcessId : 1892
+Name            : winlogon.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 2292
+ParentProcessId : 2248
+Name            : fontdrvhost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 2364
+ParentProcessId : 1976
+Name            : WUDFHost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 2392
+ParentProcessId : 2248
+Name            : dwm.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 2484
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 2492
+ParentProcessId : 1976
+Name            : amdpmfservice.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 2500
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 2528
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 2544
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 2552
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 2720
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 2792
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 2812
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 2924
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 3148
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 3280
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 3464
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 3792
+ParentProcessId : 1976
+Name            : NVDisplay.Container.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 3836
+ParentProcessId : 1236
+Name            : WmiPrvSE.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 3848
+ParentProcessId : 1976
+Name            : amdfendrsr.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 3856
+ParentProcessId : 1976
+Name            : atiesrxx.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 4028
+ParentProcessId : 3856
+Name            : atieclxx.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 4048
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 4056
+ParentProcessId : 4
+Name            : Memory Compression
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 3252
+ParentProcessId : 1976
+Name            : WUDFCompanionHost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 3528
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 4108
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 4232
+ParentProcessId : 1976
+Name            : WUDFCompanionHost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 4240
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 4432
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 4540
+ParentProcessId : 4108
+Name            : audiodg.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 4548
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 4840
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 5024
+ParentProcessId : 1236
+Name            : unsecapp.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 5224
+ParentProcessId : 3792
+Name            : NVDisplay.Container.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 5472
+ParentProcessId : 1976
+Name            : spoolsv.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 5564
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 5648
+ParentProcessId : 2812
+Name            : NgcIso.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 5712
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 5808
+ParentProcessId : 1976
+Name            : AmdPpkgSvc.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 5832
+ParentProcessId : 1976
+Name            : HGridStream.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 5844
+ParentProcessId : 1976
+Name            : mtkbtsvc.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 5852
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 5860
+ParentProcessId : 1976
+Name            : GameManagerService3.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 5872
+ParentProcessId : 1976
+Name            : OfficeClickToRun.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 5880
+ParentProcessId : 1976
+Name            : RtkAudUService64.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 5896
+ParentProcessId : 1976
+Name            : HGridEngine.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 5916
+ParentProcessId : 1976
+Name            : MpDefenderCoreService.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 5928
+ParentProcessId : 1976
+Name            : MsMpEng.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 6568
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 6688
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 7224
+ParentProcessId : 4840
+Name            : wlanext.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 7480
+ParentProcessId : 2492
+Name            : amdpmfserviceuser.exe
+CommandLine     : "C:\WINDOWS\System32\amdpmfserviceuser.exe"
+ExecutablePath  : C:\WINDOWS\System32\amdpmfserviceuser.exe
+
+ProcessId       : 7552
+ParentProcessId : 7480
+Name            : conhost.exe
+CommandLine     : \??\C:\WINDOWS\system32\conhost.exe 0x4
+ExecutablePath  : C:\WINDOWS\system32\conhost.exe
+
+ProcessId       : 7768
+ParentProcessId : 2500
+Name            : sihost.exe
+CommandLine     : sihost.exe
+ExecutablePath  : C:\WINDOWS\System32\sihost.exe
+
+ProcessId       : 8184
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : C:\WINDOWS\system32\svchost.exe -k BthAppGroup -p
+ExecutablePath  : C:\WINDOWS\system32\svchost.exe
+
+ProcessId       : 7088
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : C:\WINDOWS\system32\svchost.exe -k UnistackSvcGroup
+ExecutablePath  : C:\WINDOWS\system32\svchost.exe
+
+ProcessId       : 7668
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestrict
+                  ed -p
+ExecutablePath  : C:\WINDOWS\system32\svchost.exe
+
+ProcessId       : 7620
+ParentProcessId : 2500
+Name            : taskhostw.exe
+CommandLine     : taskhostw.exe {222A245B-E637-4AE9-A93F-A59CA119A75E}
+ExecutablePath  : C:\WINDOWS\System32\taskhostw.exe
+
+ProcessId       : 2344
+ParentProcessId : 2500
+Name            : MicrosoftEdgeUpdate.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 8768
+ParentProcessId : 8656
+Name            : explorer.exe
+CommandLine     : C:\WINDOWS\Explorer.EXE
+ExecutablePath  : C:\WINDOWS\Explorer.EXE
+
+ProcessId       : 8488
+ParentProcessId : 7768
+Name            : AIXHost.exe
+CommandLine     : "C:\WINDOWS\SystemApps\MicrosoftWindows.Client.AIX_cw5n1h2txy
+                  ewy\AIXHost.exe" /tileid MicrosoftWindows.Client.AIX_cw5n1h2t
+                  xyewy!AIXApp
+ExecutablePath  : C:\WINDOWS\SystemApps\MicrosoftWindows.Client.AIX_cw5n1h2txye
+                  wy\AIXHost.exe
+
+ProcessId       : 8492
+ParentProcessId : 7768
+Name            : ClickToDo.exe
+CommandLine     : "C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CoreAI_cw5n1h2
+                  txyewy\ClickToDo.exe" /tileid MicrosoftWindows.Client.CoreAI_
+                  cw5n1h2txyewy!ClickToDoApp
+ExecutablePath  : C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CoreAI_cw5n1h2t
+                  xyewy\ClickToDo.exe
+
+ProcessId       : 8412
+ParentProcessId : 7768
+Name            : CrossDeviceResume.exe
+CommandLine     : "C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txy
+                  ewy\CrossDeviceResume.exe" /tileid MicrosoftWindows.Client.CB
+                  S_cw5n1h2txyewy!CrossDeviceResumeApp
+ExecutablePath  : C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txye
+                  wy\CrossDeviceResume.exe
+
+ProcessId       : 8248
+ParentProcessId : 1236
+Name            : aihost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 9660
+ParentProcessId : 1976
+Name            : SearchIndexer.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 9236
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 10288
+ParentProcessId : 2500
+Name            : GHelper.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 10660
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 7956
+ParentProcessId : 1236
+Name            : WorkloadsSessionManager.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 7996
+ParentProcessId : 1236
+Name            : WorkloadsSessionHost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 10224
+ParentProcessId : 1236
+Name            : WorkloadsSessionHost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 10616
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : C:\WINDOWS\system32\svchost.exe -k ClipboardSvcGroup -p
+ExecutablePath  : C:\WINDOWS\system32\svchost.exe
+
+ProcessId       : 11496
+ParentProcessId : 1236
+Name            : ApplicationFrameHost.exe
+CommandLine     : C:\WINDOWS\system32\ApplicationFrameHost.exe -Embedding
+ExecutablePath  : C:\WINDOWS\system32\ApplicationFrameHost.exe
+
+ProcessId       : 11600
+ParentProcessId : 1236
+Name            : Microsoft.Notes.exe
+CommandLine     : "C:\Program Files\WindowsApps\Microsoft.MicrosoftStickyNotes_
+                  6.1.4.0_x64__8wekyb3d8bbwe\Microsoft.Notes.exe" -ServerName:A
+                  pp.AppX495fygk72hjw82j58ny5h3nr8hpsd8vs.mca
+ExecutablePath  : C:\Program Files\WindowsApps\Microsoft.MicrosoftStickyNotes_6
+                  .1.4.0_x64__8wekyb3d8bbwe\Microsoft.Notes.exe
+
+ProcessId       : 11644
+ParentProcessId : 1236
+Name            : StartMenuExperienceHost.exe
+CommandLine     : "C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceH
+                  ost_cw5n1h2txyewy\StartMenuExperienceHost.exe" -ServerName:Fu
+                  llTrustApp.AppXykjsye98af63ez2annt9djke8trg8stn.mca
+ExecutablePath  : C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHo
+                  st_cw5n1h2txyewy\StartMenuExperienceHost.exe
+
+ProcessId       : 11668
+ParentProcessId : 1236
+Name            : SearchHost.exe
+CommandLine     : "C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txy
+                  ewy\SearchHost.exe" -ServerName:CortanaUI.AppXstmwaab17q5s3y2
+                  2tp6apqz7a45vwv65.mca
+ExecutablePath  : C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txye
+                  wy\SearchHost.exe
+
+ProcessId       : 11868
+ParentProcessId : 1236
+Name            : Widgets.exe
+CommandLine     : "C:\Program Files\WindowsApps\MicrosoftWindows.Client.WebExpe
+                  rience_526.1202.40.0_x64__cw5n1h2txyewy\Dashboard\Widgets.exe
+                  " -ServerName:Microsoft.Windows.DashboardServer
+ExecutablePath  : C:\Program Files\WindowsApps\MicrosoftWindows.Client.WebExper
+                  ience_526.1202.40.0_x64__cw5n1h2txyewy\Dashboard\Widgets.exe
+
+ProcessId       : 11892
+ParentProcessId : 1236
+Name            : RuntimeBroker.exe
+CommandLine     : C:\Windows\System32\RuntimeBroker.exe -Embedding
+ExecutablePath  : C:\Windows\System32\RuntimeBroker.exe
+
+ProcessId       : 11964
+ParentProcessId : 1236
+Name            : RuntimeBroker.exe
+CommandLine     : C:\Windows\System32\RuntimeBroker.exe -Embedding
+ExecutablePath  : C:\Windows\System32\RuntimeBroker.exe
+
+ProcessId       : 12088
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : C:\WINDOWS\system32\svchost.exe -k UdkSvcGroup
+ExecutablePath  : C:\WINDOWS\system32\svchost.exe
+
+ProcessId       : 12812
+ParentProcessId : 1236
+Name            : UserOOBEBroker.exe
+CommandLine     : C:\Windows\System32\oobe\UserOOBEBroker.exe -Embedding
+ExecutablePath  : C:\Windows\System32\oobe\UserOOBEBroker.exe
+
+ProcessId       : 12780
+ParentProcessId : 1976
+Name            : NisSrv.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 13628
+ParentProcessId : 11668
+Name            : msedgewebview2.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147
+                  .0.3912.86\msedgewebview2.exe" --embedded-browser-webview=1 -
+                  -webview-exe-name=SearchHost.exe --webview-exe-version=2126.5
+                  604.40.0 --user-data-dir="C:\Users\Han\AppData\Local\Packages
+                  \MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebVi
+                  ew" --noerrdialogs --disable-features=msSmartScreenProtection
+                   --edge-webview-enable-mojo-ipcz --enable-features=msEdgeFlue
+                  ntOverlayScrollbar --user-agent="Mozilla/5.0 (Windows NT 10.0
+                  ; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.8246) Appl
+                  eWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safar
+                  i/537.36 Edge/18.26200 IsWebView2/True (WebView2Version 147.0
+                  .3912.86)" --lang=ko --mojo-named-platform-channel-pipe=11668
+                  .13448.2014456247605381861 /pfhostedapp:61fd2097973969ae2e706
+                  3559b46a202c3301c2b
+ExecutablePath  : C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147.
+                  0.3912.86\msedgewebview2.exe
+
+ProcessId       : 13964
+ParentProcessId : 13628
+Name            : msedgewebview2.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147
+                  .0.3912.86\msedgewebview2.exe" --type=crashpad-handler --user
+                  -data-dir=C:\Users\Han\AppData\Local\Packages\MicrosoftWindow
+                  s.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView /prefetch:4 /
+                  pfhostedapp:61fd2097973969ae2e7063559b46a202c3301c2b --monito
+                  r-self-annotation=ptype=crashpad-handler --database=C:\Users\
+                  Han\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h
+                  2txyewy\LocalState\EBWebView\Crashpad --annotation=IsOfficial
+                  Build=1 --annotation=channel= --annotation=chromium-version=1
+                  47.0.7727.118 "--annotation=exe=C:\Program Files (x86)\Micros
+                  oft\EdgeWebView\Application\147.0.3912.86\msedgewebview2.exe"
+                   --annotation=plat=Win64 "--annotation=prod=Edge WebView2" --
+                  annotation=ver=147.0.3912.86 --initial-client-data=0x16c,0x17
+                  0,0x174,0x148,0x17c,0x7ff8ecd20d58,0x7ff8ecd20d64,0x7ff8ecd20
+                  d70
+ExecutablePath  : C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147.
+                  0.3912.86\msedgewebview2.exe
+
+ProcessId       : 9696
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : C:\WINDOWS\system32\svchost.exe -k LocalService -p
+ExecutablePath  : C:\WINDOWS\system32\svchost.exe
+
+ProcessId       : 13580
+ParentProcessId : 13628
+Name            : msedgewebview2.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147
+                  .0.3912.86\msedgewebview2.exe" --type=gpu-process --noerrdial
+                  ogs --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; C
+                  ortana 1.18.9.23723; 10.0.0.0.26200.8246) AppleWebKit/537.36 
+                  (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/1
+                  8.26200 IsWebView2/True (WebView2Version 147.0.3912.86)" --us
+                  er-data-dir="C:\Users\Han\AppData\Local\Packages\MicrosoftWin
+                  dows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView" --webview
+                  -exe-name=SearchHost.exe --webview-exe-version=2126.5604.40.0
+                   --embedded-browser-webview=1 --gpu-preferences=SAAAAAAAAADgA
+                  AAEAAAAAAAAAAAAAGAAAQAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA
+                  AQAAAAAAAAABAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --always-read-
+                  main-dll --metrics-shmem-handle=1916,i,2468432497654267701,13
+                  548866470236820781,262144 --field-trial-handle=1924,i,7452012
+                  537514168323,971215918962909184,262144 --enable-features=msEd
+                  geFluentOverlayScrollbar --disable-features=msSmartScreenProt
+                  ection --variations-seed-version --pseudonymization-salt-hand
+                  le=2040,i,17365275443780893102,17416166704229236863,4 --trace
+                  -process-track-uuid=3190708988185955192 --mojo-platform-chann
+                  el-handle=2028 /prefetch:2 /pfhostedapp:61fd2097973969ae2e706
+                  3559b46a202c3301c2b
+ExecutablePath  : C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147.
+                  0.3912.86\msedgewebview2.exe
+
+ProcessId       : 13636
+ParentProcessId : 13628
+Name            : msedgewebview2.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147
+                  .0.3912.86\msedgewebview2.exe" --type=utility --utility-sub-t
+                  ype=network.mojom.NetworkService --lang=ko --service-sandbox-
+                  type=none --noerrdialogs --user-agent="Mozilla/5.0 (Windows N
+                  T 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.8246
+                  ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102
+                   Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Version
+                   147.0.3912.86)" --user-data-dir="C:\Users\Han\AppData\Local\
+                  Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState
+                  \EBWebView" --webview-exe-name=SearchHost.exe --webview-exe-v
+                  ersion=2126.5604.40.0 --embedded-browser-webview=1 --always-r
+                  ead-main-dll --metrics-shmem-handle=2268,i,125842763468092805
+                  73,10080487276155588873,524288 --field-trial-handle=1924,i,74
+                  52012537514168323,971215918962909184,262144 --enable-features
+                  =msEdgeFluentOverlayScrollbar --disable-features=msSmartScree
+                  nProtection --variations-seed-version --pseudonymization-salt
+                  -handle=2040,i,17365275443780893102,17416166704229236863,4 --
+                  trace-process-track-uuid=3190708989122997041 --mojo-platform-
+                  channel-handle=2360 /prefetch:11 /pfhostedapp:61fd2097973969a
+                  e2e7063559b46a202c3301c2b
+ExecutablePath  : C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147.
+                  0.3912.86\msedgewebview2.exe
+
+ProcessId       : 14240
+ParentProcessId : 13628
+Name            : msedgewebview2.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147
+                  .0.3912.86\msedgewebview2.exe" --type=utility --utility-sub-t
+                  ype=storage.mojom.StorageService --lang=ko --service-sandbox-
+                  type=service --noerrdialogs --user-agent="Mozilla/5.0 (Window
+                  s NT 10.0; Win64; x64; Cortana 1.18.9.23723; 10.0.0.0.26200.8
+                  246) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.
+                  102 Safari/537.36 Edge/18.26200 IsWebView2/True (WebView2Vers
+                  ion 147.0.3912.86)" --user-data-dir="C:\Users\Han\AppData\Loc
+                  al\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalSt
+                  ate\EBWebView" --webview-exe-name=SearchHost.exe --webview-ex
+                  e-version=2126.5604.40.0 --embedded-browser-webview=1 --alway
+                  s-read-main-dll --metrics-shmem-handle=2588,i,430303708492934
+                  7590,5062993643404880182,524288 --field-trial-handle=1924,i,7
+                  452012537514168323,971215918962909184,262144 --enable-feature
+                  s=msEdgeFluentOverlayScrollbar --disable-features=msSmartScre
+                  enProtection --variations-seed-version --pseudonymization-sal
+                  t-handle=2040,i,17365275443780893102,17416166704229236863,4 -
+                  -trace-process-track-uuid=3190708990060038890 --mojo-platform
+                  -channel-handle=2220 /prefetch:13 /pfhostedapp:61fd2097973969
+                  ae2e7063559b46a202c3301c2b
+ExecutablePath  : C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147.
+                  0.3912.86\msedgewebview2.exe
+
+ProcessId       : 14532
+ParentProcessId : 13628
+Name            : msedgewebview2.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147
+                  .0.3912.86\msedgewebview2.exe" --type=renderer --noerrdialogs
+                   --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; Cort
+                  ana 1.18.9.23723; 10.0.0.0.26200.8246) AppleWebKit/537.36 (KH
+                  TML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.2
+                  6200 IsWebView2/True (WebView2Version 147.0.3912.86)" --user-
+                  data-dir="C:\Users\Han\AppData\Local\Packages\MicrosoftWindow
+                  s.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView" --webview-ex
+                  e-name=SearchHost.exe --webview-exe-version=2126.5604.40.0 --
+                  embedded-browser-webview=1 --video-capture-use-gpu-memory-buf
+                  fer --lang=ko --device-scale-factor=1.25 --num-raster-threads
+                  =4 --enable-main-frame-before-activation --renderer-client-id
+                  =5 --js-flags="--expose-gc --ms-user-locale=ko_KR" --time-tic
+                  ks-at-unix-epoch=-1777294796998837 --launch-time-ticks=327257
+                  69 --always-read-main-dll --metrics-shmem-handle=3764,i,48638
+                  92279733772083,12425390152622240512,2097152 --field-trial-han
+                  dle=1924,i,7452012537514168323,971215918962909184,262144 --en
+                  able-features=msEdgeFluentOverlayScrollbar --disable-features
+                  =msSmartScreenProtection --variations-seed-version --pseudony
+                  mization-salt-handle=2040,i,17365275443780893102,174161667042
+                  29236863,4 --trace-process-track-uuid=3190708990997080739 --m
+                  ojo-platform-channel-handle=3948 /pfhostedapp:61fd2097973969a
+                  e2e7063559b46a202c3301c2b /prefetch:1
+ExecutablePath  : C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147.
+                  0.3912.86\msedgewebview2.exe
+
+ProcessId       : 7816
+ParentProcessId : 1236
+Name            : WorkloadsSessionHost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 11048
+ParentProcessId : 2484
+Name            : ctfmon.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 15952
+ParentProcessId : 1236
+Name            : TextInputHost.exe
+CommandLine     : "C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txy
+                  ewy\TextInputHost.exe" -ServerName:InputApp.AppXk0k6mrh4r2q0c
+                  t33a9wgbez0x7v9cz5y.mca
+ExecutablePath  : C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txye
+                  wy\TextInputHost.exe
+
+ProcessId       : 6596
+ParentProcessId : 1236
+Name            : PhoneExperienceHost.exe
+CommandLine     : "C:\Program Files\WindowsApps\Microsoft.YourPhone_1.26022.64.
+                  0_x64__8wekyb3d8bbwe\PhoneExperienceHost.exe" -ComServer:Back
+                  ground -Embedding
+ExecutablePath  : C:\Program Files\WindowsApps\Microsoft.YourPhone_1.26022.64.0
+                  _x64__8wekyb3d8bbwe\PhoneExperienceHost.exe
+
+ProcessId       : 17048
+ParentProcessId : 8768
+Name            : SecurityHealthSystray.exe
+CommandLine     : "C:\Windows\System32\SecurityHealthSystray.exe" 
+ExecutablePath  : C:\Windows\System32\SecurityHealthSystray.exe
+
+ProcessId       : 17068
+ParentProcessId : 1976
+Name            : SecurityHealthService.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 16588
+ParentProcessId : 5784
+Name            : RadeonSoftware.exe
+CommandLine     : "C:\Program Files\AMD\CNext\CNext\Radeonsoftware.exe" atlogon
+ExecutablePath  : C:\Program Files\AMD\CNext\CNext\Radeonsoftware.exe
+
+ProcessId       : 16644
+ParentProcessId : 8768
+Name            : ramdiskws.exe
+CommandLine     : "C:\Program Files\SoftPerfect RAM Disk\ramdiskws.exe" /hide
+ExecutablePath  : C:\Program Files\SoftPerfect RAM Disk\ramdiskws.exe
+
+ProcessId       : 17336
+ParentProcessId : 8768
+Name            : OneDrive.exe
+CommandLine     : "C:\Program Files\Microsoft OneDrive\OneDrive.exe" /backgroun
+                  d
+ExecutablePath  : C:\Program Files\Microsoft OneDrive\OneDrive.exe
+
+ProcessId       : 5764
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 17272
+ParentProcessId : 2500
+Name            : RtkAudUService64.exe
+CommandLine     : "C:\WINDOWS\System32\DriverStore\FileRepository\realtekservic
+                  e.inf_amd64_2b63610c0056caa8\RtkAudUService64.exe" -backgroun
+                  d
+ExecutablePath  : C:\WINDOWS\System32\DriverStore\FileRepository\realtekservice
+                  .inf_amd64_2b63610c0056caa8\RtkAudUService64.exe
+
+ProcessId       : 16432
+ParentProcessId : 16588
+Name            : cncmd.exe
+CommandLine     : "C:\Program Files\AMD\CNext\CNext\cncmd.exe" watch 16588
+ExecutablePath  : C:\Program Files\AMD\CNext\CNext\cncmd.exe
+
+ProcessId       : 7412
+ParentProcessId : 7236
+Name            : cmd.exe
+CommandLine     : "C:\WINDOWS\system32\cmd.exe" /C "C:\Program Files\AMD\CNext\
+                  CNext\AMDRSServ.exe"
+ExecutablePath  : C:\WINDOWS\system32\cmd.exe
+
+ProcessId       : 3208
+ParentProcessId : 7412
+Name            : conhost.exe
+CommandLine     : \??\C:\WINDOWS\system32\conhost.exe 0x4
+ExecutablePath  : C:\WINDOWS\system32\conhost.exe
+
+ProcessId       : 13008
+ParentProcessId : 1976
+Name            : FileSyncHelper.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 17444
+ParentProcessId : 7412
+Name            : AMDRSServ.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 17580
+ParentProcessId : 17444
+Name            : AMDRSSrcExt.exe
+CommandLine     : "C:\Program Files\AMD\CNext\CNext\AMDRSSrcExt.exe" fb28e830-7
+                  c29-4591-b2df-4e16275fa0d9 SOFTWARE\AMD\DVR\Overlays
+ExecutablePath  : C:\Program Files\AMD\CNext\CNext\AMDRSSrcExt.exe
+
+ProcessId       : 17652
+ParentProcessId : 17580
+Name            : conhost.exe
+CommandLine     : \??\C:\WINDOWS\system32\conhost.exe 0x4
+ExecutablePath  : C:\WINDOWS\system32\conhost.exe
+
+ProcessId       : 17688
+ParentProcessId : 17444
+Name            : amdow.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 10248
+ParentProcessId : 18420
+Name            : RazerAppEngine.exe
+CommandLine     :  --url-params=apps=synapse --launch-force-hidden=synapse --au
+                  toStart=1
+ExecutablePath  : C:\Program Files\Razer\RazerAppEngine\app-4.0.662\RazerAppEng
+                  ine.exe
+
+ProcessId       : 17964
+ParentProcessId : 10248
+Name            : RazerAppEngine.exe
+CommandLine     : "C:\Program Files\Razer\RazerAppEngine\app-4.0.662\RazerAppEn
+                  gine.exe" --type=gpu-process --user-data-dir="C:\Users\Han\Ap
+                  pData\Local\Razer\RazerAppEngine\User Data\Default" --gpu-pre
+                  ferences=WAAAAAAAAADgAAAcAAAAAAAAAAAAAAAAAABgAAEAAAA4AAAAAAAA
+                  AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAYAAAAA
+                  AAAAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --field-trial-handle=
+                  2084,i,2204423285523557193,5022964882408707390,262144 --enabl
+                  e-features=MediaFoundationD3D11VideoCapture,kWebSQLAccess --d
+                  isable-features=SpareRendererForSitePerProcess,WinDelaySpellc
+                  heckServiceInit,WinRetrieveSuggestionsOnlyOnDemand --variatio
+                  ns-seed-version --mojo-platform-channel-handle=2080 /prefetch
+                  :2
+ExecutablePath  : C:\Program Files\Razer\RazerAppEngine\app-4.0.662\RazerAppEng
+                  ine.exe
+
+ProcessId       : 18048
+ParentProcessId : 10248
+Name            : RazerAppEngine.exe
+CommandLine     : "C:\Program Files\Razer\RazerAppEngine\app-4.0.662\RazerAppEn
+                  gine.exe" --type=utility --utility-sub-type=network.mojom.Net
+                  workService --lang=ko --service-sandbox-type=none --try-suppo
+                  rted-channel-layouts --user-data-dir="C:\Users\Han\AppData\Lo
+                  cal\Razer\RazerAppEngine\User Data\Default" --secure-schemes=
+                  sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes=sent
+                  ry-ipc --fetch-schemes=sentry-ipc --field-trial-handle=2340,i
+                  ,2204423285523557193,5022964882408707390,262144 --enable-feat
+                  ures=MediaFoundationD3D11VideoCapture,kWebSQLAccess --disable
+                  -features=SpareRendererForSitePerProcess,WinDelaySpellcheckSe
+                  rviceInit,WinRetrieveSuggestionsOnlyOnDemand --variations-see
+                  d-version --mojo-platform-channel-handle=2336 /prefetch:3
+ExecutablePath  : C:\Program Files\Razer\RazerAppEngine\app-4.0.662\RazerAppEng
+                  ine.exe
+
+ProcessId       : 15308
+ParentProcessId : 10248
+Name            : RazerAppEngine.exe
+CommandLine     : "C:\Program Files\Razer\RazerAppEngine\app-4.0.662\RazerAppEn
+                  gine.exe" --type=renderer --user-data-dir="C:\Users\Han\AppDa
+                  ta\Local\Razer\RazerAppEngine\User Data\Default" --secure-sch
+                  emes=sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes
+                  =sentry-ipc --fetch-schemes=sentry-ipc --app-path="C:\Program
+                   Files\Razer\RazerAppEngine\app-4.0.662\resources\app.asar" -
+                  -enable-sandbox --js-flags=--expose-gc --try-supported-channe
+                  l-layouts --video-capture-use-gpu-memory-buffer --lang=ko --d
+                  evice-scale-factor=1.25 --num-raster-threads=4 --enable-zero-
+                  copy --enable-main-frame-before-activation --renderer-client-
+                  id=5 --time-ticks-at-unix-epoch=-1777294796993168 --launch-ti
+                  me-ticks=65553496 --field-trial-handle=4832,i,220442328552355
+                  7193,5022964882408707390,262144 --enable-features=MediaFounda
+                  tionD3D11VideoCapture,kWebSQLAccess --disable-features=SpareR
+                  endererForSitePerProcess,WinDelaySpellcheckServiceInit,WinRet
+                  rieveSuggestionsOnlyOnDemand --variations-seed-version --mojo
+                  -platform-channel-handle=4852 --razer-page-name=win-systray-l
+                  eft /prefetch:1
+ExecutablePath  : C:\Program Files\Razer\RazerAppEngine\app-4.0.662\RazerAppEng
+                  ine.exe
+
+ProcessId       : 18224
+ParentProcessId : 10248
+Name            : RzEngineMon.exe
+CommandLine     : C:\Program Files\Razer\RazerAppEngine\app-4.0.662\CommonDLL\R
+                  zEngineMon.exe --ppid 10248
+ExecutablePath  : C:\Program Files\Razer\RazerAppEngine\app-4.0.662\CommonDLL\R
+                  zEngineMon.exe
+
+ProcessId       : 18452
+ParentProcessId : 1976
+Name            : razer_elevation_service.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 18788
+ParentProcessId : 10248
+Name            : RazerAppEngine.exe
+CommandLine     : "C:\Program Files\Razer\RazerAppEngine\app-4.0.662\RazerAppEn
+                  gine.exe" --type=renderer --user-data-dir="C:\Users\Han\AppDa
+                  ta\Local\Razer\RazerAppEngine\User Data\Default" --secure-sch
+                  emes=sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes
+                  =sentry-ipc --fetch-schemes=sentry-ipc --app-path="C:\Program
+                   Files\Razer\RazerAppEngine\app-4.0.662\resources\app.asar" -
+                  -enable-sandbox --js-flags=--expose-gc --try-supported-channe
+                  l-layouts --video-capture-use-gpu-memory-buffer --lang=ko --d
+                  evice-scale-factor=1.25 --num-raster-threads=4 --enable-zero-
+                  copy --enable-main-frame-before-activation --renderer-client-
+                  id=7 --time-ticks-at-unix-epoch=-1777294796993168 --launch-ti
+                  me-ticks=67347312 --field-trial-handle=5612,i,220442328552355
+                  7193,5022964882408707390,262144 --enable-features=MediaFounda
+                  tionD3D11VideoCapture,kWebSQLAccess --disable-features=SpareR
+                  endererForSitePerProcess,WinDelaySpellcheckServiceInit,WinRet
+                  rieveSuggestionsOnlyOnDemand --variations-seed-version --mojo
+                  -platform-channel-handle=5488 --razer-page-name=win-backgroun
+                  d-manager /prefetch:1
+ExecutablePath  : C:\Program Files\Razer\RazerAppEngine\app-4.0.662\RazerAppEng
+                  ine.exe
+
+ProcessId       : 18856
+ParentProcessId : 10248
+Name            : RazerAppEngine.exe
+CommandLine     : "C:\Program Files\Razer\RazerAppEngine\app-4.0.662\RazerAppEn
+                  gine.exe" --type=renderer --user-data-dir="C:\Users\Han\AppDa
+                  ta\Local\Razer\RazerAppEngine\User Data\Default" --secure-sch
+                  emes=sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes
+                  =sentry-ipc --fetch-schemes=sentry-ipc --app-path="C:\Program
+                   Files\Razer\RazerAppEngine\app-4.0.662\resources\app.asar" -
+                  -enable-sandbox --js-flags=--expose-gc --try-supported-channe
+                  l-layouts --video-capture-use-gpu-memory-buffer --lang=ko --d
+                  evice-scale-factor=1.25 --num-raster-threads=4 --enable-zero-
+                  copy --enable-main-frame-before-activation --renderer-client-
+                  id=8 --time-ticks-at-unix-epoch=-1777294796993168 --launch-ti
+                  me-ticks=67379117 --field-trial-handle=5580,i,220442328552355
+                  7193,5022964882408707390,262144 --enable-features=MediaFounda
+                  tionD3D11VideoCapture,kWebSQLAccess --disable-features=SpareR
+                  endererForSitePerProcess,WinDelaySpellcheckServiceInit,WinRet
+                  rieveSuggestionsOnlyOnDemand --variations-seed-version --mojo
+                  -platform-channel-handle=5572 --razer-page-name=win-notificat
+                  ion-manager /prefetch:1
+ExecutablePath  : C:\Program Files\Razer\RazerAppEngine\app-4.0.662\RazerAppEng
+                  ine.exe
+
+ProcessId       : 19264
+ParentProcessId : 10248
+Name            : RazerAppEngine.exe
+CommandLine     : "C:\Program Files\Razer\RazerAppEngine\app-4.0.662\RazerAppEn
+                  gine.exe" --type=renderer --user-data-dir="C:\Users\Han\AppDa
+                  ta\Local\Razer\RazerAppEngine\User Data\Default" --secure-sch
+                  emes=sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes
+                  =sentry-ipc --fetch-schemes=sentry-ipc --app-path="C:\Program
+                   Files\Razer\RazerAppEngine\app-4.0.662\resources\app.asar" -
+                  -enable-sandbox --js-flags=--expose-gc --try-supported-channe
+                  l-layouts --video-capture-use-gpu-memory-buffer --lang=ko --d
+                  evice-scale-factor=1.25 --num-raster-threads=4 --enable-zero-
+                  copy --enable-main-frame-before-activation --renderer-client-
+                  id=12 --time-ticks-at-unix-epoch=-1777294796993168 --launch-t
+                  ime-ticks=73064435 --field-trial-handle=6688,i,22044232855235
+                  57193,5022964882408707390,262144 --enable-features=MediaFound
+                  ationD3D11VideoCapture,kWebSQLAccess --disable-features=Spare
+                  RendererForSitePerProcess,WinDelaySpellcheckServiceInit,WinRe
+                  trieveSuggestionsOnlyOnDemand --variations-seed-version --moj
+                  o-platform-channel-handle=6576 --razer-page-name=win-lighting
+                  -engine /prefetch:1
+ExecutablePath  : C:\Program Files\Razer\RazerAppEngine\app-4.0.662\RazerAppEng
+                  ine.exe
+
+ProcessId       : 19284
+ParentProcessId : 10248
+Name            : RazerAppEngine.exe
+CommandLine     : "C:\Program Files\Razer\RazerAppEngine\app-4.0.662\RazerAppEn
+                  gine.exe" --type=renderer --user-data-dir="C:\Users\Han\AppDa
+                  ta\Local\Razer\RazerAppEngine\User Data\Default" --secure-sch
+                  emes=sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes
+                  =sentry-ipc --fetch-schemes=sentry-ipc --app-path="C:\Program
+                   Files\Razer\RazerAppEngine\app-4.0.662\resources\app.asar" -
+                  -enable-sandbox --js-flags=--expose-gc --try-supported-channe
+                  l-layouts --video-capture-use-gpu-memory-buffer --lang=ko --d
+                  evice-scale-factor=1.25 --num-raster-threads=4 --enable-zero-
+                  copy --enable-main-frame-before-activation --renderer-client-
+                  id=13 --time-ticks-at-unix-epoch=-1777294796993168 --launch-t
+                  ime-ticks=73085084 --field-trial-handle=5944,i,22044232855235
+                  57193,5022964882408707390,262144 --enable-features=MediaFound
+                  ationD3D11VideoCapture,kWebSQLAccess --disable-features=Spare
+                  RendererForSitePerProcess,WinDelaySpellcheckServiceInit,WinRe
+                  trieveSuggestionsOnlyOnDemand --variations-seed-version --moj
+                  o-platform-channel-handle=6720 --razer-page-name=win-gms-prox
+                  y /prefetch:1
+ExecutablePath  : C:\Program Files\Razer\RazerAppEngine\app-4.0.662\RazerAppEng
+                  ine.exe
+
+ProcessId       : 15628
+ParentProcessId : 8768
+Name            : KakaoTalk.exe
+CommandLine     : "C:\Program Files\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
+ExecutablePath  : C:\Program Files\Kakao\KakaoTalk\KakaoTalk.exe
+
+ProcessId       : 15556
+ParentProcessId : 8768
+Name            : picpick.exe
+CommandLine     : "C:\Program Files\PicPick\picpick.exe" /startup
+ExecutablePath  : C:\Program Files\PicPick\picpick.exe
+
+ProcessId       : 7988
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : C:\WINDOWS\system32\svchost.exe -k PrintWorkflow
+ExecutablePath  : C:\WINDOWS\system32\svchost.exe
+
+ProcessId       : 14244
+ParentProcessId : 8768
+Name            : mscopilot.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Copilot\Application\mscopil
+                  ot.exe" --no-startup-window --win-session-start
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Copilot\Application\mscopilo
+                  t.exe
+
+ProcessId       : 15176
+ParentProcessId : 14244
+Name            : mscopilot.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Copilot\Application\mscopil
+                  ot.exe" --type=crashpad-handler "--user-data-dir=C:\Users\Han
+                  \AppData\Local\Microsoft\Copilot\User Data" /prefetch:4 --mon
+                  itor-self-annotation=ptype=crashpad-handler "--database=C:\Us
+                  ers\Han\AppData\Local\Microsoft\Copilot\User Data\Crashpad" -
+                  -annotation=IsOfficialBuild=1 --annotation=channel= --annotat
+                  ion=chromium-version=147.0.7727.102 "--annotation=exe=C:\Prog
+                  ram Files (x86)\Microsoft\Copilot\Application\mscopilot.exe" 
+                  --annotation=plat=Win64 --annotation=prod=Copilot --annotatio
+                  n=ver=147.0.3912.84 --initial-client-data=0x23c,0x26c,0x270,0
+                  x238,0x278,0x7ff8906e0d58,0x7ff8906e0d64,0x7ff8906e0d70
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Copilot\Application\mscopilo
+                  t.exe
+
+ProcessId       : 19240
+ParentProcessId : 14244
+Name            : mscopilot.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Copilot\Application\mscopil
+                  ot.exe" --type=gpu-process --gpu-preferences=SAAAAAAAAADgAAAE
+                  AAAAAAAAAAAAAGAAAQAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAQA
+                  AAAAAAAABAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --startup-read-ma
+                  in-dll --metrics-shmem-handle=2384,i,2127882474137616441,1339
+                  3566718392749022,262144 --field-trial-handle=2480,i,137311622
+                  8919732378,12819830242663549793,262144 --variations-seed-vers
+                  ion --pseudonymization-salt-handle=2512,i,1403747317110278764
+                  6,16720006078290366975,4 --trace-process-track-uuid=319070898
+                  8185955192 --mojo-platform-channel-handle=2368 /prefetch:2
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Copilot\Application\mscopilo
+                  t.exe
+
+ProcessId       : 19176
+ParentProcessId : 14244
+Name            : mscopilot.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Copilot\Application\mscopil
+                  ot.exe" --type=utility --utility-sub-type=network.mojom.Netwo
+                  rkService --lang=ko --service-sandbox-type=none --startup-rea
+                  d-main-dll --metrics-shmem-handle=2576,i,3948096078461735773,
+                  5706291010708199925,524288 --field-trial-handle=2480,i,137311
+                  6228919732378,12819830242663549793,262144 --variations-seed-v
+                  ersion --pseudonymization-salt-handle=2512,i,1403747317110278
+                  7646,16720006078290366975,4 --trace-process-track-uuid=319070
+                  8989122997041 --mojo-platform-channel-handle=2740 /prefetch:1
+                  1
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Copilot\Application\mscopilo
+                  t.exe
+
+ProcessId       : 15792
+ParentProcessId : 14244
+Name            : mscopilot.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Copilot\Application\mscopil
+                  ot.exe" --type=utility --utility-sub-type=storage.mojom.Stora
+                  geService --lang=ko --service-sandbox-type=service --startup-
+                  read-main-dll --metrics-shmem-handle=2216,i,10595086900292665
+                  131,11704232299917299703,524288 --field-trial-handle=2480,i,1
+                  373116228919732378,12819830242663549793,262144 --variations-s
+                  eed-version --pseudonymization-salt-handle=2512,i,14037473171
+                  102787646,16720006078290366975,4 --trace-process-track-uuid=3
+                  190708990060038890 --mojo-platform-channel-handle=2880 /prefe
+                  tch:13
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Copilot\Application\mscopilo
+                  t.exe
+
+ProcessId       : 15716
+ParentProcessId : 15628
+Name            : msedgewebview2.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147
+                  .0.3912.86\msedgewebview2.exe" --embedded-browser-webview=1 -
+                  -webview-exe-name=KakaoTalk.exe --webview-exe-version=26.3.1.
+                  5062 --user-data-dir="C:\Users\Han\AppData\Local\Kakao\KakaoT
+                  alk\users\0f80a7cde7a05e037f669841d0573fd261a0da30\wv\EBWebVi
+                  ew" --noerrdialogs --embedded-browser-webview-dpi-awareness=2
+                   --edge-webview-disable-crash-reporting=1 --disable-gpu --ena
+                  ble-features=ThirdPartyStoragePartitioning,PartitionedCookies
+                   --mojo-named-platform-channel-pipe=15628.15720.4106095081155
+                  442525 /pfhostedapp:9cf3df7925782c462f0e4abcf5eedc8f2a5695f3
+ExecutablePath  : C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147.
+                  0.3912.86\msedgewebview2.exe
+
+ProcessId       : 14360
+ParentProcessId : 15716
+Name            : msedgewebview2.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147
+                  .0.3912.86\msedgewebview2.exe" --type=crashpad-handler --user
+                  -data-dir=C:\Users\Han\AppData\Local\Kakao\KakaoTalk\users\0f
+                  80a7cde7a05e037f669841d0573fd261a0da30\wv\EBWebView /prefetch
+                  :4 /pfhostedapp:9cf3df7925782c462f0e4abcf5eedc8f2a5695f3 --mo
+                  nitor-self-annotation=ptype=crashpad-handler --database=C:\Us
+                  ers\Han\AppData\Local\Kakao\KakaoTalk\users\0f80a7cde7a05e037
+                  f669841d0573fd261a0da30\wv\EBWebView\Crashpad --annotation=Is
+                  OfficialBuild=1 --annotation=channel= --annotation=chromium-v
+                  ersion=147.0.7727.118 "--annotation=exe=C:\Program Files (x86
+                  )\Microsoft\EdgeWebView\Application\147.0.3912.86\msedgewebvi
+                  ew2.exe" --annotation=plat=Win64 "--annotation=prod=Edge WebV
+                  iew2" --annotation=ver=147.0.3912.86 --initial-client-data=0x
+                  17c,0x180,0x184,0x158,0x18c,0x7ff8ecd20d58,0x7ff8ecd20d64,0x7
+                  ff8ecd20d70
+ExecutablePath  : C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147.
+                  0.3912.86\msedgewebview2.exe
+
+ProcessId       : 3876
+ParentProcessId : 15716
+Name            : msedgewebview2.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147
+                  .0.3912.86\msedgewebview2.exe" --type=gpu-process --noerrdial
+                  ogs --user-data-dir="C:\Users\Han\AppData\Local\Kakao\KakaoTa
+                  lk\users\0f80a7cde7a05e037f669841d0573fd261a0da30\wv\EBWebVie
+                  w" --webview-exe-name=KakaoTalk.exe --webview-exe-version=26.
+                  3.1.5062 --embedded-browser-webview=1 --embedded-browser-webv
+                  iew-dpi-awareness=2 --gpu-preferences=SAAAAAAAAADgAAAEAAAAAAA
+                  AAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAQAAAAAAAA
+                  ABAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --use-gl=angle --use-ang
+                  le=d3d11-warp-webgl --startup-read-main-dll --metrics-shmem-h
+                  andle=1788,i,17422051719744849374,16204170414883511896,262144
+                   --field-trial-handle=1860,i,12447129896770849,13424154916176
+                  51374,262144 --enable-features=PartitionedCookies,ThirdPartyS
+                  toragePartitioning --variations-seed-version --pseudonymizati
+                  on-salt-handle=1872,i,17057775110706538834,153394041042384106
+                  97,4 --trace-process-track-uuid=3190708988185955192 --mojo-pl
+                  atform-channel-handle=1852 /prefetch:2 /pfhostedapp:9cf3df792
+                  5782c462f0e4abcf5eedc8f2a5695f3
+ExecutablePath  : C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147.
+                  0.3912.86\msedgewebview2.exe
+
+ProcessId       : 3256
+ParentProcessId : 15716
+Name            : msedgewebview2.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147
+                  .0.3912.86\msedgewebview2.exe" --type=utility --utility-sub-t
+                  ype=network.mojom.NetworkService --lang=ko --service-sandbox-
+                  type=none --noerrdialogs --user-data-dir="C:\Users\Han\AppDat
+                  a\Local\Kakao\KakaoTalk\users\0f80a7cde7a05e037f669841d0573fd
+                  261a0da30\wv\EBWebView" --webview-exe-name=KakaoTalk.exe --we
+                  bview-exe-version=26.3.1.5062 --embedded-browser-webview=1 --
+                  embedded-browser-webview-dpi-awareness=2 --startup-read-main-
+                  dll --metrics-shmem-handle=2168,i,14620397685562815087,109710
+                  79221036455497,524288 --field-trial-handle=1860,i,12447129896
+                  770849,1342415491617651374,262144 --enable-features=Partition
+                  edCookies,ThirdPartyStoragePartitioning --variations-seed-ver
+                  sion --pseudonymization-salt-handle=1872,i,170577751107065388
+                  34,15339404104238410697,4 --trace-process-track-uuid=31907089
+                  89122997041 --mojo-platform-channel-handle=2132 /prefetch:11 
+                  /pfhostedapp:9cf3df7925782c462f0e4abcf5eedc8f2a5695f3
+ExecutablePath  : C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147.
+                  0.3912.86\msedgewebview2.exe
+
+ProcessId       : 5452
+ParentProcessId : 15716
+Name            : msedgewebview2.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147
+                  .0.3912.86\msedgewebview2.exe" --type=utility --utility-sub-t
+                  ype=storage.mojom.StorageService --lang=ko --service-sandbox-
+                  type=service --noerrdialogs --user-data-dir="C:\Users\Han\App
+                  Data\Local\Kakao\KakaoTalk\users\0f80a7cde7a05e037f669841d057
+                  3fd261a0da30\wv\EBWebView" --webview-exe-name=KakaoTalk.exe -
+                  -webview-exe-version=26.3.1.5062 --embedded-browser-webview=1
+                   --embedded-browser-webview-dpi-awareness=2 --startup-read-ma
+                  in-dll --metrics-shmem-handle=2292,i,11681338880261939450,638
+                  2825008332169843,524288 --field-trial-handle=1860,i,124471298
+                  96770849,1342415491617651374,262144 --enable-features=Partiti
+                  onedCookies,ThirdPartyStoragePartitioning --variations-seed-v
+                  ersion --pseudonymization-salt-handle=1872,i,1705777511070653
+                  8834,15339404104238410697,4 --trace-process-track-uuid=319070
+                  8990060038890 --mojo-platform-channel-handle=2304 /prefetch:1
+                  3 /pfhostedapp:9cf3df7925782c462f0e4abcf5eedc8f2a5695f3
+ExecutablePath  : C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147.
+                  0.3912.86\msedgewebview2.exe
+
+ProcessId       : 19644
+ParentProcessId : 15716
+Name            : msedgewebview2.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147
+                  .0.3912.86\msedgewebview2.exe" --type=renderer --noerrdialogs
+                   --user-data-dir="C:\Users\Han\AppData\Local\Kakao\KakaoTalk\
+                  users\0f80a7cde7a05e037f669841d0573fd261a0da30\wv\EBWebView" 
+                  --webview-exe-name=KakaoTalk.exe --webview-exe-version=26.3.1
+                  .5062 --embedded-browser-webview=1 --embedded-browser-webview
+                  -dpi-awareness=2 --disable-gpu-compositing --video-capture-us
+                  e-gpu-memory-buffer --lang=ko --device-scale-factor=1.25 --nu
+                  m-raster-threads=4 --enable-main-frame-before-activation --re
+                  nderer-client-id=6 --js-flags="--expose-gc --ms-user-locale=k
+                  o_KR" --time-ticks-at-unix-epoch=-1777294796998837 --launch-t
+                  ime-ticks=86369698 --skip-read-main-dll --metrics-shmem-handl
+                  e=5204,i,11076690042767404181,10916924939697694146,2097152 --
+                  field-trial-handle=1860,i,12447129896770849,13424154916176513
+                  74,262144 --enable-features=PartitionedCookies,ThirdPartyStor
+                  agePartitioning --variations-seed-version --pseudonymization-
+                  salt-handle=1872,i,17057775110706538834,15339404104238410697,
+                  4 --trace-process-track-uuid=3190708991934122588 --mojo-platf
+                  orm-channel-handle=5212 /pfhostedapp:9cf3df7925782c462f0e4abc
+                  f5eedc8f2a5695f3 /prefetch:1
+ExecutablePath  : C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147.
+                  0.3912.86\msedgewebview2.exe
+
+ProcessId       : 19932
+ParentProcessId : 1236
+Name            : WidgetService.exe
+CommandLine     : "C:\Program Files\WindowsApps\Microsoft.WidgetsPlatformRuntim
+                  e_1.6.14.0_x64__8wekyb3d8bbwe\WidgetService\WidgetService.exe
+                  " -RegisterProcessAsComServer -Embedding
+ExecutablePath  : C:\Program Files\WindowsApps\Microsoft.WidgetsPlatformRuntime
+                  _1.6.14.0_x64__8wekyb3d8bbwe\WidgetService\WidgetService.exe
+
+ProcessId       : 20092
+ParentProcessId : 11868
+Name            : msedgewebview2.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147
+                  .0.3912.86\msedgewebview2.exe" --embedded-browser-webview=1 -
+                  -webview-exe-name=Widgets.exe --webview-exe-version=526.1202.
+                  10.0 --user-data-dir="C:\Users\Han\AppData\Local\Packages\Mic
+                  rosoftWindows.Client.WebExperience_cw5n1h2txyewy\LocalState\E
+                  BWebView" --noerrdialogs --disk-cache-size=52428800 --edge-we
+                  bview-is-background --lang=ko-KR --mojo-named-platform-channe
+                  l-pipe=11868.20088.10207798979979799586 /pfhostedapp:44312bea
+                  bee3b93feba7d5ad2ab7f3d18a9b7934
+ExecutablePath  : C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147.
+                  0.3912.86\msedgewebview2.exe
+
+ProcessId       : 20124
+ParentProcessId : 20092
+Name            : msedgewebview2.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147
+                  .0.3912.86\msedgewebview2.exe" --type=crashpad-handler --user
+                  -data-dir=C:\Users\Han\AppData\Local\Packages\MicrosoftWindow
+                  s.Client.WebExperience_cw5n1h2txyewy\LocalState\EBWebView /pr
+                  efetch:4 /pfhostedapp:44312beabee3b93feba7d5ad2ab7f3d18a9b793
+                  4 --monitor-self-annotation=ptype=crashpad-handler --database
+                  =C:\Users\Han\AppData\Local\Packages\MicrosoftWindows.Client.
+                  WebExperience_cw5n1h2txyewy\LocalState\EBWebView\Crashpad --a
+                  nnotation=IsOfficialBuild=1 --annotation=channel= --annotatio
+                  n=chromium-version=147.0.7727.118 "--annotation=exe=C:\Progra
+                  m Files (x86)\Microsoft\EdgeWebView\Application\147.0.3912.86
+                  \msedgewebview2.exe" --annotation=plat=Win64 "--annotation=pr
+                  od=Edge WebView2" --annotation=ver=147.0.3912.86 --initial-cl
+                  ient-data=0x174,0x178,0x17c,0x150,0x110,0x7ff8ecd20d58,0x7ff8
+                  ecd20d64,0x7ff8ecd20d70
+ExecutablePath  : C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147.
+                  0.3912.86\msedgewebview2.exe
+
+ProcessId       : 20312
+ParentProcessId : 20092
+Name            : msedgewebview2.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147
+                  .0.3912.86\msedgewebview2.exe" --type=gpu-process --noerrdial
+                  ogs --user-data-dir="C:\Users\Han\AppData\Local\Packages\Micr
+                  osoftWindows.Client.WebExperience_cw5n1h2txyewy\LocalState\EB
+                  WebView" --webview-exe-name=Widgets.exe --webview-exe-version
+                  =526.1202.10.0 --embedded-browser-webview=1 --gpu-preferences
+                  =SAAAAAAAAADgAAAEAAAAAAAAAAAAAGAAAQAAAAAAAAAAAAAAAAAAAAIAAAAA
+                  AAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== 
+                  --startup-read-main-dll --metrics-shmem-handle=1876,i,7456440
+                  573587704748,10198027017291656595,262144 --field-trial-handle
+                  =2016,i,12020957675856789599,12515902795769824593,262144 --va
+                  riations-seed-version --pseudonymization-salt-handle=2020,i,2
+                  773476048290879235,6901850805624722354,4 --trace-process-trac
+                  k-uuid=3190708988185955192 --mojo-platform-channel-handle=201
+                  2 /prefetch:2 /pfhostedapp:44312beabee3b93feba7d5ad2ab7f3d18a
+                  9b7934
+ExecutablePath  : C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147.
+                  0.3912.86\msedgewebview2.exe
+
+ProcessId       : 20340
+ParentProcessId : 20092
+Name            : msedgewebview2.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147
+                  .0.3912.86\msedgewebview2.exe" --type=utility --utility-sub-t
+                  ype=network.mojom.NetworkService --lang=ko --service-sandbox-
+                  type=none --noerrdialogs --user-data-dir="C:\Users\Han\AppDat
+                  a\Local\Packages\MicrosoftWindows.Client.WebExperience_cw5n1h
+                  2txyewy\LocalState\EBWebView" --webview-exe-name=Widgets.exe 
+                  --webview-exe-version=526.1202.10.0 --embedded-browser-webvie
+                  w=1 --startup-read-main-dll --metrics-shmem-handle=2396,i,140
+                  28156146601255591,2076585296591491714,524288 --field-trial-ha
+                  ndle=2016,i,12020957675856789599,12515902795769824593,262144 
+                  --variations-seed-version --pseudonymization-salt-handle=2020
+                  ,i,2773476048290879235,6901850805624722354,4 --trace-process-
+                  track-uuid=3190708989122997041 --mojo-platform-channel-handle
+                  =2388 /prefetch:11 /pfhostedapp:44312beabee3b93feba7d5ad2ab7f
+                  3d18a9b7934
+ExecutablePath  : C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147.
+                  0.3912.86\msedgewebview2.exe
+
+ProcessId       : 20392
+ParentProcessId : 20092
+Name            : msedgewebview2.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147
+                  .0.3912.86\msedgewebview2.exe" --type=utility --utility-sub-t
+                  ype=storage.mojom.StorageService --lang=ko --service-sandbox-
+                  type=service --noerrdialogs --user-data-dir="C:\Users\Han\App
+                  Data\Local\Packages\MicrosoftWindows.Client.WebExperience_cw5
+                  n1h2txyewy\LocalState\EBWebView" --webview-exe-name=Widgets.e
+                  xe --webview-exe-version=526.1202.10.0 --embedded-browser-web
+                  view=1 --startup-read-main-dll --metrics-shmem-handle=2412,i,
+                  2934679120919173956,510698419267841732,524288 --field-trial-h
+                  andle=2016,i,12020957675856789599,12515902795769824593,262144
+                   --variations-seed-version --pseudonymization-salt-handle=202
+                  0,i,2773476048290879235,6901850805624722354,4 --trace-process
+                  -track-uuid=3190708990060038890 --mojo-platform-channel-handl
+                  e=2468 /prefetch:13 /pfhostedapp:44312beabee3b93feba7d5ad2ab7
+                  f3d18a9b7934
+ExecutablePath  : C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147.
+                  0.3912.86\msedgewebview2.exe
+
+ProcessId       : 6212
+ParentProcessId : 20092
+Name            : msedgewebview2.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147
+                  .0.3912.86\msedgewebview2.exe" --type=renderer --noerrdialogs
+                   --user-data-dir="C:\Users\Han\AppData\Local\Packages\Microso
+                  ftWindows.Client.WebExperience_cw5n1h2txyewy\LocalState\EBWeb
+                  View" --webview-exe-name=Widgets.exe --webview-exe-version=52
+                  6.1202.10.0 --embedded-browser-webview=1 --video-capture-use-
+                  gpu-memory-buffer --lang=ko --device-scale-factor=1.25 --num-
+                  raster-threads=4 --enable-main-frame-before-activation --rend
+                  erer-client-id=5 --js-flags="--expose-gc --ms-user-locale=ko_
+                  KR" --time-ticks-at-unix-epoch=-1777294796998837 --launch-tim
+                  e-ticks=93628374 --ssd-no-pressure-read-main-dll --metrics-sh
+                  mem-handle=4040,i,10969277068516424436,8858863184514614845,20
+                  97152 --field-trial-handle=2016,i,12020957675856789599,125159
+                  02795769824593,262144 --variations-seed-version --pseudonymiz
+                  ation-salt-handle=2020,i,2773476048290879235,6901850805624722
+                  354,4 --trace-process-track-uuid=3190708990997080739 --mojo-p
+                  latform-channel-handle=4056 /pfhostedapp:44312beabee3b93feba7
+                  d5ad2ab7f3d18a9b7934 /prefetch:1
+ExecutablePath  : C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147.
+                  0.3912.86\msedgewebview2.exe
+
+ProcessId       : 20488
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 20636
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 19740
+ParentProcessId : 1236
+Name            : FileCoAuth.exe
+CommandLine     : "C:\Program Files\Microsoft OneDrive\26.062.0402.0002\FileCoA
+                  uth.exe" -Embedding
+ExecutablePath  : C:\Program Files\Microsoft OneDrive\26.062.0402.0002\FileCoAu
+                  th.exe
+
+ProcessId       : 13204
+ParentProcessId : 1236
+Name            : WorkloadsSessionHost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 13316
+ParentProcessId : 1236
+Name            : WorkloadsSessionHost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 20928
+ParentProcessId : 1236
+Name            : SystemSettings.exe
+CommandLine     : "C:\Windows\ImmersiveControlPanel\SystemSettings.exe" -Server
+                  Name:microsoft.windows.immersivecontrolpanel
+ExecutablePath  : C:\Windows\ImmersiveControlPanel\SystemSettings.exe
+
+ProcessId       : 17292
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : C:\WINDOWS\system32\svchost.exe -k DevicesFlow
+ExecutablePath  : C:\WINDOWS\system32\svchost.exe
+
+ProcessId       : 11476
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 21480
+ParentProcessId : 1236
+Name            : AppActions.exe
+CommandLine     : "C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txy
+                  ewy\AppActions.exe" -Embedding
+ExecutablePath  : C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txye
+                  wy\AppActions.exe
+
+ProcessId       : 20460
+ParentProcessId : 1236
+Name            : LockApp.exe
+CommandLine     : "C:\WINDOWS\SystemApps\Microsoft.LockApp_cw5n1h2txyewy\LockAp
+                  p.exe" -ServerName:WindowsDefaultLockScreen.AppX7y4nbzq37zn4k
+                  s9k7amqjywdat7d3j2z.mca
+ExecutablePath  : C:\WINDOWS\SystemApps\Microsoft.LockApp_cw5n1h2txyewy\LockApp
+                  .exe
+
+ProcessId       : 10464
+ParentProcessId : 1236
+Name            : RuntimeBroker.exe
+CommandLine     : C:\Windows\System32\RuntimeBroker.exe -Embedding
+ExecutablePath  : C:\Windows\System32\RuntimeBroker.exe
+
+ProcessId       : 7020
+ParentProcessId : 5960
+Name            : powershell.exe
+CommandLine     : "C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe" -
+                  NoExit -NoProfile -ExecutionPolicy Bypass -Command & "C:\User
+                  s\Han\.unsloth\studio\unsloth_studio\Scripts\unsloth.exe" stu
+                  dio -H 0.0.0.0 -p 8888 
+ExecutablePath  : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+
+ProcessId       : 10396
+ParentProcessId : 7020
+Name            : conhost.exe
+CommandLine     : \??\C:\WINDOWS\system32\conhost.exe 0x4
+ExecutablePath  : C:\WINDOWS\system32\conhost.exe
+
+ProcessId       : 20568
+ParentProcessId : 1236
+Name            : OpenConsole.exe
+CommandLine     : "C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.24.
+                  10921.0_x64__8wekyb3d8bbwe\OpenConsole.exe" -Embedding
+ExecutablePath  : C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.24.1
+                  0921.0_x64__8wekyb3d8bbwe\OpenConsole.exe
+
+ProcessId       : 9156
+ParentProcessId : 1236
+Name            : WindowsTerminal.exe
+CommandLine     : "C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.24.
+                  10921.0_x64__8wekyb3d8bbwe\WindowsTerminal.exe" -Embedding
+ExecutablePath  : C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.24.1
+                  0921.0_x64__8wekyb3d8bbwe\WindowsTerminal.exe
+
+ProcessId       : 16720
+ParentProcessId : 7020
+Name            : unsloth.exe
+CommandLine     : "C:\Users\Han\.unsloth\studio\unsloth_studio\Scripts\unsloth.
+                  exe" studio -H 0.0.0.0 -p 8888
+ExecutablePath  : C:\Users\Han\.unsloth\studio\unsloth_studio\Scripts\unsloth.e
+                  xe
+
+ProcessId       : 19744
+ParentProcessId : 16720
+Name            : python.exe
+CommandLine     : "C:\Users\Han\.unsloth\studio\unsloth_studio\Scripts\python.e
+                  xe" "C:\Users\Han\.unsloth\studio\unsloth_studio\Scripts\unsl
+                  oth.exe" studio -H 0.0.0.0 -p 8888
+ExecutablePath  : C:\Users\Han\.unsloth\studio\unsloth_studio\Scripts\python.ex
+                  e
+
+ProcessId       : 3384
+ParentProcessId : 19744
+Name            : python.exe
+CommandLine     : "C:\Users\Han\AppData\Roaming\uv\python\cpython-3.12.12-windo
+                  ws-x86_64-none\python.exe" "C:\Users\Han\.unsloth\studio\unsl
+                  oth_studio\Scripts\unsloth.exe" studio -H 0.0.0.0 -p 8888
+ExecutablePath  : C:\Users\Han\AppData\Roaming\uv\python\cpython-3.12.12-window
+                  s-x86_64-none\python.exe
+
+ProcessId       : 13864
+ParentProcessId : 19968
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --edge-skip-compat-layer-relaunch --single-argument http://
+                  localhost:8888/
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 19720
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=crashpad-handler "--user-data-dir=C:\Users\Han\AppDa
+                  ta\Local\Microsoft\Edge\User Data" /prefetch:4 --monitor-self
+                  -annotation=ptype=crashpad-handler "--database=C:\Users\Han\A
+                  ppData\Local\Microsoft\Edge\User Data\Crashpad" --annotation=
+                  IsOfficialBuild=1 --annotation=channel= --annotation=chromium
+                  -version=147.0.7727.118 "--annotation=exe=C:\Program Files (x
+                  86)\Microsoft\Edge\Application\msedge.exe" --annotation=plat=
+                  Win64 --annotation=prod=Edge --annotation=ver=147.0.3912.86 -
+                  -initial-client-data=0x278,0x27c,0x280,0x274,0x288,0x7ff8ecd2
+                  0d58,0x7ff8ecd20d64,0x7ff8ecd20d70
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 6356
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=gpu-process --gpu-preferences=SAAAAAAAAADgAAAEAAAAAA
+                  AAAAAAAGAAAQAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAQAAAAAAA
+                  AABAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --startup-read-main-dll
+                   --metrics-shmem-handle=2212,i,11942924947131221667,168118475
+                  55005464462,262144 --field-trial-handle=2272,i,99828147966061
+                  30259,1519065432485052606,262144 --variations-seed-version --
+                  pseudonymization-salt-handle=2316,i,9695188994490130268,96568
+                  3116075067613,4 --trace-process-track-uuid=319070898818595519
+                  2 --mojo-platform-channel-handle=2284 /prefetch:2
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 9172
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=utility --utility-sub-type=network.mojom.NetworkServ
+                  ice --lang=ko --service-sandbox-type=none --startup-read-main
+                  -dll --metrics-shmem-handle=2796,i,7083521424483948018,800333
+                  1155692463070,524288 --field-trial-handle=2272,i,998281479660
+                  6130259,1519065432485052606,262144 --variations-seed-version 
+                  --pseudonymization-salt-handle=2316,i,9695188994490130268,965
+                  683116075067613,4 --trace-process-track-uuid=3190708989122997
+                  041 --mojo-platform-channel-handle=2624 /prefetch:11
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 14012
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=utility --utility-sub-type=storage.mojom.StorageServ
+                  ice --lang=ko --service-sandbox-type=service --startup-read-m
+                  ain-dll --metrics-shmem-handle=2772,i,8206542975630094151,654
+                  9751636863245452,524288 --field-trial-handle=2272,i,998281479
+                  6606130259,1519065432485052606,262144 --variations-seed-versi
+                  on --pseudonymization-salt-handle=2316,i,9695188994490130268,
+                  965683116075067613,4 --trace-process-track-uuid=3190708990060
+                  038890 --mojo-platform-channel-handle=2956 /prefetch:13
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 10692
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=renderer --pdf-upsell-enabled --video-capture-use-gp
+                  u-memory-buffer --lang=ko --js-flags=--ms-user-locale=ko_KR -
+                  -device-scale-factor=1.25 --num-raster-threads=4 --enable-mai
+                  n-frame-before-activation --renderer-client-id=5 --time-ticks
+                  -at-unix-epoch=-1777294796998838 --launch-time-ticks=25789723
+                  28 --skip-read-main-dll --metrics-shmem-handle=4104,i,3968228
+                  006775981298,12418538006883468322,2097152 --field-trial-handl
+                  e=2272,i,9982814796606130259,1519065432485052606,262144 --var
+                  iations-seed-version --pseudonymization-salt-handle=2316,i,96
+                  95188994490130268,965683116075067613,4 --trace-process-track-
+                  uuid=3190708990997080739 --mojo-platform-channel-handle=4128 
+                  /prefetch:1
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 21124
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=utility --utility-sub-type=edge_search_indexer.mojom
+                  .SearchIndexerInterfaceBroker --lang=ko --service-sandbox-typ
+                  e=search_indexer --message-loop-type-ui --video-capture-use-g
+                  pu-memory-buffer --skip-read-main-dll --metrics-shmem-handle=
+                  8840,i,7297683337803010988,1419980242495161940,524288 --field
+                  -trial-handle=2272,i,9982814796606130259,1519065432485052606,
+                  262144 --variations-seed-version --pseudonymization-salt-hand
+                  le=2316,i,9695188994490130268,965683116075067613,4 --trace-pr
+                  ocess-track-uuid=3190709006926792172 --mojo-platform-channel-
+                  handle=7684 /prefetch:14
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 10752
+ParentProcessId : 1236
+Name            : RuntimeBroker.exe
+CommandLine     : C:\Windows\System32\RuntimeBroker.exe -Embedding
+ExecutablePath  : C:\Windows\System32\RuntimeBroker.exe
+
+ProcessId       : 11512
+ParentProcessId : 1236
+Name            : ShellExperienceHost.exe
+CommandLine     : "C:\WINDOWS\SystemApps\ShellExperienceHost_cw5n1h2txyewy\Shel
+                  lExperienceHost.exe" -ServerName:App.AppXtk181tbxbce2qsex02s8
+                  tw7hfxa9xb3t.mca
+ExecutablePath  : C:\WINDOWS\SystemApps\ShellExperienceHost_cw5n1h2txyewy\Shell
+                  ExperienceHost.exe
+
+ProcessId       : 2460
+ParentProcessId : 1236
+Name            : RuntimeBroker.exe
+CommandLine     : C:\Windows\System32\RuntimeBroker.exe -Embedding
+ExecutablePath  : C:\Windows\System32\RuntimeBroker.exe
+
+ProcessId       : 13188
+ParentProcessId : 8768
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" 
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 9044
+ParentProcessId : 13188
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" --type=crashpad-handler --user-data-dir=C:\Users\Han\AppD
+                  ata\Roaming\Code /prefetch:4 --no-rate-limit --monitor-self-a
+                  nnotation=ptype=crashpad-handler --database=C:\Users\Han\AppD
+                  ata\Roaming\Code\Crashpad --url=appcenter://code?aid=a4e3233c
+                  -699c-46ec-b4f4-9c2a77254662&uid=f37a46bf-c4cd-4e9d-bd3a-4999
+                  b0ba0cab&iid=f37a46bf-c4cd-4e9d-bd3a-4999b0ba0cab&sid=f37a46b
+                  f-c4cd-4e9d-bd3a-4999b0ba0cab --annotation=_companyName=Micro
+                  soft --annotation=_productName=VSCode --annotation=_version=1
+                  .117.0 --annotation=plat=Win64 --annotation=prod=Electron --a
+                  nnotation=ver=39.8.7 --initial-client-data=0x4e0,0x4e4,0x4e8,
+                  0x4dc,0x4ec,0x7ff6c1a681ac,0x7ff6c1a681b8,0x7ff6c1a681c8
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 14000
+ParentProcessId : 13188
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" --type=gpu-process --user-data-dir="C:\Users\Han\AppData\
+                  Roaming\Code" --gpu-preferences=SAAAAAAAAADgAAAEAAAAAAAAAAAAA
+                  GAAAQAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAA
+                  AAAAAACAAAAAAAAAAIAAAAAAAAAA== --field-trial-handle=1764,i,66
+                  0037799984101565,12971051013009889146,262144 --enable-feature
+                  s=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstabl
+                  ishGpuChannel,EnableTransparentHwndEnlargement,EstablishGpuCh
+                  annelAsync --disable-features=CalculateNativeWinOcclusion,Loc
+                  alNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSite
+                  PerProcess,TraceSiteInstanceGetProcessCreation --variations-s
+                  eed-version --trace-process-track-uuid=3190708988185955192 --
+                  mojo-platform-channel-handle=1760 /prefetch:2
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 14036
+ParentProcessId : 13188
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" --type=utility --utility-sub-type=network.mojom.NetworkSe
+                  rvice --lang=en-US --service-sandbox-type=none --user-data-di
+                  r="C:\Users\Han\AppData\Roaming\Code" --standard-schemes=vsco
+                  de-webview,vscode-file --enable-sandbox --secure-schemes=vsco
+                  de-webview,vscode-file --cors-schemes=vscode-webview,vscode-f
+                  ile --fetch-schemes=vscode-webview,vscode-file --service-work
+                  er-schemes=vscode-webview --code-cache-schemes=vscode-webview
+                  ,vscode-file --field-trial-handle=1764,i,660037799984101565,1
+                  2971051013009889146,262144 --enable-features=DocumentPolicyIn
+                  cludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,Enab
+                  leTransparentHwndEnlargement,EstablishGpuChannelAsync --disab
+                  le-features=CalculateNativeWinOcclusion,LocalNetworkAccessChe
+                  cks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSi
+                  teInstanceGetProcessCreation --variations-seed-version --trac
+                  e-process-track-uuid=3190708989122997041 --mojo-platform-chan
+                  nel-handle=2024 /prefetch:11
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 1916
+ParentProcessId : 13188
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" --type=renderer --user-data-dir="C:\Users\Han\AppData\Roa
+                  ming\Code" --standard-schemes=vscode-webview,vscode-file --en
+                  able-sandbox --secure-schemes=vscode-webview,vscode-file --co
+                  rs-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-
+                  webview,vscode-file --service-worker-schemes=vscode-webview -
+                  -code-cache-schemes=vscode-webview,vscode-file --app-user-mod
+                  el-id=Microsoft.VisualStudioCode --app-path="C:\Users\Han\App
+                  Data\Local\Programs\Microsoft VS Code\10c8e557c8\resources\ap
+                  p" --enable-sandbox --enable-blink-features=HighlightAPI --ma
+                  x-active-webgl-contexts=32 --disable-blink-features=FontMatch
+                  ingCTMigration,StandardizedBrowserZoom, --video-capture-use-g
+                  pu-memory-buffer --lang=en-US --device-scale-factor=1.25 --nu
+                  m-raster-threads=4 --enable-main-frame-before-activation --re
+                  nderer-client-id=4 --time-ticks-at-unix-epoch=-17772947969988
+                  38 --launch-time-ticks=2819696287 --field-trial-handle=1764,i
+                  ,660037799984101565,12971051013009889146,262144 --enable-feat
+                  ures=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEst
+                  ablishGpuChannel,EnableTransparentHwndEnlargement,EstablishGp
+                  uChannelAsync --disable-features=CalculateNativeWinOcclusion,
+                  LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForS
+                  itePerProcess,TraceSiteInstanceGetProcessCreation --variation
+                  s-seed-version --trace-process-track-uuid=3190708990060038890
+                   --mojo-platform-channel-handle=3112 --vscode-window-config=v
+                  scode:a083ac9b-794d-49f4-8786-443b61e719f4 /prefetch:1
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 2740
+ParentProcessId : 13188
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" --type=utility --utility-sub-type=node.mojom.NodeService 
+                  --lang=en-US --service-sandbox-type=none --dns-result-order=i
+                  pv4first --experimental-network-inspection --inspect-port=0 -
+                  -video-capture-use-gpu-memory-buffer --user-data-dir="C:\User
+                  s\Han\AppData\Roaming\Code" --standard-schemes=vscode-webview
+                  ,vscode-file --enable-sandbox --secure-schemes=vscode-webview
+                  ,vscode-file --cors-schemes=vscode-webview,vscode-file --fetc
+                  h-schemes=vscode-webview,vscode-file --service-worker-schemes
+                  =vscode-webview --code-cache-schemes=vscode-webview,vscode-fi
+                  le --field-trial-handle=1764,i,660037799984101565,12971051013
+                  009889146,262144 --enable-features=DocumentPolicyIncludeJSCal
+                  lStacksInCrashReports,EarlyEstablishGpuChannel,EnableTranspar
+                  entHwndEnlargement,EstablishGpuChannelAsync --disable-feature
+                  s=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,Screen
+                  AIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstance
+                  GetProcessCreation --variations-seed-version --trace-process-
+                  track-uuid=3190708990997080739 --mojo-platform-channel-handle
+                  =3548 /prefetch:14
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 15052
+ParentProcessId : 13188
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" --type=utility --utility-sub-type=node.mojom.NodeService 
+                  --lang=en-US --service-sandbox-type=none --video-capture-use-
+                  gpu-memory-buffer --user-data-dir="C:\Users\Han\AppData\Roami
+                  ng\Code" --standard-schemes=vscode-webview,vscode-file --enab
+                  le-sandbox --secure-schemes=vscode-webview,vscode-file --cors
+                  -schemes=vscode-webview,vscode-file --fetch-schemes=vscode-we
+                  bview,vscode-file --service-worker-schemes=vscode-webview --c
+                  ode-cache-schemes=vscode-webview,vscode-file --field-trial-ha
+                  ndle=1764,i,660037799984101565,12971051013009889146,262144 --
+                  enable-features=DocumentPolicyIncludeJSCallStacksInCrashRepor
+                  ts,EarlyEstablishGpuChannel,EnableTransparentHwndEnlargement,
+                  EstablishGpuChannelAsync --disable-features=CalculateNativeWi
+                  nOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareR
+                  endererForSitePerProcess,TraceSiteInstanceGetProcessCreation 
+                  --variations-seed-version --trace-process-track-uuid=31907089
+                  91934122588 --mojo-platform-channel-handle=3744 /prefetch:14
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 18484
+ParentProcessId : 13188
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" --type=utility --utility-sub-type=node.mojom.NodeService 
+                  --lang=en-US --service-sandbox-type=none --video-capture-use-
+                  gpu-memory-buffer --user-data-dir="C:\Users\Han\AppData\Roami
+                  ng\Code" --standard-schemes=vscode-webview,vscode-file --enab
+                  le-sandbox --secure-schemes=vscode-webview,vscode-file --cors
+                  -schemes=vscode-webview,vscode-file --fetch-schemes=vscode-we
+                  bview,vscode-file --service-worker-schemes=vscode-webview --c
+                  ode-cache-schemes=vscode-webview,vscode-file --field-trial-ha
+                  ndle=1764,i,660037799984101565,12971051013009889146,262144 --
+                  enable-features=DocumentPolicyIncludeJSCallStacksInCrashRepor
+                  ts,EarlyEstablishGpuChannel,EnableTransparentHwndEnlargement,
+                  EstablishGpuChannelAsync --disable-features=CalculateNativeWi
+                  nOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareR
+                  endererForSitePerProcess,TraceSiteInstanceGetProcessCreation 
+                  --variations-seed-version --trace-process-track-uuid=31907089
+                  92871164437 --mojo-platform-channel-handle=3764 /prefetch:14
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 18848
+ParentProcessId : 13188
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" --type=utility --utility-sub-type=node.mojom.NodeService 
+                  --lang=en-US --service-sandbox-type=none --video-capture-use-
+                  gpu-memory-buffer --user-data-dir="C:\Users\Han\AppData\Roami
+                  ng\Code" --standard-schemes=vscode-webview,vscode-file --enab
+                  le-sandbox --secure-schemes=vscode-webview,vscode-file --cors
+                  -schemes=vscode-webview,vscode-file --fetch-schemes=vscode-we
+                  bview,vscode-file --service-worker-schemes=vscode-webview --c
+                  ode-cache-schemes=vscode-webview,vscode-file --field-trial-ha
+                  ndle=1764,i,660037799984101565,12971051013009889146,262144 --
+                  enable-features=DocumentPolicyIncludeJSCallStacksInCrashRepor
+                  ts,EarlyEstablishGpuChannel,EnableTransparentHwndEnlargement,
+                  EstablishGpuChannelAsync --disable-features=CalculateNativeWi
+                  nOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareR
+                  endererForSitePerProcess,TraceSiteInstanceGetProcessCreation 
+                  --variations-seed-version --trace-process-track-uuid=31907089
+                  93808206286 --mojo-platform-channel-handle=3392 /prefetch:14
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 4172
+ParentProcessId : 18848
+Name            : OpenConsole.exe
+CommandLine     : "c:\Users\Han\AppData\Local\Programs\Microsoft VS Code\10c8e5
+                  57c8\resources\app\node_modules\node-pty\build\Release\conpty
+                  \OpenConsole.exe" --headless --width 87 --height 20 --signal 
+                  0x5c0 --server 0x5b4
+ExecutablePath  : c:\Users\Han\AppData\Local\Programs\Microsoft VS Code\10c8e55
+                  7c8\resources\app\node_modules\node-pty\build\Release\conpty\
+                  OpenConsole.exe
+
+ProcessId       : 21388
+ParentProcessId : 18848
+Name            : powershell.exe
+CommandLine     : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -no
+                  exit -command "try { . \"c:\Users\Han\AppData\Local\Programs\
+                  Microsoft VS Code\10c8e557c8\resources\app\out\vs\workbench\c
+                  ontrib\terminal\common\scripts\shellIntegration.ps1\" } catch
+                   {}"
+ExecutablePath  : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+
+ProcessId       : 21412
+ParentProcessId : 2740
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" "c:\Users\Han\AppData\Local\Programs\Microsoft VS Code\10
+                  c8e557c8\resources\app\extensions\css-language-features\serve
+                  r\dist\node\cssServerMain" --node-ipc --clientProcessId=2740
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 8584
+ParentProcessId : 2740
+Name            : pet.exe
+CommandLine     : c:\Users\Han\.vscode\extensions\ms-python.python-2026.4.0-win
+                  32-x64\python-env-tools\bin\pet.exe server
+ExecutablePath  : c:\Users\Han\.vscode\extensions\ms-python.python-2026.4.0-win
+                  32-x64\python-env-tools\bin\pet.exe
+
+ProcessId       : 4772
+ParentProcessId : 8584
+Name            : conhost.exe
+CommandLine     : \??\C:\WINDOWS\system32\conhost.exe 0x4
+ExecutablePath  : C:\WINDOWS\system32\conhost.exe
+
+ProcessId       : 11580
+ParentProcessId : 18848
+Name            : OpenConsole.exe
+CommandLine     : "c:\Users\Han\AppData\Local\Programs\Microsoft VS Code\10c8e5
+                  57c8\resources\app\node_modules\node-pty\build\Release\conpty
+                  \OpenConsole.exe" --headless --width 80 --height 30 --signal 
+                  0x60c --server 0x5d4
+ExecutablePath  : c:\Users\Han\AppData\Local\Programs\Microsoft VS Code\10c8e55
+                  7c8\resources\app\node_modules\node-pty\build\Release\conpty\
+                  OpenConsole.exe
+
+ProcessId       : 17816
+ParentProcessId : 18848
+Name            : powershell.exe
+CommandLine     : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -no
+                  exit -command "try { . \"c:\Users\Han\AppData\Local\Programs\
+                  Microsoft VS Code\10c8e557c8\resources\app\out\vs\workbench\c
+                  ontrib\terminal\common\scripts\shellIntegration.ps1\" } catch
+                   {}"
+ExecutablePath  : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+
+ProcessId       : 7896
+ParentProcessId : 2740
+Name            : pet.exe
+CommandLine     : c:\Users\Han\.vscode\extensions\ms-python.vscode-python-envs-
+                  1.28.0-win32-x64\python-env-tools\bin\pet.exe server
+ExecutablePath  : c:\Users\Han\.vscode\extensions\ms-python.vscode-python-envs-
+                  1.28.0-win32-x64\python-env-tools\bin\pet.exe
+
+ProcessId       : 17564
+ParentProcessId : 7896
+Name            : conhost.exe
+CommandLine     : \??\C:\WINDOWS\system32\conhost.exe 0x4
+ExecutablePath  : C:\WINDOWS\system32\conhost.exe
+
+ProcessId       : 20812
+ParentProcessId : 2740
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" c:\Users\Han\.vscode\extensions\ms-python.vscode-pylance-
+                  2026.2.1\dist\server.bundle.js --cancellationReceive=file:4c3
+                  60ee8b307a46e740dcf9bbaccb04dcf9e070067 --node-ipc --clientPr
+                  ocessId=2740
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 22184
+ParentProcessId : 1236
+Name            : mscopilot_proxy.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Copilot\Application\mscopil
+                  ot_proxy.exe" -Embedding
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Copilot\Application\mscopilo
+                  t_proxy.exe
+
+ProcessId       : 21636
+ParentProcessId : 1236
+Name            : dllhost.exe
+CommandLine     : "C:\WINDOWS\system32\DllHost.exe" /Processid:{0001DEAD-9BF7-4
+                  CFA-8A5C-DE8679340001}
+ExecutablePath  : C:\WINDOWS\system32\DllHost.exe
+
+ProcessId       : 21632
+ParentProcessId : 1236
+Name            : dllhost.exe
+CommandLine     : "C:\WINDOWS\system32\DllHost.exe" /Processid:{5250E46F-BB09-D
+                  602-5891-F476DC89B700}
+ExecutablePath  : C:\WINDOWS\system32\DllHost.exe
+
+ProcessId       : 21344
+ParentProcessId : 1236
+Name            : dllhost.exe
+CommandLine     : "C:\WINDOWS\system32\DllHost.exe" /Processid:{CA6CC9F1-867A-4
+                  81E-951E-A28C5E4F01EA}
+ExecutablePath  : C:\WINDOWS\system32\DllHost.exe
+
+ProcessId       : 21660
+ParentProcessId : 1236
+Name            : dllhost.exe
+CommandLine     : "C:\WINDOWS\SysWOW64\DllHost.exe" /Processid:{1C6DF0C0-192A-4
+                  451-BE36-6A59A86A692E}
+ExecutablePath  : C:\WINDOWS\SysWOW64\DllHost.exe
+
+ProcessId       : 22160
+ParentProcessId : 13188
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" --type=renderer --user-data-dir="C:\Users\Han\AppData\Roa
+                  ming\Code" --standard-schemes=vscode-webview,vscode-file --en
+                  able-sandbox --secure-schemes=vscode-webview,vscode-file --co
+                  rs-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-
+                  webview,vscode-file --service-worker-schemes=vscode-webview -
+                  -code-cache-schemes=vscode-webview,vscode-file --app-user-mod
+                  el-id=Microsoft.VisualStudioCode --app-path="C:\Users\Han\App
+                  Data\Local\Programs\Microsoft VS Code\10c8e557c8\resources\ap
+                  p" --enable-sandbox --enable-blink-features=HighlightAPI --ma
+                  x-active-webgl-contexts=32 --disable-blink-features=FontMatch
+                  ingCTMigration,StandardizedBrowserZoom, --video-capture-use-g
+                  pu-memory-buffer --lang=en-US --device-scale-factor=1.25 --nu
+                  m-raster-threads=4 --enable-main-frame-before-activation --re
+                  nderer-client-id=9 --time-ticks-at-unix-epoch=-17772947969988
+                  38 --launch-time-ticks=2837609146 --field-trial-handle=1764,i
+                  ,660037799984101565,12971051013009889146,262144 --enable-feat
+                  ures=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEst
+                  ablishGpuChannel,EnableTransparentHwndEnlargement,EstablishGp
+                  uChannelAsync --disable-features=CalculateNativeWinOcclusion,
+                  LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForS
+                  itePerProcess,TraceSiteInstanceGetProcessCreation --variation
+                  s-seed-version --trace-process-track-uuid=3190708994745248135
+                   --mojo-platform-channel-handle=4408 --vscode-window-config=v
+                  scode:8fb3847e-ca4c-42df-9e75-d22a0b89a1d4 /prefetch:1
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 19412
+ParentProcessId : 13188
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" --type=utility --utility-sub-type=node.mojom.NodeService 
+                  --lang=en-US --service-sandbox-type=none --dns-result-order=i
+                  pv4first --experimental-network-inspection --inspect-port=0 -
+                  -video-capture-use-gpu-memory-buffer --user-data-dir="C:\User
+                  s\Han\AppData\Roaming\Code" --standard-schemes=vscode-webview
+                  ,vscode-file --enable-sandbox --secure-schemes=vscode-webview
+                  ,vscode-file --cors-schemes=vscode-webview,vscode-file --fetc
+                  h-schemes=vscode-webview,vscode-file --service-worker-schemes
+                  =vscode-webview --code-cache-schemes=vscode-webview,vscode-fi
+                  le --field-trial-handle=1764,i,660037799984101565,12971051013
+                  009889146,262144 --enable-features=DocumentPolicyIncludeJSCal
+                  lStacksInCrashReports,EarlyEstablishGpuChannel,EnableTranspar
+                  entHwndEnlargement,EstablishGpuChannelAsync --disable-feature
+                  s=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,Screen
+                  AIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstance
+                  GetProcessCreation --variations-seed-version --trace-process-
+                  track-uuid=3190708997556373682 --mojo-platform-channel-handle
+                  =5076 /prefetch:14
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 21576
+ParentProcessId : 13188
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" --type=utility --utility-sub-type=node.mojom.NodeService 
+                  --lang=en-US --service-sandbox-type=none --video-capture-use-
+                  gpu-memory-buffer --user-data-dir="C:\Users\Han\AppData\Roami
+                  ng\Code" --standard-schemes=vscode-webview,vscode-file --enab
+                  le-sandbox --secure-schemes=vscode-webview,vscode-file --cors
+                  -schemes=vscode-webview,vscode-file --fetch-schemes=vscode-we
+                  bview,vscode-file --service-worker-schemes=vscode-webview --c
+                  ode-cache-schemes=vscode-webview,vscode-file --field-trial-ha
+                  ndle=1764,i,660037799984101565,12971051013009889146,262144 --
+                  enable-features=DocumentPolicyIncludeJSCallStacksInCrashRepor
+                  ts,EarlyEstablishGpuChannel,EnableTransparentHwndEnlargement,
+                  EstablishGpuChannelAsync --disable-features=CalculateNativeWi
+                  nOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareR
+                  endererForSitePerProcess,TraceSiteInstanceGetProcessCreation 
+                  --variations-seed-version --trace-process-track-uuid=31907089
+                  98493415531 --mojo-platform-channel-handle=5012 /prefetch:14
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 16036
+ParentProcessId : 19412
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" "c:\Users\Han\AppData\Local\Programs\Microsoft VS Code\10
+                  c8e557c8\resources\app\extensions\markdown-language-features\
+                  dist\serverWorkerMain" --node-ipc --clientProcessId=19412
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 22312
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=renderer --pdf-upsell-enabled --video-capture-use-gp
+                  u-memory-buffer --lang=ko --js-flags=--ms-user-locale=ko_KR -
+                  -device-scale-factor=1.25 --num-raster-threads=4 --enable-mai
+                  n-frame-before-activation --renderer-client-id=27 --time-tick
+                  s-at-unix-epoch=-1777294796998838 --launch-time-ticks=2876406
+                  148 --ssd-no-pressure-read-main-dll --metrics-shmem-handle=56
+                  44,i,5236514514198086792,1071424474121513924,2097152 --field-
+                  trial-handle=2272,i,9982814796606130259,1519065432485052606,2
+                  62144 --variations-seed-version --pseudonymization-salt-handl
+                  e=2316,i,9695188994490130268,965683116075067613,4 --trace-pro
+                  cess-track-uuid=3190709011612001417 --mojo-platform-channel-h
+                  andle=5572 /prefetch:1
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 15284
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=renderer --pdf-upsell-enabled --video-capture-use-gp
+                  u-memory-buffer --lang=ko --js-flags=--ms-user-locale=ko_KR -
+                  -device-scale-factor=1.25 --num-raster-threads=4 --enable-mai
+                  n-frame-before-activation --renderer-client-id=28 --time-tick
+                  s-at-unix-epoch=-1777294796998838 --launch-time-ticks=2877962
+                  298 --skip-read-main-dll --metrics-shmem-handle=6652,i,661413
+                  3428801452975,12242914054304076310,2097152 --field-trial-hand
+                  le=2272,i,9982814796606130259,1519065432485052606,262144 --va
+                  riations-seed-version --pseudonymization-salt-handle=2316,i,9
+                  695188994490130268,965683116075067613,4 --trace-process-track
+                  -uuid=3190709012549043266 --mojo-platform-channel-handle=9124
+                   /prefetch:1
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 11864
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=renderer --pdf-upsell-enabled --video-capture-use-gp
+                  u-memory-buffer --lang=ko --js-flags=--ms-user-locale=ko_KR -
+                  -device-scale-factor=1.25 --num-raster-threads=4 --enable-mai
+                  n-frame-before-activation --renderer-client-id=33 --time-tick
+                  s-at-unix-epoch=-1777294796998838 --launch-time-ticks=2889814
+                  295 --skip-read-main-dll --metrics-shmem-handle=7948,i,454116
+                  7881065030388,9181801925959899646,2097152 --field-trial-handl
+                  e=2272,i,9982814796606130259,1519065432485052606,262144 --var
+                  iations-seed-version --pseudonymization-salt-handle=2316,i,96
+                  95188994490130268,965683116075067613,4 --trace-process-track-
+                  uuid=3190709017234252511 --mojo-platform-channel-handle=8716 
+                  /prefetch:1
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 7992
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=renderer --pdf-upsell-enabled --video-capture-use-gp
+                  u-memory-buffer --lang=ko --js-flags=--ms-user-locale=ko_KR -
+                  -device-scale-factor=1.25 --num-raster-threads=4 --enable-mai
+                  n-frame-before-activation --renderer-client-id=34 --time-tick
+                  s-at-unix-epoch=-1777294796998838 --launch-time-ticks=2890491
+                  211 --skip-read-main-dll --metrics-shmem-handle=7888,i,591762
+                  1770214149109,12152189842835881188,2097152 --field-trial-hand
+                  le=2272,i,9982814796606130259,1519065432485052606,262144 --va
+                  riations-seed-version --pseudonymization-salt-handle=2316,i,9
+                  695188994490130268,965683116075067613,4 --trace-process-track
+                  -uuid=3190709018171294360 --mojo-platform-channel-handle=5020
+                   /prefetch:1
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 22840
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=renderer --pdf-upsell-enabled --video-capture-use-gp
+                  u-memory-buffer --lang=ko --js-flags=--ms-user-locale=ko_KR -
+                  -device-scale-factor=1.25 --num-raster-threads=4 --enable-mai
+                  n-frame-before-activation --renderer-client-id=41 --time-tick
+                  s-at-unix-epoch=-1777294796998838 --launch-time-ticks=2963998
+                  405 --skip-read-main-dll --metrics-shmem-handle=9272,i,984070
+                  6466589334350,6334510485223359776,2097152 --field-trial-handl
+                  e=2272,i,9982814796606130259,1519065432485052606,262144 --var
+                  iations-seed-version --pseudonymization-salt-handle=2316,i,96
+                  95188994490130268,965683116075067613,4 --trace-process-track-
+                  uuid=3190709024730587303 --mojo-platform-channel-handle=10160
+                   /prefetch:1
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 22868
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=utility --utility-sub-type=audio.mojom.AudioService 
+                  --lang=ko --service-sandbox-type=audio --video-capture-use-gp
+                  u-memory-buffer --skip-read-main-dll --metrics-shmem-handle=9
+                  880,i,10464380459735089209,4247479911369832765,524288 --field
+                  -trial-handle=2272,i,9982814796606130259,1519065432485052606,
+                  262144 --variations-seed-version --pseudonymization-salt-hand
+                  le=2316,i,9695188994490130268,965683116075067613,4 --trace-pr
+                  ocess-track-uuid=3190709025667629152 --mojo-platform-channel-
+                  handle=10212 /prefetch:12
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 22876
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=utility --utility-sub-type=video_capture.mojom.Video
+                  CaptureService --lang=ko --service-sandbox-type=none --video-
+                  capture-use-gpu-memory-buffer --skip-read-main-dll --metrics-
+                  shmem-handle=10144,i,10476974711376930610,1608354974323716907
+                  6,524288 --field-trial-handle=2272,i,9982814796606130259,1519
+                  065432485052606,262144 --variations-seed-version --pseudonymi
+                  zation-salt-handle=2316,i,9695188994490130268,965683116075067
+                  613,4 --trace-process-track-uuid=3190709026604671001 --mojo-p
+                  latform-channel-handle=1856 /prefetch:14
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 11904
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=renderer --pdf-upsell-enabled --video-capture-use-gp
+                  u-memory-buffer --lang=ko --js-flags=--ms-user-locale=ko_KR -
+                  -device-scale-factor=1.25 --num-raster-threads=4 --enable-mai
+                  n-frame-before-activation --renderer-client-id=48 --time-tick
+                  s-at-unix-epoch=-1777294796998838 --launch-time-ticks=3162353
+                  109 --ssd-no-pressure-read-main-dll --metrics-shmem-handle=32
+                  56,i,3001333608938851162,7086387026485676154,2097152 --field-
+                  trial-handle=2272,i,9982814796606130259,1519065432485052606,2
+                  62144 --variations-seed-version --pseudonymization-salt-handl
+                  e=2316,i,9695188994490130268,965683116075067613,4 --trace-pro
+                  cess-track-uuid=3190709031289880246 --mojo-platform-channel-h
+                  andle=10428 /prefetch:1
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 9920
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=renderer --pdf-upsell-enabled --video-capture-use-gp
+                  u-memory-buffer --lang=ko --js-flags=--ms-user-locale=ko_KR -
+                  -device-scale-factor=1.25 --num-raster-threads=4 --enable-mai
+                  n-frame-before-activation --renderer-client-id=52 --time-tick
+                  s-at-unix-epoch=-1777294796998838 --launch-time-ticks=3215555
+                  159 --skip-read-main-dll --metrics-shmem-handle=10904,i,12217
+                  572010494117957,6151653867767802681,2097152 --field-trial-han
+                  dle=2272,i,9982814796606130259,1519065432485052606,262144 --v
+                  ariations-seed-version --pseudonymization-salt-handle=2316,i,
+                  9695188994490130268,965683116075067613,4 --trace-process-trac
+                  k-uuid=3190709035038047642 --mojo-platform-channel-handle=927
+                  6 /prefetch:1
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 8936
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=renderer --pdf-upsell-enabled --video-capture-use-gp
+                  u-memory-buffer --lang=ko --js-flags=--ms-user-locale=ko_KR -
+                  -device-scale-factor=1.25 --num-raster-threads=4 --enable-mai
+                  n-frame-before-activation --renderer-client-id=53 --time-tick
+                  s-at-unix-epoch=-1777294796998838 --launch-time-ticks=3215642
+                  264 --skip-read-main-dll --metrics-shmem-handle=10764,i,10809
+                  982690428881840,13162081271481051694,2097152 --field-trial-ha
+                  ndle=2272,i,9982814796606130259,1519065432485052606,262144 --
+                  variations-seed-version --pseudonymization-salt-handle=2316,i
+                  ,9695188994490130268,965683116075067613,4 --trace-process-tra
+                  ck-uuid=3190709035975089491 --mojo-platform-channel-handle=10
+                  524 /prefetch:1
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 22676
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=renderer --pdf-upsell-enabled --video-capture-use-gp
+                  u-memory-buffer --lang=ko --js-flags=--ms-user-locale=ko_KR -
+                  -device-scale-factor=1.25 --num-raster-threads=4 --enable-mai
+                  n-frame-before-activation --renderer-client-id=56 --time-tick
+                  s-at-unix-epoch=-1777294796998838 --launch-time-ticks=3218842
+                  162 --skip-read-main-dll --metrics-shmem-handle=10828,i,49776
+                  26047577279726,9800754707277986567,2097152 --field-trial-hand
+                  le=2272,i,9982814796606130259,1519065432485052606,262144 --va
+                  riations-seed-version --pseudonymization-salt-handle=2316,i,9
+                  695188994490130268,965683116075067613,4 --trace-process-track
+                  -uuid=3190709038786215038 --mojo-platform-channel-handle=1115
+                  2 /prefetch:1
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 4100
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=renderer --instant-process --pdf-upsell-enabled --vi
+                  deo-capture-use-gpu-memory-buffer --lang=ko --js-flags=--ms-u
+                  ser-locale=ko_KR --device-scale-factor=1.25 --num-raster-thre
+                  ads=4 --enable-main-frame-before-activation --renderer-client
+                  -id=58 --time-ticks-at-unix-epoch=-1777294796998838 --launch-
+                  time-ticks=3285844551 --ssd-no-pressure-read-main-dll --metri
+                  cs-shmem-handle=9464,i,4155426303282339921,175773426498842242
+                  65,2097152 --field-trial-handle=2272,i,9982814796606130259,15
+                  19065432485052606,262144 --variations-seed-version --pseudony
+                  mization-salt-handle=2316,i,9695188994490130268,9656831160750
+                  67613,4 --trace-process-track-uuid=3190709040660298736 --mojo
+                  -platform-channel-handle=10876 /prefetch:1
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 22720
+ParentProcessId : 19412
+Name            : azmcp.exe
+CommandLine     : c:\Users\Han\.vscode\extensions\ms-azuretools.vscode-azure-mc
+                  p-server-3.0.5-win32-x64\server\azmcp.exe server start --mode
+                   namespace
+ExecutablePath  : c:\Users\Han\.vscode\extensions\ms-azuretools.vscode-azure-mc
+                  p-server-3.0.5-win32-x64\server\azmcp.exe
+
+ProcessId       : 22908
+ParentProcessId : 22720
+Name            : conhost.exe
+CommandLine     : \??\C:\WINDOWS\system32\conhost.exe 0x4
+ExecutablePath  : C:\WINDOWS\system32\conhost.exe
+
+ProcessId       : 11212
+ParentProcessId : 19412
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" "c:\Users\Han\AppData\Local\Programs\Microsoft VS Code\10
+                  c8e557c8\resources\app\extensions\json-language-features\serv
+                  er\dist\node\jsonServerMain" --node-ipc --clientProcessId=194
+                  12
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 20968
+ParentProcessId : 1236
+Name            : WorkloadsSessionHost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 9112
+ParentProcessId : 1236
+Name            : SDXHelper.exe
+CommandLine     : "C:\Program Files\Microsoft Office\Root\Office16\SDXHelper.ex
+                  e" -Embedding
+ExecutablePath  : C:\Program Files\Microsoft Office\Root\Office16\SDXHelper.exe
+
+ProcessId       : 21396
+ParentProcessId : 3384
+Name            : python.exe
+CommandLine     : "C:\Users\Han\AppData\Roaming\uv\python\cpython-3.12.12-windo
+                  ws-x86_64-none\python.exe" "-c" "from multiprocessing.spawn i
+                  mport spawn_main; spawn_main(parent_pid=3384, pipe_handle=546
+                  0)" "--multiprocessing-fork"
+ExecutablePath  : C:\Users\Han\AppData\Roaming\uv\python\cpython-3.12.12-window
+                  s-x86_64-none\python.exe
+
+ProcessId       : 5988
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=renderer --extension-process --renderer-sub-type=ext
+                  ension --pdf-upsell-enabled --video-capture-use-gpu-memory-bu
+                  ffer --lang=ko --js-flags=--ms-user-locale=ko_KR --device-sca
+                  le-factor=1.25 --num-raster-threads=4 --enable-main-frame-bef
+                  ore-activation --renderer-client-id=65 --time-ticks-at-unix-e
+                  poch=-1777294796998838 --launch-time-ticks=3838838975 --skip-
+                  read-main-dll --metrics-shmem-handle=8580,i,14301924335513041
+                  156,11944362514627144744,2097152 --field-trial-handle=2272,i,
+                  9982814796606130259,1519065432485052606,262144 --variations-s
+                  eed-version --pseudonymization-salt-handle=2316,i,96951889944
+                  90130268,965683116075067613,4 --trace-process-track-uuid=3190
+                  709047219591679 --mojo-platform-channel-handle=6148 /prefetch
+                  :9
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 22992
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=renderer --pdf-upsell-enabled --video-capture-use-gp
+                  u-memory-buffer --lang=ko --js-flags=--ms-user-locale=ko_KR -
+                  -device-scale-factor=1.25 --num-raster-threads=4 --enable-mai
+                  n-frame-before-activation --renderer-client-id=69 --time-tick
+                  s-at-unix-epoch=-1777294796998838 --launch-time-ticks=3929504
+                  048 --skip-read-main-dll --metrics-shmem-handle=9860,i,939520
+                  3904094242818,2788278223998202979,2097152 --field-trial-handl
+                  e=2272,i,9982814796606130259,1519065432485052606,262144 --var
+                  iations-seed-version --pseudonymization-salt-handle=2316,i,96
+                  95188994490130268,965683116075067613,4 --trace-process-track-
+                  uuid=3190709050967759075 --mojo-platform-channel-handle=8512 
+                  /prefetch:1
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 8512
+ParentProcessId : 13864
+Name            : msedge.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+                  " --type=renderer --pdf-upsell-enabled --video-capture-use-gp
+                  u-memory-buffer --lang=ko --js-flags=--ms-user-locale=ko_KR -
+                  -device-scale-factor=1.25 --num-raster-threads=4 --enable-mai
+                  n-frame-before-activation --renderer-client-id=72 --time-tick
+                  s-at-unix-epoch=-1777294796998838 --launch-time-ticks=3932697
+                  785 --skip-read-main-dll --metrics-shmem-handle=10856,i,93968
+                  63644143751469,8157948666631357924,2097152 --field-trial-hand
+                  le=2272,i,9982814796606130259,1519065432485052606,262144 --va
+                  riations-seed-version --pseudonymization-salt-handle=2316,i,9
+                  695188994490130268,965683116075067613,4 --trace-process-track
+                  -uuid=3190709053778884622 --mojo-platform-channel-handle=1033
+                  2 /prefetch:1
+ExecutablePath  : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+ProcessId       : 23712
+ParentProcessId : 7768
+Name            : ShellHost.exe
+CommandLine     : "C:\Windows\System32\ShellHost.exe"
+ExecutablePath  : C:\Windows\System32\ShellHost.exe
+
+ProcessId       : 10236
+ParentProcessId : 20092
+Name            : msedgewebview2.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147
+                  .0.3912.86\msedgewebview2.exe" --type=utility --utility-sub-t
+                  ype=audio.mojom.AudioService --lang=ko --service-sandbox-type
+                  =audio --video-capture-use-gpu-memory-buffer --noerrdialogs -
+                  -user-data-dir="C:\Users\Han\AppData\Local\Packages\Microsoft
+                  Windows.Client.WebExperience_cw5n1h2txyewy\LocalState\EBWebVi
+                  ew" --webview-exe-name=Widgets.exe --webview-exe-version=526.
+                  1202.10.0 --embedded-browser-webview=1 --ssd-no-pressure-read
+                  -main-dll --metrics-shmem-handle=5728,i,12935028799356682494,
+                  3690438243755154322,524288 --field-trial-handle=2016,i,120209
+                  57675856789599,12515902795769824593,262144 --variations-seed-
+                  version --pseudonymization-salt-handle=2020,i,277347604829087
+                  9235,6901850805624722354,4 --trace-process-track-uuid=3190708
+                  992871164437 --mojo-platform-channel-handle=3188 /prefetch:12
+                   /pfhostedapp:44312beabee3b93feba7d5ad2ab7f3d18a9b7934
+ExecutablePath  : C:\Program Files (x86)\Microsoft\EdgeWebView\Application\147.
+                  0.3912.86\msedgewebview2.exe
+
+ProcessId       : 23524
+ParentProcessId : 2740
+Name            : azmcp.exe
+CommandLine     : c:\Users\Han\.vscode\extensions\ms-azuretools.vscode-azure-mc
+                  p-server-3.0.5-win32-x64\server\azmcp.exe server start --mode
+                   namespace
+ExecutablePath  : c:\Users\Han\.vscode\extensions\ms-azuretools.vscode-azure-mc
+                  p-server-3.0.5-win32-x64\server\azmcp.exe
+
+ProcessId       : 14284
+ParentProcessId : 23524
+Name            : conhost.exe
+CommandLine     : \??\C:\WINDOWS\system32\conhost.exe 0x4
+ExecutablePath  : C:\WINDOWS\system32\conhost.exe
+
+ProcessId       : 23580
+ParentProcessId : 2740
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" "c:\Users\Han\AppData\Local\Programs\Microsoft VS Code\10
+                  c8e557c8\resources\app\extensions\json-language-features\serv
+                  er\dist\node\jsonServerMain" --node-ipc --clientProcessId=274
+                  0
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 17296
+ParentProcessId : 13188
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" --type=renderer --user-data-dir="C:\Users\Han\AppData\Roa
+                  ming\Code" --standard-schemes=vscode-webview,vscode-file --en
+                  able-sandbox --secure-schemes=vscode-webview,vscode-file --co
+                  rs-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-
+                  webview,vscode-file --service-worker-schemes=vscode-webview -
+                  -code-cache-schemes=vscode-webview,vscode-file --app-user-mod
+                  el-id=Microsoft.VisualStudioCode --app-path="C:\Users\Han\App
+                  Data\Local\Programs\Microsoft VS Code\10c8e557c8\resources\ap
+                  p" --enable-sandbox --enable-blink-features=HighlightAPI --ma
+                  x-active-webgl-contexts=32 --disable-blink-features=FontMatch
+                  ingCTMigration,StandardizedBrowserZoom, --video-capture-use-g
+                  pu-memory-buffer --lang=en-US --device-scale-factor=1.25 --nu
+                  m-raster-threads=4 --enable-main-frame-before-activation --re
+                  nderer-client-id=15 --time-ticks-at-unix-epoch=-1777294796998
+                  838 --launch-time-ticks=4098463699 --field-trial-handle=1764,
+                  i,660037799984101565,12971051013009889146,262144 --enable-fea
+                  tures=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEs
+                  tablishGpuChannel,EnableTransparentHwndEnlargement,EstablishG
+                  puChannelAsync --disable-features=CalculateNativeWinOcclusion
+                  ,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererFor
+                  SitePerProcess,TraceSiteInstanceGetProcessCreation --variatio
+                  ns-seed-version --trace-process-track-uuid=319070900036749922
+                  9 --mojo-platform-channel-handle=5036 --vscode-window-config=
+                  vscode:4ec309ab-055c-46ce-a268-5a9d08f337d0 /prefetch:1
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 22544
+ParentProcessId : 13188
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" --type=utility --utility-sub-type=node.mojom.NodeService 
+                  --lang=en-US --service-sandbox-type=none --dns-result-order=i
+                  pv4first --experimental-network-inspection --inspect-port=0 -
+                  -video-capture-use-gpu-memory-buffer --user-data-dir="C:\User
+                  s\Han\AppData\Roaming\Code" --standard-schemes=vscode-webview
+                  ,vscode-file --enable-sandbox --secure-schemes=vscode-webview
+                  ,vscode-file --cors-schemes=vscode-webview,vscode-file --fetc
+                  h-schemes=vscode-webview,vscode-file --service-worker-schemes
+                  =vscode-webview --code-cache-schemes=vscode-webview,vscode-fi
+                  le --field-trial-handle=1764,i,660037799984101565,12971051013
+                  009889146,262144 --enable-features=DocumentPolicyIncludeJSCal
+                  lStacksInCrashReports,EarlyEstablishGpuChannel,EnableTranspar
+                  entHwndEnlargement,EstablishGpuChannelAsync --disable-feature
+                  s=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,Screen
+                  AIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstance
+                  GetProcessCreation --variations-seed-version --trace-process-
+                  track-uuid=3190709003178624776 --mojo-platform-channel-handle
+                  =5476 /prefetch:14
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 23232
+ParentProcessId : 13188
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" --type=utility --utility-sub-type=node.mojom.NodeService 
+                  --lang=en-US --service-sandbox-type=none --video-capture-use-
+                  gpu-memory-buffer --user-data-dir="C:\Users\Han\AppData\Roami
+                  ng\Code" --standard-schemes=vscode-webview,vscode-file --enab
+                  le-sandbox --secure-schemes=vscode-webview,vscode-file --cors
+                  -schemes=vscode-webview,vscode-file --fetch-schemes=vscode-we
+                  bview,vscode-file --service-worker-schemes=vscode-webview --c
+                  ode-cache-schemes=vscode-webview,vscode-file --field-trial-ha
+                  ndle=1764,i,660037799984101565,12971051013009889146,262144 --
+                  enable-features=DocumentPolicyIncludeJSCallStacksInCrashRepor
+                  ts,EarlyEstablishGpuChannel,EnableTransparentHwndEnlargement,
+                  EstablishGpuChannelAsync --disable-features=CalculateNativeWi
+                  nOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareR
+                  endererForSitePerProcess,TraceSiteInstanceGetProcessCreation 
+                  --variations-seed-version --trace-process-track-uuid=31907090
+                  04115666625 --mojo-platform-channel-handle=5128 /prefetch:14
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 26092
+ParentProcessId : 18848
+Name            : OpenConsole.exe
+CommandLine     : "c:\Users\Han\AppData\Local\Programs\Microsoft VS Code\10c8e5
+                  57c8\resources\app\node_modules\node-pty\build\Release\conpty
+                  \OpenConsole.exe" --headless --width 77 --height 20 --signal 
+                  0x4c4 --server 0x4c8
+ExecutablePath  : c:\Users\Han\AppData\Local\Programs\Microsoft VS Code\10c8e55
+                  7c8\resources\app\node_modules\node-pty\build\Release\conpty\
+                  OpenConsole.exe
+
+ProcessId       : 26056
+ParentProcessId : 18848
+Name            : powershell.exe
+CommandLine     : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -no
+                  exit -command "try { . \"c:\Users\Han\AppData\Local\Programs\
+                  Microsoft VS Code\10c8e557c8\resources\app\out\vs\workbench\c
+                  ontrib\terminal\common\scripts\shellIntegration.ps1\" } catch
+                   {}"
+ExecutablePath  : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+
+ProcessId       : 26428
+ParentProcessId : 22544
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" "c:\Users\Han\AppData\Local\Programs\Microsoft VS Code\10
+                  c8e557c8\resources\app\extensions\markdown-language-features\
+                  dist\serverWorkerMain" --node-ipc --clientProcessId=22544
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 25908
+ParentProcessId : 22544
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" "c:\Users\Han\AppData\Local\Programs\Microsoft VS Code\10
+                  c8e557c8\resources\app\extensions\json-language-features\serv
+                  er\dist\node\jsonServerMain" --node-ipc --clientProcessId=225
+                  44
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 25528
+ParentProcessId : 2740
+Name            : AIServiceLocalPackage.exe
+CommandLine     : c:\Users\Han\.vscode\extensions\ms-azuretools.vscode-azure-gi
+                  thub-copilot-1.0.201-win32-x64\dist\node_modules\aidriver.win
+                  -x64\AIServiceLocalPackage.exe --urls=http://pipe:/azcp-6e8d6
+                  2a1cb2c --environment=Production
+ExecutablePath  : c:\Users\Han\.vscode\extensions\ms-azuretools.vscode-azure-gi
+                  thub-copilot-1.0.201-win32-x64\dist\node_modules\aidriver.win
+                  -x64\AIServiceLocalPackage.exe
+
+ProcessId       : 23832
+ParentProcessId : 25528
+Name            : conhost.exe
+CommandLine     : \??\C:\WINDOWS\system32\conhost.exe 0x4
+ExecutablePath  : C:\WINDOWS\system32\conhost.exe
+
+ProcessId       : 22972
+ParentProcessId : 18848
+Name            : OpenConsole.exe
+CommandLine     : "c:\Users\Han\AppData\Local\Programs\Microsoft VS Code\10c8e5
+                  57c8\resources\app\node_modules\node-pty\build\Release\conpty
+                  \OpenConsole.exe" --headless --width 80 --height 30 --signal 
+                  0x688 --server 0x5f8
+ExecutablePath  : c:\Users\Han\AppData\Local\Programs\Microsoft VS Code\10c8e55
+                  7c8\resources\app\node_modules\node-pty\build\Release\conpty\
+                  OpenConsole.exe
+
+ProcessId       : 24400
+ParentProcessId : 18848
+Name            : powershell.exe
+CommandLine     : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -no
+                  exit -command "try { . \"c:\Users\Han\AppData\Local\Programs\
+                  Microsoft VS Code\10c8e557c8\resources\app\out\vs\workbench\c
+                  ontrib\terminal\common\scripts\shellIntegration.ps1\" } catch
+                   {}"
+ExecutablePath  : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+
+ProcessId       : 19548
+ParentProcessId : 3384
+Name            : llama-server.exe
+CommandLine     : C:\Users\Han\.unsloth\llama.cpp\build\bin\Release\llama-serve
+                  r.exe -m C:\Users\Han\.cache\huggingface\hub\models--unsloth-
+                  -gemma-4-E2B-it-GGUF\snapshots\f064409f340b34190993560b216813
+                  3e5dbae558\gemma-4-E2B-it-UD-Q4_K_XL.gguf --port 51530 -c 409
+                  6 --parallel 1 --flash-attn on --no-context-shift -ngl -1 --j
+                  inja --chat-template-kwargs "{\"enable_thinking\": true}" --m
+                  mproj C:\Users\Han\.cache\huggingface\hub\models--unsloth--ge
+                  mma-4-E2B-it-GGUF\snapshots\f064409f340b34190993560b2168133e5
+                  dbae558\mmproj-BF16.gguf
+ExecutablePath  : C:\Users\Han\.unsloth\llama.cpp\build\bin\Release\llama-serve
+                  r.exe
+
+ProcessId       : 8924
+ParentProcessId : 22544
+Name            : azmcp.exe
+CommandLine     : c:\Users\Han\.vscode\extensions\ms-azuretools.vscode-azure-mc
+                  p-server-3.0.5-win32-x64\server\azmcp.exe server start --mode
+                   namespace
+ExecutablePath  : c:\Users\Han\.vscode\extensions\ms-azuretools.vscode-azure-mc
+                  p-server-3.0.5-win32-x64\server\azmcp.exe
+
+ProcessId       : 23724
+ParentProcessId : 8924
+Name            : conhost.exe
+CommandLine     : \??\C:\WINDOWS\system32\conhost.exe 0x4
+ExecutablePath  : C:\WINDOWS\system32\conhost.exe
+
+ProcessId       : 24920
+ParentProcessId : 22544
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" --max-old-space-size=3072 "c:\Users\Han\AppData\Local\Pro
+                  grams\Microsoft VS Code\10c8e557c8\resources\app\extensions\n
+                  ode_modules\typescript\lib\tsserver.js" --serverMode partialS
+                  emantic --useInferredProjectPerProjectRoot --disableAutomatic
+                  TypingAcquisition --cancellationPipeName R:\TEMP\vscode-types
+                  cript\eb72bd591159d8f2e882\tscancellation-3d1c3ea97f9eea12aab
+                  6.tmp* --globalPlugins @vscode/copilot-typescript-server-plug
+                  in --pluginProbeLocations c:\Users\Han\.vscode\extensions\git
+                  hub.copilot-chat-0.45.1 --locale en --noGetErrOnBackgroundUpd
+                  ate --canUseWatchEvents --validateDefaultNpmLocation --useNod
+                  eIpc
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 26608
+ParentProcessId : 22544
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" --max-old-space-size=3072 "c:\Users\Han\AppData\Local\Pro
+                  grams\Microsoft VS Code\10c8e557c8\resources\app\extensions\n
+                  ode_modules\typescript\lib\tsserver.js" --useInferredProjectP
+                  erProjectRoot --enableTelemetry --cancellationPipeName R:\TEM
+                  P\vscode-typescript\eb72bd591159d8f2e882\tscancellation-9bd94
+                  58bff1608ebb0cf.tmp* --globalPlugins @vscode/copilot-typescri
+                  pt-server-plugin --pluginProbeLocations c:\Users\Han\.vscode\
+                  extensions\github.copilot-chat-0.45.1 --locale en --noGetErrO
+                  nBackgroundUpdate --canUseWatchEvents --validateDefaultNpmLoc
+                  ation --useNodeIpc
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 18380
+ParentProcessId : 22544
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" "c:\Users\Han\AppData\Local\Programs\Microsoft VS Code\10
+                  c8e557c8\resources\app\extensions\css-language-features\serve
+                  r\dist\node\cssServerMain" --node-ipc --clientProcessId=22544
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 26560
+ParentProcessId : 26608
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" "c:/Users/Han/AppData/Local/Programs/Microsoft VS Code/10
+                  c8e557c8/resources/app/extensions/node_modules/typescript/lib
+                  /typingsInstaller.js" --globalTypingsCacheLocation C:/Users/H
+                  an/AppData/Local/Microsoft/TypeScript/6.0 --enableTelemetry -
+                  -typesMapLocation "c:/Users/Han/AppData/Local/Programs/Micros
+                  oft VS Code/10c8e557c8/resources/app/extensions/node_modules/
+                  typescript/lib/typesMap.json" --validateDefaultNpmLocation
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 26268
+ParentProcessId : 1976
+Name            : svchost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 24272
+ParentProcessId : 2740
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" "c:\Users\Han\AppData\Local\Programs\Microsoft VS Code\10
+                  c8e557c8\resources\app\extensions\markdown-language-features\
+                  dist\serverWorkerMain" --node-ipc --clientProcessId=2740
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 27492
+ParentProcessId : 2740
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" c:\Users\Han\.vscode\extensions\ms-azuretools.vscode-cont
+                  ainers-2.4.2\dist\dockerfile-language-server-nodejs\lib\serve
+                  r.mjs --node-ipc --node-ipc --clientProcessId=2740
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 27512
+ParentProcessId : 2740
+Name            : Code.exe
+CommandLine     : "C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.e
+                  xe" c:\Users\Han\.vscode\extensions\ms-azuretools.vscode-cont
+                  ainers-2.4.2\dist\compose-language-service\lib\server.mjs --n
+                  ode-ipc --node-ipc --clientProcessId=2740
+ExecutablePath  : C:\Users\Han\AppData\Local\Programs\Microsoft VS Code\Code.ex
+                  e
+
+ProcessId       : 23992
+ParentProcessId : 1236
+Name            : backgroundTaskHost.exe
+CommandLine     : "C:\WINDOWS\system32\backgroundTaskHost.exe" -ServerName:Glob
+                  al.Accounts.AppXqe94epy97qwa6w3j6w132e8zvcs117nd.mca
+ExecutablePath  : C:\WINDOWS\system32\backgroundTaskHost.exe
+
+ProcessId       : 27216
+ParentProcessId : 1236
+Name            : backgroundTaskHost.exe
+CommandLine     : "C:\WINDOWS\system32\backgroundTaskHost.exe" -ServerName:Glob
+                  al.DesktopSpotlight.AppXz2j21w56bgxkgsjhtn7zkjsepq96erz2.mca
+ExecutablePath  : C:\WINDOWS\system32\backgroundTaskHost.exe
+
+ProcessId       : 7884
+ParentProcessId : 1236
+Name            : RuntimeBroker.exe
+CommandLine     : C:\Windows\System32\RuntimeBroker.exe -Embedding
+ExecutablePath  : C:\Windows\System32\RuntimeBroker.exe
+
+ProcessId       : 26884
+ParentProcessId : 1236
+Name            : RuntimeBroker.exe
+CommandLine     : C:\Windows\System32\RuntimeBroker.exe -Embedding
+ExecutablePath  : C:\Windows\System32\RuntimeBroker.exe
+
+ProcessId       : 14140
+ParentProcessId : 9660
+Name            : SearchProtocolHost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 25196
+ParentProcessId : 9660
+Name            : SearchFilterHost.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 25556
+ParentProcessId : 1236
+Name            : WmiPrvSE.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 8400
+ParentProcessId : 18848
+Name            : OpenConsole.exe
+CommandLine     : "c:\Users\Han\AppData\Local\Programs\Microsoft VS Code\10c8e5
+                  57c8\resources\app\node_modules\node-pty\build\Release\conpty
+                  \OpenConsole.exe" --headless --width 80 --height 30 --signal 
+                  0x4e4 --server 0xc
+ExecutablePath  : c:\Users\Han\AppData\Local\Programs\Microsoft VS Code\10c8e55
+                  7c8\resources\app\node_modules\node-pty\build\Release\conpty\
+                  OpenConsole.exe
+
+ProcessId       : 24748
+ParentProcessId : 18848
+Name            : powershell.exe
+CommandLine     : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -no
+                  exit -command "try { . \"c:\Users\Han\AppData\Local\Programs\
+                  Microsoft VS Code\10c8e557c8\resources\app\out\vs\workbench\c
+                  ontrib\terminal\common\scripts\shellIntegration.ps1\" } catch
+                   {}"
+ExecutablePath  : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+
+ProcessId       : 27420
+ParentProcessId : 11368
+Name            : vctip.exe
+CommandLine     : "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools
+                  \VC\Tools\MSVC\14.50.35717\bin\HostX64\x64\VCTIP.EXE"
+ExecutablePath  : C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\
+                  VC\Tools\MSVC\14.50.35717\bin\HostX64\x64\VCTIP.EXE
+
+ProcessId       : 24708
+ParentProcessId : 1236
+Name            : backgroundTaskHost.exe
+CommandLine     : "C:\WINDOWS\system32\backgroundTaskHost.exe" -ServerName:App.
+                  AppXapskvk16gk8da8kch5g4qxh42vxccved.mca
+ExecutablePath  : C:\WINDOWS\system32\backgroundTaskHost.exe
+
+ProcessId       : 24356
+ParentProcessId : 18848
+Name            : OpenConsole.exe
+CommandLine     : "c:\Users\Han\AppData\Local\Programs\Microsoft VS Code\10c8e5
+                  57c8\resources\app\node_modules\node-pty\build\Release\conpty
+                  \OpenConsole.exe" --headless --width 65 --height 20 --signal 
+                  0x72c --server 0x724
+ExecutablePath  : c:\Users\Han\AppData\Local\Programs\Microsoft VS Code\10c8e55
+                  7c8\resources\app\node_modules\node-pty\build\Release\conpty\
+                  OpenConsole.exe
+
+ProcessId       : 23496
+ParentProcessId : 18848
+Name            : powershell.exe
+CommandLine     : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -No
+                  Profile -ExecutionPolicy Bypass -Command "Import-Module 'c:\U
+                  sers\Han\.vscode\extensions\ms-vscode.powershell-2025.4.0\mod
+                  ules\PowerShellEditorServices\PowerShellEditorServices.psd1';
+                   Start-EditorServices -HostName 'Visual Studio Code Host' -Ho
+                  stProfileId 'Microsoft.VSCode' -HostVersion '2025.4.0' -Bundl
+                  edModulesPath 'c:\Users\Han\.vscode\extensions\ms-vscode.powe
+                  rshell-2025.4.0\modules' -EnableConsoleRepl -StartupBanner \"
+                  PowerShell Extension v2025.4.0
+                  Copyright (c) Microsoft Corporation.
+                  
+                  https://aka.ms/vscode-powershell
+                  Type 'help' to get help.
+                  \" -LogLevel 'Warning' -LogPath 'c:\Users\Han\AppData\Roaming
+                  \Code\logs\20260427T224656\window3\exthost\ms-vscode.powershe
+                  ll' -SessionDetailsPath 'c:\Users\Han\AppData\Roaming\Code\Us
+                  er\globalStorage\ms-vscode.powershell\sessions\PSES-VSCode-13
+                  188-615414.json' -FeatureFlags @() "
+ExecutablePath  : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+
+ProcessId       : 21764
+ParentProcessId : 24748
+Name            : dokebicollector.exe
+CommandLine     : "C:\Users\Han\dokebicollector\target\debug\dokebicollector.ex
+                  e" --output test-output --name build-run-check
+ExecutablePath  : C:\Users\Han\dokebicollector\target\debug\dokebicollector.exe
+
+ProcessId       : 26928
+ParentProcessId : 1236
+Name            : WmiPrvSE.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 26932
+ParentProcessId : 1976
+Name            : TrustedInstaller.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 27640
+ParentProcessId : 1236
+Name            : TiWorker.exe
+CommandLine     : 
+ExecutablePath  : 
+
+ProcessId       : 27464
+ParentProcessId : 21764
+Name            : powershell.exe
+CommandLine     : "powershell" -NoProfile -ExecutionPolicy Bypass -Command "Get
+                  -CimInstance Win32_Process | Select-Object ProcessId,ParentPr
+                  ocessId,Name,CommandLine,ExecutablePath | Format-List"
+ExecutablePath  : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+
+
+
+
+
+# stderr

@@ -1,0 +1,65 @@
+# command
+Get-DnsClientCache | Format-List
+
+# stdout
+
+
+Entry      : telemetry.individual.githubcopilot.com
+RecordName : telemetry.individual.githubcopilot.com
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 9
+DataLength : 8
+Data       : copilot-telemetry-service.githubusercontent.com
+
+Entry      : telemetry.individual.githubcopilot.com
+RecordName : copilot-telemetry-service.githubusercontent.com
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 9
+DataLength : 8
+Data       : glb-db52c2cf8be544.github.com
+
+Entry      : telemetry.individual.githubcopilot.com
+RecordName : glb-db52c2cf8be544.github.com
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 9
+DataLength : 4
+Data       : 140.82.114.21
+
+Entry      : default.exp-tas.com
+RecordName : default.exp-tas.com
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 119
+DataLength : 8
+Data       : deault-exp-tas-com.e-0014.e-msedge.net
+
+Entry      : default.exp-tas.com
+RecordName : deault-exp-tas-com.e-0014.e-msedge.net
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 119
+DataLength : 8
+Data       : e-0014.e-msedge.net
+
+Entry      : default.exp-tas.com
+RecordName : e-0014.e-msedge.net
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 119
+DataLength : 4
+Data       : 13.107.5.93
+
+
+
+
+
+# stderr

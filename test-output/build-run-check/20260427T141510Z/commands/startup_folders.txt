@@ -1,0 +1,7 @@
+# command
+Get-ChildItem -Path 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp', "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup" -ErrorAction SilentlyContinue | Format-List
+
+# stdout
+
+
+# stderr

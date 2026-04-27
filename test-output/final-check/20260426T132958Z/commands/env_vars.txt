@@ -1,0 +1,78 @@
+# command
+Get-ChildItem Env:
+
+# stdout
+
+Name                           Value                                           
+----                           -----                                           
+ACSetupSvcPort                 23210                                           
+ALLUSERSPROFILE                C:\ProgramData                                  
+ANDROID_HOME                   C:\Users\Han\AppData\Local\Android\Sdk          
+ANDROID_SDK_ROOT               C:\Users\Han\AppData\Local\Android\Sdk          
+APPDATA                        C:\Users\Han\AppData\Roaming                    
+CHROME_CRASHPAD_PIPE_NAME      \\.\pipe\crashpad_32340_DPKYPTKVLTHKEHFI        
+COLORTERM                      truecolor                                       
+CommonProgramFiles             C:\Program Files\Common Files                   
+CommonProgramFiles(x86)        C:\Program Files (x86)\Common Files             
+CommonProgramW6432             C:\Program Files\Common Files                   
+COMPUTERNAME                   DESKTOP-0DLR5GA                                 
+ComSpec                        C:\WINDOWS\system32\cmd.exe                     
+CUDA_PATH                      C:\Program Files\NVIDIA GPU Computing Toolkit...
+CUDA_PATH_V13_2                C:\Program Files\NVIDIA GPU Computing Toolkit...
+DriverData                     C:\Windows\System32\Drivers\DriverData          
+EFC_9040_1592913036            1                                               
+EnableLog                      INFO                                            
+GIT_ASKPASS                    c:\Users\Han\AppData\Roaming\Code\User\global...
+GIT_EDITOR                     :                                               
+GIT_MERGE_AUTOEDIT             no                                              
+GIT_PAGER                      cat                                             
+HOMEDRIVE                      C:                                              
+HOMEPATH                       \Users\Han                                      
+LANG                           en_US.UTF-8                                     
+LOCALAPPDATA                   C:\Users\Han\AppData\Local                      
+LOGONSERVER                    \\DESKTOP-0DLR5GA                               
+NUMBER_OF_PROCESSORS           24                                              
+OneDrive                       C:\Users\Han\OneDrive                           
+OneDriveConsumer               C:\Users\Han\OneDrive                           
+OS                             Windows_NT                                      
+Path                           c:\Users\Han\AppData\Roaming\Code\User\global...
+PATHEXT                        .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;....
+POWERSHELL_TELEMETRY_OPTOUT    1                                               
+PROCESSOR_ARCHITECTURE         AMD64                                           
+PROCESSOR_IDENTIFIER           AMD64 Family 26 Model 36 Stepping 0, Authenti...
+PROCESSOR_LEVEL                26                                              
+PROCESSOR_REVISION             2400                                            
+ProgramData                    C:\ProgramData                                  
+ProgramFiles                   C:\Program Files                                
+ProgramFiles(x86)              C:\Program Files (x86)                          
+ProgramW6432                   C:\Program Files                                
+PSExecutionPolicyPreference    Bypass                                          
+PSModulePath                   C:\Users\Han\OneDrive\����\WindowsPowerShell\...
+PUBLIC                         C:\Users\Public                                 
+PYTHON_BASIC_REPL              1                                               
+PYTHONSTARTUP                  c:\Users\Han\AppData\Roaming\Code\User\worksp...
+RlsSvcPort                     22112                                           
+SESSIONNAME                    Console                                         
+SystemDrive                    C:                                              
+SystemRoot                     C:\WINDOWS                                      
+TEMP                           R:\TEMP                                         
+TERM_PROGRAM                   vscode                                          
+TERM_PROGRAM_VERSION           1.116.0                                         
+TMP                            R:\TEMP                                         
+TORCHINDUCTOR_CACHE_DIR        C:\tc                                           
+USERDOMAIN                     DESKTOP-0DLR5GA                                 
+USERDOMAIN_ROAMINGPROFILE      DESKTOP-0DLR5GA                                 
+USERNAME                       Han                                             
+USERPROFILE                    C:\Users\Han                                    
+VSCODE_GIT_ASKPASS_EXTRA_ARGS                                                  
+VSCODE_GIT_ASKPASS_MAIN        c:\Users\Han\AppData\Roaming\Code\User\global...
+VSCODE_GIT_ASKPASS_NODE        C:\Users\Han\AppData\Local\Programs\Microsoft...
+VSCODE_GIT_IPC_HANDLE          \\.\pipe\vscode-git-67b5b9a72b-sock             
+VSCODE_INJECTION               1                                               
+VSCODE_PYTHON_AUTOACTIVATE_... 1                                               
+windir                         C:\WINDOWS                                      
+
+
+
+
+# stderr

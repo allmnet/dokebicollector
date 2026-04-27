@@ -1,0 +1,87 @@
+# command
+Get-LocalUser | Format-List
+
+# stdout
+
+
+AccountExpires         : 
+Description            : ��ǻ�� �������� �����ϵ��� �⺻ ������ ����
+Enabled                : False
+FullName               : 
+PasswordChangeableDate : 
+PasswordExpires        : 
+UserMayChangePassword  : True
+PasswordRequired       : True
+PasswordLastSet        : 
+LastLogon              : 
+Name                   : Administrator
+SID                    : S-1-5-21-2524442614-897783795-4009278393-500
+PrincipalSource        : Local
+ObjectClass            : �����
+
+AccountExpires         : 
+Description            : �ý��ۿ��� �����ϴ� ����� �����Դϴ�.
+Enabled                : False
+FullName               : 
+PasswordChangeableDate : 
+PasswordExpires        : 
+UserMayChangePassword  : True
+PasswordRequired       : False
+PasswordLastSet        : 
+LastLogon              : 
+Name                   : DefaultAccount
+SID                    : S-1-5-21-2524442614-897783795-4009278393-503
+PrincipalSource        : Local
+ObjectClass            : �����
+
+AccountExpires         : 
+Description            : �Խ�Ʈ�� ��ǻ�� �������� �׼����ϵ��� �⺻ ������ ����
+Enabled                : False
+FullName               : 
+PasswordChangeableDate : 
+PasswordExpires        : 
+UserMayChangePassword  : False
+PasswordRequired       : False
+PasswordLastSet        : 
+LastLogon              : 
+Name                   : Guest
+SID                    : S-1-5-21-2524442614-897783795-4009278393-501
+PrincipalSource        : Local
+ObjectClass            : �����
+
+AccountExpires         : 
+Description            : 
+Enabled                : True
+FullName               : 
+PasswordChangeableDate : 2026-01-25 ���� 10:51:07
+PasswordExpires        : 
+UserMayChangePassword  : True
+PasswordRequired       : False
+PasswordLastSet        : 2026-01-25 ���� 10:51:07
+LastLogon              : 2026-04-26 ���� 10:21:44
+Name                   : Han
+SID                    : S-1-5-21-2524442614-897783795-4009278393-1001
+PrincipalSource        : Local
+ObjectClass            : �����
+
+AccountExpires         : 
+Description            : Windows Defender Application Guard �ó����������� �ý�
+                         �ۿ��� ���� �� ����ϴ� ����� �����Դϴ�.
+Enabled                : False
+FullName               : 
+PasswordChangeableDate : 2026-01-23 ���� 8:35:42
+PasswordExpires        : 2026-03-06 ���� 8:35:42
+UserMayChangePassword  : True
+PasswordRequired       : True
+PasswordLastSet        : 2026-01-23 ���� 8:35:42
+LastLogon              : 
+Name                   : WDAGUtilityAccount
+SID                    : S-1-5-21-2524442614-897783795-4009278393-504
+PrincipalSource        : Local
+ObjectClass            : �����
+
+
+
+
+
+# stderr

@@ -1,0 +1,428 @@
+{
+  "collector_version": "0.1.0",
+  "started_at_utc": "2026-04-27T14:15:10.958393800+00:00",
+  "finished_at_utc": "2026-04-27T14:15:48.649928+00:00",
+  "host": "DESKTOP-0DLR5GA",
+  "os": "windows",
+  "case_name": "build-run-check",
+  "output_dir": "test-output\\build-run-check\\20260427T141510Z",
+  "command_results": [
+    {
+      "name": "time_info",
+      "command": "Get-Date; Get-TimeZone",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\time_info.txt",
+      "sha256": "11ab217dcf85d9d39240c29e484aabfdd411410caf258d7bf89f63a95a4b0767",
+      "error": null
+    },
+    {
+      "name": "system_info",
+      "command": "systeminfo",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\system_info.txt",
+      "sha256": "59ba93b44daf1f1ee312f8520ae3b6ec72c91974326a28ee930290f130a12d83",
+      "error": null
+    },
+    {
+      "name": "users_sessions",
+      "command": "query user 2>&1; qwinsta 2>&1",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\users_sessions.txt",
+      "sha256": "5f7cc55c11674f037e2141bdb9e5ef679ef2e938af27b1e8b3be84d3c17590dc",
+      "error": null
+    },
+    {
+      "name": "processes",
+      "command": "Get-CimInstance Win32_Process | Select-Object ProcessId,ParentProcessId,Name,CommandLine,ExecutablePath | Format-List",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\processes.txt",
+      "sha256": "7d043525b96751dce60e8b3182aa6f5cf214d77a7e6fb3e883702ca8cd5e1764",
+      "error": null
+    },
+    {
+      "name": "services",
+      "command": "Get-CimInstance Win32_Service | Select-Object Name,State,StartMode,PathName | Format-List",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\services.txt",
+      "sha256": "a8c175daae08915c325cae01b9c334e785b818cbd440ab8a36bf26397cd9b257",
+      "error": null
+    },
+    {
+      "name": "drivers",
+      "command": "Get-CimInstance Win32_SystemDriver | Select-Object Name,State,PathName | Format-List",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\drivers.txt",
+      "sha256": "8e27dc6c31947a2a1c404cc14d5e7fdb23f0392a7135a1db7267a78b571207e6",
+      "error": null
+    },
+    {
+      "name": "network_connections",
+      "command": "netstat -ano",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\network_connections.txt",
+      "sha256": "9e46da84485e2cbc6aa131226d6fac014e9267e5178b50f2679a765d5c3ffb43",
+      "error": null
+    },
+    {
+      "name": "routes",
+      "command": "route print",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\routes.txt",
+      "sha256": "0c8e6b79275db5275b7ad8115e2b3fc838a7c1378bf3559c1cf8c504d581821c",
+      "error": null
+    },
+    {
+      "name": "arp",
+      "command": "arp -a",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\arp.txt",
+      "sha256": "fa3f321277e335583f4646d76d3c02312ef96ee8cacef711b3ca88f783348b0e",
+      "error": null
+    },
+    {
+      "name": "dns_cache",
+      "command": "Get-DnsClientCache | Format-List",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\dns_cache.txt",
+      "sha256": "8401e2735fcf5761a455731b8017932837c1159d0a8e83648308e9f1134e64d6",
+      "error": null
+    },
+    {
+      "name": "firewall_rules",
+      "command": "Get-NetFirewallRule | Where-Object {$_.Enabled -eq 'True'} | Format-List",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\firewall_rules.txt",
+      "sha256": "ef214d60e8afa9707f68b1788cf4ef0258d42096753118c2b270f595325d24d3",
+      "error": null
+    },
+    {
+      "name": "firewall_status",
+      "command": "netsh advfirewall show allprofiles",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\firewall_status.txt",
+      "sha256": "754cb9cea8be44f98e3e65fdbd5dc56f3ff16092b8e246c50d92ac35e838f84d",
+      "error": null
+    },
+    {
+      "name": "scheduled_tasks",
+      "command": "schtasks /query /fo LIST /v",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\scheduled_tasks.txt",
+      "sha256": "a88cff2bfa7cc014791972e3676d26f0417ee3012ae4d7a0547f02b0c1832648",
+      "error": null
+    },
+    {
+      "name": "local_users",
+      "command": "Get-LocalUser | Format-List",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\local_users.txt",
+      "sha256": "d69563da0cf1525071f015c70a66faee86ebd51ab29a8d52f82980c6186cb7c2",
+      "error": null
+    },
+    {
+      "name": "local_groups",
+      "command": "Get-LocalGroup | Format-List; net localgroup administrators",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\local_groups.txt",
+      "sha256": "cb76cc1a3cc8e97f04982279bc646220c79cb81c583e15e8133f6aca48a56762",
+      "error": null
+    },
+    {
+      "name": "autorun_hklm_run",
+      "command": "Get-ItemProperty HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\autorun_hklm_run.txt",
+      "sha256": "456ab062c51eac04e0ce7cf96282cd026091ee2a028997e10432b636fa7f173a",
+      "error": null
+    },
+    {
+      "name": "autorun_hkcu_run",
+      "command": "Get-ItemProperty HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\autorun_hkcu_run.txt",
+      "sha256": "0ad6ce62160e978c748c80cbb9fbc3528d9cc066db1a3342d38f5a9f8521129f",
+      "error": null
+    },
+    {
+      "name": "autorun_hklm_runonce",
+      "command": "Get-ItemProperty HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce 2>&1",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\autorun_hklm_runonce.txt",
+      "sha256": "c42473d5527f77e6e0c3f7875da6c71db5fb12cc426ed7a43d75490c61758950",
+      "error": null
+    },
+    {
+      "name": "startup_folders",
+      "command": "Get-ChildItem -Path 'C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\StartUp', \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\" -ErrorAction SilentlyContinue | Format-List",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\startup_folders.txt",
+      "sha256": "e35ad80dcc0af00a0df9e72ef928f2c46fe3b393a1c2bbc7546b8b1fd8c88479",
+      "error": null
+    },
+    {
+      "name": "installed_software",
+      "command": "Get-ItemProperty HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\* | Select-Object DisplayName,DisplayVersion,InstallDate,Publisher | Format-Table -AutoSize",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\installed_software.txt",
+      "sha256": "57023858062a9d193f4a9bc9c318704a5f10b4fd44bca001642bbfeb4fd41fda",
+      "error": null
+    },
+    {
+      "name": "shares",
+      "command": "net share",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\shares.txt",
+      "sha256": "2fae89a222098c41b2800113965d922f72c29c4c9011645a86210b19fdcd9865",
+      "error": null
+    },
+    {
+      "name": "defender_status",
+      "command": "Get-MpComputerStatus",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\defender_status.txt",
+      "sha256": "6d6b6d67f1c83e3d10ec00cb1493a52db71b5a064009a97d6ad02934ab6728e8",
+      "error": null
+    },
+    {
+      "name": "logon_sessions",
+      "command": "Get-CimInstance Win32_LogonSession | Format-List",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\logon_sessions.txt",
+      "sha256": "6e3b7764e88f1d3e2f458f77ffc59b2a0034231f5e84b409eb067b8e6e33372b",
+      "error": null
+    },
+    {
+      "name": "named_pipes",
+      "command": "[System.IO.Directory]::GetFiles('\\\\.\\pipe') | Format-Table",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\named_pipes.txt",
+      "sha256": "928d239623e25f68b85a075a15d1d435bdb27c29236317de1fb8fc92476c9cfe",
+      "error": null
+    },
+    {
+      "name": "env_vars",
+      "command": "Get-ChildItem Env:",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\env_vars.txt",
+      "sha256": "ba9ad944beccfbe53cb9e234288158e99cebc33611f978b66eb136b23c1f1fc5",
+      "error": null
+    },
+    {
+      "name": "hosts_file",
+      "command": "Get-Content C:\\Windows\\System32\\drivers\\etc\\hosts",
+      "status": "ok",
+      "exit_code": 0,
+      "output_file": "test-output\\build-run-check\\20260427T141510Z\\commands\\hosts_file.txt",
+      "sha256": "eb2155930cd8f2665c7b216285f4532416790320ac8bf8d64719108154e9c44b",
+      "error": null
+    }
+  ],
+  "copied_artifacts": [
+    {
+      "source": "C:/Windows/Prefetch",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\artifacts\\C__Windows_Prefetch",
+      "status": "empty_or_unreadable",
+      "sha256": null,
+      "error": null
+    },
+    {
+      "source": "C:/Windows/System32/drivers/etc/hosts",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\artifacts\\C__Windows_System32_drivers_etc_hosts",
+      "status": "ok",
+      "sha256": "2d6bdfb341be3a6234b24742377f93aa7c7cfb0d9fd64efa9282c87852e57085",
+      "error": null
+    }
+  ],
+  "evtx_exports": [
+    {
+      "source": "Security",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\evtx\\Security.evtx",
+      "status": "error",
+      "sha256": null,
+      "error": "wevtutil epl Security failed (code 5) (requires Administrator): Security �α׸� �������� ���߽��ϴ�.\r\n�׼����� �źεǾ����ϴ�."
+    },
+    {
+      "source": "System",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\evtx\\System.evtx",
+      "status": "ok",
+      "sha256": "2489478e37aa01a15176ccfb19e9eb5cd5a7e207f122471093150a40ea5769ec",
+      "error": null
+    },
+    {
+      "source": "Application",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\evtx\\Application.evtx",
+      "status": "ok",
+      "sha256": "aef9e2eb23188f47dd45313966671c2c32c8783d9a5c91ec4f407c511df71a01",
+      "error": null
+    },
+    {
+      "source": "Microsoft-Windows-Sysmon/Operational",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\evtx\\Sysmon_Operational.evtx",
+      "status": "not_found",
+      "sha256": null,
+      "error": "channel not found or not enabled on this system"
+    },
+    {
+      "source": "Microsoft-Windows-PowerShell/Operational",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\evtx\\PowerShell_Operational.evtx",
+      "status": "ok",
+      "sha256": "11ef79eddd68a548414f06b7aee69fa8c89789ed9951a51c49684ddec9e22f28",
+      "error": null
+    },
+    {
+      "source": "Windows PowerShell",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\evtx\\Windows_PowerShell.evtx",
+      "status": "ok",
+      "sha256": "97be69ee867da51f32e8f8dd3db567b520e703c6a8471d77dac6f33cb37e5b88",
+      "error": null
+    },
+    {
+      "source": "Microsoft-Windows-TaskScheduler/Operational",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\evtx\\TaskScheduler_Operational.evtx",
+      "status": "ok",
+      "sha256": "2b15b0ab7d73f64840e8f3fa612473e772465ca3ac9d39b1cbe5240d537a07be",
+      "error": null
+    },
+    {
+      "source": "Microsoft-Windows-WMI-Activity/Operational",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\evtx\\WMI_Operational.evtx",
+      "status": "ok",
+      "sha256": "3600335cfca9bfbd9ac066c0a29d2f52326b7f93ba8e61022e370e80a06e159e",
+      "error": null
+    },
+    {
+      "source": "Microsoft-Windows-Windows Defender/Operational",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\evtx\\Defender_Operational.evtx",
+      "status": "ok",
+      "sha256": "5eb451eeaecd605ff9429e4724a5ea9e7c7ef5de17401ca5d51a29729ffff5e5",
+      "error": null
+    },
+    {
+      "source": "Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\evtx\\RDP_RemoteConnectionManager.evtx",
+      "status": "ok",
+      "sha256": "cd28f9174067512df42a0e8b824b420b94a00f911f4df0779b2ea4a1c2f5a48f",
+      "error": null
+    },
+    {
+      "source": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\evtx\\RDP_LocalSessionManager.evtx",
+      "status": "ok",
+      "sha256": "9d21b79d560db6c0f51ce6f2c49072338de2919c191fb859be1b695c94c7d24e",
+      "error": null
+    },
+    {
+      "source": "Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\evtx\\RDP_CoreTS.evtx",
+      "status": "ok",
+      "sha256": "d438fd386fb47825bdbfaa83095bfe20caa8ce4f06bcf62d9025ee6fcdf91f92",
+      "error": null
+    },
+    {
+      "source": "Microsoft-Windows-Bits-Client/Operational",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\evtx\\BITS_Client.evtx",
+      "status": "ok",
+      "sha256": "74d4614f15512dc8d8a72bfe8c8a501a8c284c5683b8095ab6a212624245c4af",
+      "error": null
+    },
+    {
+      "source": "Microsoft-Windows-DNSClient/Operational",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\evtx\\DNS_Client.evtx",
+      "status": "not_found",
+      "sha256": null,
+      "error": "channel not found or not enabled on this system"
+    }
+  ],
+  "registry_exports": [
+    {
+      "source": "HKLM\\SAM",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\registry\\SAM.hiv",
+      "status": "error",
+      "sha256": null,
+      "error": "reg save HKLM\\SAM failed (code 1): ����: Ŭ���̾�Ʈ�� �ʿ��� ������ ������ ���� �ʽ��ϴ�. "
+    },
+    {
+      "source": "HKLM\\SYSTEM",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\registry\\SYSTEM.hiv",
+      "status": "error",
+      "sha256": null,
+      "error": "reg save HKLM\\SYSTEM failed (code 1): ����: Ŭ���̾�Ʈ�� �ʿ��� ������ ������ ���� �ʽ��ϴ�. "
+    },
+    {
+      "source": "HKLM\\SOFTWARE",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\registry\\SOFTWARE.hiv",
+      "status": "error",
+      "sha256": null,
+      "error": "reg save HKLM\\SOFTWARE failed (code 1): ����: Ŭ���̾�Ʈ�� �ʿ��� ������ ������ ���� �ʽ��ϴ�. "
+    },
+    {
+      "source": "HKLM\\SECURITY",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\registry\\SECURITY.hiv",
+      "status": "error",
+      "sha256": null,
+      "error": "reg save HKLM\\SECURITY failed (code 1): ����: �׼����� �źεǾ����ϴ�. "
+    }
+  ],
+  "browser_artifacts": [
+    {
+      "source": "C:\\Users\\Han\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\History",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\browser\\Edge\\Han\\Default\\History",
+      "status": "ok",
+      "sha256": "8809cfffe888adc56ca71102091c644909400f30ac80c8929ec8d3d5388ae620",
+      "error": null
+    },
+    {
+      "source": "C:\\Users\\Han\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Login Data",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\browser\\Edge\\Han\\Default\\Login Data",
+      "status": "ok",
+      "sha256": "4db9ca5d82cc596d79f1d21632a523726c7174c45ec14050c29a2b2c5d9501d5",
+      "error": null
+    },
+    {
+      "source": "C:\\Users\\Han\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Web Data",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\browser\\Edge\\Han\\Default\\Web Data",
+      "status": "ok",
+      "sha256": "eebfbf0c97f3f6c93f809f6a9776650e6dbc0691d2c5e6cb79d01409a1805af5",
+      "error": null
+    },
+    {
+      "source": "C:\\Users\\Han\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Bookmarks",
+      "destination": "test-output\\build-run-check\\20260427T141510Z\\browser\\Edge\\Han\\Default\\Bookmarks",
+      "status": "ok",
+      "sha256": "f6c487615033e8f7cb5769bc5fa10ed9146cdb6ca02166673df3760328bb1eeb",
+      "error": null
+    }
+  ],
+  "errors": [
+    "wevtutil epl Security failed (code 5) (requires Administrator): Security �α׸� �������� ���߽��ϴ�.\r\n�׼����� �źεǾ����ϴ�.",
+    "reg save HKLM\\SAM failed (code 1): ����: Ŭ���̾�Ʈ�� �ʿ��� ������ ������ ���� �ʽ��ϴ�. ",
+    "reg save HKLM\\SYSTEM failed (code 1): ����: Ŭ���̾�Ʈ�� �ʿ��� ������ ������ ���� �ʽ��ϴ�. ",
+    "reg save HKLM\\SOFTWARE failed (code 1): ����: Ŭ���̾�Ʈ�� �ʿ��� ������ ������ ���� �ʽ��ϴ�. ",
+    "reg save HKLM\\SECURITY failed (code 1): ����: �׼����� �źεǾ����ϴ�. "
+  ]
+}

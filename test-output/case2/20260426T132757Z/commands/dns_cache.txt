@@ -1,0 +1,128 @@
+# command
+Get-DnsClientCache | Format-List
+
+# stdout
+
+
+Entry      : telemetry.individual.githubcopilot.com
+RecordName : telemetry.individual.githubcopilot.com
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 40
+DataLength : 8
+Data       : copilot-telemetry-service.githubusercontent.com
+
+Entry      : telemetry.individual.githubcopilot.com
+RecordName : copilot-telemetry-service.githubusercontent.com
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 40
+DataLength : 8
+Data       : glb-db52c2cf8be544.github.com
+
+Entry      : telemetry.individual.githubcopilot.com
+RecordName : glb-db52c2cf8be544.github.com
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 40
+DataLength : 4
+Data       : 140.82.114.21
+
+Entry      : c.pki.goog
+RecordName : c.pki.goog
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 186
+DataLength : 8
+Data       : pki-goog.l.google.com
+
+Entry      : c.pki.goog
+RecordName : pki-goog.l.google.com
+RecordType : AAAA
+Status     : Success
+Section    : Answer
+TimeToLive : 186
+DataLength : 16
+Data       : 2404:6800:400a:1009::5e
+
+Entry      : launcher.gryphline.com
+RecordName : launcher.gryphline.com
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 15
+DataLength : 8
+Data       : launcher.hggslb.com
+
+Entry      : launcher.gryphline.com
+RecordName : launcher.hggslb.com
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 15
+DataLength : 8
+Data       : launcher.gryphline.com.cdn.cloudflare.net
+
+Entry      : launcher.gryphline.com
+RecordName : launcher.gryphline.com.cdn.cloudflare.net
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 15
+DataLength : 4
+Data       : 104.18.27.233
+
+Entry      : launcher.gryphline.com
+RecordName : launcher.gryphline.com.cdn.cloudflare.net
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 15
+DataLength : 4
+Data       : 104.18.26.233
+
+Entry      : launcher.gryphline.com
+RecordName : launcher.gryphline.com
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 15
+DataLength : 8
+Data       : launcher.hggslb.com
+
+Entry      : launcher.gryphline.com
+RecordName : launcher.hggslb.com
+RecordType : CNAME
+Status     : Success
+Section    : Answer
+TimeToLive : 15
+DataLength : 8
+Data       : launcher.gryphline.com.cdn.cloudflare.net
+
+Entry      : launcher.gryphline.com
+RecordName : launcher.gryphline.com.cdn.cloudflare.net
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 15
+DataLength : 4
+Data       : 104.18.27.233
+
+Entry      : launcher.gryphline.com
+RecordName : launcher.gryphline.com.cdn.cloudflare.net
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 15
+DataLength : 4
+Data       : 104.18.26.233
+
+
+
+
+
+# stderr

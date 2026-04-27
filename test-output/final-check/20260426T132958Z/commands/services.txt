@@ -1,0 +1,1565 @@
+# command
+Get-CimInstance Win32_Service | Select-Object Name,State,StartMode,PathName | Format-List
+
+# stdout
+
+
+Name      : ADPSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceAndNoImpersonation -
+            p
+
+Name      : ALG
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\alg.exe
+
+Name      : AMD Crash Defender Service
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\DriverStore\FileRepository\amdfendr.inf_amd64_d
+            2d4d4a4cf935317\amdfendrsr.exe
+
+Name      : AMD External Events Utility
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\DriverStore\FileRepository\u0198975.inf_amd64_c
+            ab3843582148687\B025836\atiesrxx.exe
+
+Name      : amdpmfservice
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\amdpmfservice.exe
+
+Name      : AmdPpkgSvc
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\DriverStore\FileRepository\amdppkg.inf_amd64_f5
+            7cfc457aa3e60b\AmdPpkgSvc.exe
+
+Name      : AntiCheatExpert Protection
+State     : Stopped
+StartMode : Manual
+PathName  : "C:\Program Files\AntiCheatExpert\ACE-Service64.exe"  -autorun
+
+Name      : AppIDSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Name      : Appinfo
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : AppMgmt
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : AppReadiness
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k AppReadiness -p
+
+Name      : AppVClient
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\system32\AppVClient.exe
+
+Name      : AppXSvc
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k wsappx -p
+
+Name      : ApxSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalService -p
+
+Name      : ArmouryCrateControlInterface
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\System32\ASUSACCI\ArmouryCrateControlInterface.exe
+
+Name      : AssignedAccessManagerSvc
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\system32\svchost.exe -k AssignedAccessManagerSvc
+
+Name      : AsusAppService
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\System32\DriverStore\FileRepository\asussci2.inf_amd64_e
+            bcc5101f0564a1b\AsusAppService\AsusAppService.exe
+
+Name      : AsusCertService
+State     : Stopped
+StartMode : Disabled
+PathName  : "C:\Program Files (x86)\ASUS\AsusCertService\1.2.40\AsusCertService
+            .exe"
+
+Name      : ASUSOptimization
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\System32\DriverStore\FileRepository\asussci2.inf_amd64_e
+            bcc5101f0564a1b\ASUSOptimization\AsusOptimization.exe
+
+Name      : AsusPTPService
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\DriverStore\FileRepository\asusptpfilter.inf_am
+            d64_d2e7386fb4cf762c\AsusPTPService.exe
+
+Name      : ASUSSoftwareManager
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\System32\DriverStore\FileRepository\asussci2.inf_amd64_e
+            bcc5101f0564a1b\ASUSSoftwareManager\AsusSoftwareManager.exe
+
+Name      : ASUSSwitch
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\System32\DriverStore\FileRepository\asussci2.inf_amd64_e
+            bcc5101f0564a1b\ASUSSwitch\AsusSwitch.exe
+
+Name      : ASUSSystemAnalysis
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\System32\DriverStore\FileRepository\asussci2.inf_amd64_e
+            bcc5101f0564a1b\ASUSSystemAnalysis\AsusSystemAnalysis.exe
+
+Name      : ASUSSystemDiagnosis
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\System32\DriverStore\FileRepository\asussci2.inf_amd64_e
+            bcc5101f0564a1b\ASUSSystemDiagnosis\AsusSystemDiagnosis.exe
+
+Name      : AudioEndpointBuilder
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : Audiosrv
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Name      : autotimesvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k autoTimeSvc
+
+Name      : AxInstSV
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\system32\svchost.exe -k AxInstSVGroup
+
+Name      : BDESVC
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k netsvcs -p
+
+Name      : BFE
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceNoNetworkFirewall -p
+
+Name      : BITS
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k netsvcs -p
+
+Name      : BrokerInfrastructure
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k DcomLaunch -p
+
+Name      : BTAGService
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceNetworkRestricted
+
+Name      : BthAvctpSvc
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceRedirectionGuard -p
+
+Name      : bthserv
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalService -p
+
+Name      : camsvc
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k osprivacy -p
+
+Name      : CDPSvc
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalService -p
+
+Name      : CertPropSvc
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs
+
+Name      : ClickToRunSvc
+State     : Running
+StartMode : Auto
+PathName  : "C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeCl
+            ickToRun.exe" /service
+
+Name      : ClipSVC
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k wsappx -p
+
+Name      : cloudidsvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k CloudIdServiceGroup -p
+
+Name      : COMSysApp
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\dllhost.exe /Processid:{02D4B3F1-FD88-11D1-960D
+            -00805FC79235}
+
+Name      : CoreMessagingRegistrar
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceNoNetwork -p
+
+Name      : CrossEX Live Checker
+State     : Stopped
+StartMode : Disabled
+PathName  : "C:\Program Files (x86)\iniLINE\CrossEX\crossex\ObCrossEXService.ex
+            e"
+
+Name      : CryptSvc
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k NetworkService -p
+
+Name      : CscService
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : DcomLaunch
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k DcomLaunch -p
+
+Name      : dcsvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : defragsvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k defragsvc
+
+Name      : DeviceAssociationService
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : DeviceInstall
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k DcomLaunch -p
+
+Name      : DevQueryBroker
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : Dhcp
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Name      : diagsvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k diagnostics
+
+Name      : DiagTrack
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\System32\svchost.exe -k utcsvc -p
+
+Name      : DialogBlockingService
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\system32\svchost.exe -k DialogBlockingService
+
+Name      : DispBrokerDesktopSvc
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalService -p
+
+Name      : DisplayEnhancementService
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : DmEnrollmentSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : dmwappushservice
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : Dnscache
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k NetworkService -p
+
+Name      : DolbyDAXAPI
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\System32\DriverStore\FileRepository\dax3_swc_aposvc.inf_
+            amd64_6c19a4caad42dde0\DAX3API.exe
+
+Name      : DoSvc
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\svchost.exe -k NetworkService -p
+
+Name      : dot3svc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : DPS
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalServiceNoNetwork -p
+
+Name      : DsmSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : DsSvc
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : DusmSvc
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+             -s DusmSvc
+
+Name      : EapHost
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k netsvcs -p
+
+Name      : EasyAntiCheat_EOS
+State     : Stopped
+StartMode : Manual
+PathName  : "C:\Program Files (x86)\EasyAntiCheat_EOS\EasyAntiCheat_EOS.exe"
+
+Name      : edgeupdate
+State     : Stopped
+StartMode : Auto
+PathName  : "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.ex
+            e" /svc
+
+Name      : edgeupdatem
+State     : Stopped
+StartMode : Manual
+PathName  : "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.ex
+            e" /medsvc
+
+Name      : EFS
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\lsass.exe
+
+Name      : embeddedmode
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : EntAppSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k appmodelRedirectionGuard -p
+
+Name      : EventLog
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Name      : EventSystem
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceRedirectionGuard -p
+
+Name      : fdPHost
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalService -p
+
+Name      : FDResPub
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceAndNoImpersonation -
+            p
+
+Name      : fhsvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : FileJoSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\Program Files (x86)\FileJo\FileJoService.exe
+
+Name      : FileSyncHelper
+State     : Running
+StartMode : Manual
+PathName  : "C:\Program Files\Microsoft OneDrive\26.062.0402.0002\FileSyncHelpe
+            r.exe"
+
+Name      : FontCache
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalService -p
+
+Name      : FontCache3.0.0.0
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\Microsoft.Net\Framework64\v3.0\WPF\PresentationFontCache
+            .exe
+
+Name      : FrameServer
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k Camera
+
+Name      : FrameServerMonitor
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k CameraMonitor
+
+Name      : GameInputSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\GameInputSvc.exe
+
+Name      : gpsvc
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k GPSvcGroup
+
+Name      : GraphicsPerfSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k GraphicsPerfSvcGroup
+
+Name      : HGRID_ENGINE
+State     : Running
+StartMode : Auto
+PathName  : "C:\Program Files (x86)\HGrid\HGridEngine.exe"
+
+Name      : HGRID_STREAM
+State     : Running
+StartMode : Auto
+PathName  : "C:\Program Files (x86)\HGrid\HGridStream.exe"
+
+Name      : hidserv
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : hpatchmon
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : HvHost
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : icssvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Name      : IKEEXT
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : InstallService
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k netsvcs -p
+
+Name      : InventorySvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k InvSvcGroup -p
+
+Name      : iphlpsvc
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\svchost.exe -k NetSvcs -p
+
+Name      : IpxlatCfgSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : KeyIso
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\lsass.exe
+
+Name      : KtmRm
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k NetworkServiceAndNoImpersonation
+             -p
+
+Name      : LanmanServer
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : LanmanWorkstation
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\svchost.exe -k NetworkService -p
+
+Name      : lfsvc
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcsRedirectionGuard -p
+
+Name      : LicenseManager
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalService -p
+
+Name      : lltdsvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalService -p
+
+Name      : lmhosts
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Name      : LocalKdc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\lsass.exe
+
+Name      : LSM
+State     : Running
+StartMode : Unknown
+PathName  : 
+
+Name      : LxpSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs
+
+Name      : MapsBroker
+State     : Stopped
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\svchost.exe -k NetworkService -p
+
+Name      : McmSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k McmSvc -p -s McmSvc
+
+Name      : McpManagementService
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k McpManagementServiceGroup
+
+Name      : MDCoreSvc
+State     : Running
+StartMode : Auto
+PathName  : "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.26030.3011
+            -0\MpDefenderCoreService.exe"
+
+Name      : MicrosoftCopilotElevationService
+State     : Stopped
+StartMode : Manual
+PathName  : "C:\Program Files (x86)\Microsoft\Copilot\Application\147.0.3912.84
+            \elevation_service.exe"
+
+Name      : MicrosoftEdgeElevationService
+State     : Stopped
+StartMode : Manual
+PathName  : "C:\Program Files (x86)\Microsoft\Edge\Application\147.0.3912.72\el
+            evation_service.exe"
+
+Name      : midisrv
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\midisrv.exe
+
+Name      : mpssvc
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceNoNetworkFirewall -p
+
+Name      : MSDTC
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\msdtc.exe
+
+Name      : MSiSCSI
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : msiserver
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\msiexec.exe /V
+
+Name      : MsKeyboardFilter
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : MTKBTSVC
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\mtkbtsvc.exe
+
+Name      : NaturalAuthentication
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : NcaSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k NetSvcs -p
+
+Name      : NcbService
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : NcdAutoSetup
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalServiceNoNetwork -p
+
+Name      : Netlogon
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\lsass.exe
+
+Name      : Netman
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : netprofm
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k netprofm -p
+
+Name      : NetSetupSvc
+State     : Stopped
+StartMode : Unknown
+PathName  : 
+
+Name      : NetTcpPortSharing
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\SMSvcHost.exe
+
+Name      : NgcCtnrSvc
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Name      : NgcSvc
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : NlaSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k netprofm -p
+
+Name      : npggsvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\GameMon.des -service
+
+Name      : nsi
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalService -p
+
+Name      : NVDisplay.ContainerLocalSystem
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\DriverStore\FileRepository\nvami.inf_amd64_2c2a
+            10115c2556ed\Display.NvContainer\NVDisplay.Container.exe -s NVDispl
+            ay.ContainerLocalSystem -f C:\ProgramData\NVIDIA\NVDisplay.Containe
+            rLocalSystem.log -l 3 -d C:\WINDOWS\System32\DriverStore\FileReposi
+            tory\nvami.inf_amd64_2c2a10115c2556ed\Display.NvContainer\plugins\L
+            ocalSystem -r -p 30000 -cfg NVDisplay.ContainerLocalSystem\LocalSys
+            tem /ert
+
+Name      : ONDISK UP-DOWN
+State     : Stopped
+StartMode : Manual
+PathName  : "C:\Program Files (x86)\ETMS ONDISK\Ondisk_WinSvc.exe"
+
+Name      : OndiskPlayerService
+State     : Stopped
+StartMode : Manual
+PathName  : C:\Users\Han\AppData\Roaming\OndiskPlayer\OndiskPlayerAgent.exe
+
+Name      : OneDrive Updater Service
+State     : Stopped
+StartMode : Manual
+PathName  : "C:\Program Files\Microsoft OneDrive\26.062.0402.0002\OneDriveUpdat
+            erService.exe"
+
+Name      : PcaSvc
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : PeerDistSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k PeerDist
+
+Name      : perceptionsimulation
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\PerceptionSimulation\PerceptionSimulationServic
+            e.exe
+
+Name      : PerfHost
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\SysWow64\perfhost.exe
+
+Name      : PhoneSvc
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalService -p
+
+Name      : pla
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalServiceNoNetwork -p
+
+Name      : PlugPlay
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k DcomLaunch -p
+
+Name      : PolicyAgent
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k NetworkServiceNetworkRestricted 
+            -p
+
+Name      : Power
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k DcomLaunch -p
+
+Name      : PrintDeviceConfigurationService
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : PrintNotify
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k print
+
+Name      : PrintScanBrokerService
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k PrintScanBrokerService -p
+
+Name      : ProfSvc
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k UserProfileService -p
+
+Name      : PushToInstall
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k netsvcs -p
+
+Name      : QWAVE
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceAndNoImpersonation -
+            p
+
+Name      : RasAuto
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k netsvcs -p
+
+Name      : RasMan
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k netsvcs
+
+Name      : Razer Elevation Service
+State     : Running
+StartMode : Manual
+PathName  : "C:\Program Files\Razer\razer_elevation_service\razer_elevation_ser
+            vice.exe"
+
+Name      : Razer Game Manager Service 3
+State     : Running
+StartMode : Auto
+PathName  : "C:\Program Files (x86)\Razer\Razer Services\GMS3\GameManagerServic
+            e3.exe"
+
+Name      : refsdedupsvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\ReFsDedupSvc.exe
+
+Name      : RemoteAccess
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\System32\svchost.exe -k netsvcs
+
+Name      : RemoteRegistry
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\system32\svchost.exe -k localService -p
+
+Name      : RetailDemo
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k rdxgroup
+
+Name      : RmSvc
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalServiceNetworkRestricted
+
+Name      : RpcEptMapper
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k RPCSS -p
+
+Name      : RpcLocator
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\system32\locator.exe
+
+Name      : RpcSs
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k rpcss -p
+
+Name      : RtkAudioUniversalService
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\DriverStore\FileRepository\realtekservice.inf_a
+            md64_2b63610c0056caa8\RtkAudUService64.exe
+
+Name      : SamSs
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\lsass.exe
+
+Name      : SCardSvr
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceAndNoImpersonation
+
+Name      : ScDeviceEnum
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted
+
+Name      : Schedule
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : SCPolicySvc
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs
+
+Name      : SDRSVC
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k SDRSVC
+
+Name      : seclogon
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : SecurityHealthService
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\SecurityHealthService.exe
+
+Name      : SEMgrSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalService -p
+
+Name      : SENS
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcsRedirectionGuard -p
+
+Name      : Sense
+State     : Stopped
+StartMode : Manual
+PathName  : "C:\Program Files\Windows Defender Advanced Threat Protection\MsSen
+            se.exe"
+
+Name      : SensorDataService
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\SensorDataService.exe
+
+Name      : SensorService
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : SensrSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceAndNoImpersonation -
+            p
+
+Name      : SessionEnv
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k netsvcs -p
+
+Name      : SharedAccess
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k netsvcs -p
+
+Name      : ShellHWDetection
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\svchost.exe -k netsvcs -p
+
+Name      : shpamsvc
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\System32\svchost.exe -k netsvcsRedirectionGuard -p
+
+Name      : SmMgrDaemon
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\Program Files (x86)\SManager\smmgr.exe
+
+Name      : smphost
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k smphost
+
+Name      : SmsRouter
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Name      : SNMPTrap
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\System32\snmptrap.exe
+
+Name      : Spooler
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\spoolsv.exe
+
+Name      : sppsvc
+State     : Stopped
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\sppsvc.exe
+
+Name      : SSDPSRV
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceAndNoImpersonation -
+            p
+
+Name      : ssh-agent
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\System32\OpenSSH\ssh-agent.exe
+
+Name      : SstpSvc
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalService -p
+
+Name      : StateRepository
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k appmodel -p
+
+Name      : StiSvc
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k imgsvc
+
+Name      : StorSvc
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : svsvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : swprv
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k swprv
+
+Name      : SysMain
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : SystemEventsBroker
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k DcomLaunch -p
+
+Name      : TapiSrv
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k NetworkService -p
+
+Name      : TermService
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k NetworkService
+
+Name      : TextInputManagementService
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : Themes
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\svchost.exe -k netsvcs -p
+
+Name      : TieringEngineService
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\TieringEngineService.exe
+
+Name      : TimeBrokerSvc
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Name      : TokenBroker
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : TrkWks
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : TroubleshootingSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : TrustedInstaller
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\servicing\TrustedInstaller.exe
+
+Name      : tzautoupdate
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalService -p
+
+Name      : UevAgentService
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\system32\AgentService.exe
+
+Name      : UmRdpService
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : upnphost
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceAndNoImpersonation -
+            p
+
+Name      : UserManager
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : UsoSvc
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : VaultSvc
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\lsass.exe
+
+Name      : vds
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\vds.exe
+
+Name      : vmicguestinterface
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : vmicheartbeat
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k ICService -p
+
+Name      : vmickvpexchange
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : vmicrdv
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k ICService -p
+
+Name      : vmicshutdown
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : vmictimesync
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Name      : vmicvmsession
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : vmicvss
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : VSInstallerElevationService
+State     : Stopped
+StartMode : Manual
+PathName  : "C:\Program Files (x86)\Microsoft Visual Studio\Installer\VSInstall
+            erElevationService.exe"
+
+Name      : VSS
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\vssvc.exe
+
+Name      : VSStandardCollectorService150
+State     : Stopped
+StartMode : Manual
+PathName  : "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Common\Diagn
+            osticsHub.Collection.Service\StandardCollector.Service.exe"
+
+Name      : W32Time
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalService
+
+Name      : WaaSMedicSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k wusvcs -p
+
+Name      : WalletService
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k appmodel -p
+
+Name      : WarpJITSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalServiceNetworkRestricted
+
+Name      : wbengine
+State     : Stopped
+StartMode : Manual
+PathName  : "C:\WINDOWS\system32\wbengine.exe"
+
+Name      : WbioSrvc
+State     : Stopped
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k WbioSvcGroup
+
+Name      : Wcmsvc
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+             -s Wcmsvc
+
+Name      : wcncsvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalServiceAndNoImpersonation -
+            p
+
+Name      : WdiServiceHost
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalService -p
+
+Name      : WdiSystemHost
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : WdNisSvc
+State     : Running
+StartMode : Manual
+PathName  : "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.26030.3011
+            -0\NisSrv.exe"
+
+Name      : WebClient
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalService -p
+
+Name      : webthreatdefsvc
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k WebThreatDefense -p
+
+Name      : Wecsvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k NetworkService -p
+
+Name      : WEPHOSTSVC
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k WepHostSvcGroup
+
+Name      : wercplsupport
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k netsvcs -p
+
+Name      : WerSvc
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\System32\svchost.exe -k WerSvcGroup
+
+Name      : WFDSConMgrSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Name      : whesvc
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k whesvc -p
+
+Name      : WiaRpc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : WinDefend
+State     : Running
+StartMode : Auto
+PathName  : "C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.26030.3011
+            -0\MsMpEng.exe"
+
+Name      : WinHttpAutoProxySvc
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceHttp -p
+
+Name      : Winmgmt
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : WinRM
+State     : Stopped
+StartMode : Disabled
+PathName  : C:\WINDOWS\System32\svchost.exe -k NetworkService -p
+
+Name      : wisvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : WlanSvc
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : wlidsvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : wlpasvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Name      : WManSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : wmiApSrv
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\wbem\WmiApSrv.exe
+
+Name      : workfolderssvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalService -p
+
+Name      : WpcMonSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalService
+
+Name      : WPDBusEnum
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted
+
+Name      : WpnService
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : WSAIFabricSvc
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k WSAIFabricSvcGroup -p
+
+Name      : wscsvc
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+
+Name      : WSearch
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\SearchIndexer.exe /Embedding
+
+Name      : wuauserv
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : wuqisvc
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k WuqiSvcGroup -p
+
+Name      : WwanSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : XblAuthManager
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcsRedirectionGuard -p
+
+Name      : XblGameSave
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : XboxGipSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : XboxNetApiSvc
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k netsvcs -p
+
+Name      : AarSvc_9b96f
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k AarSvcGroup -p
+
+Name      : BcastDVRUserService_9b96f
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k BcastDVRUserService
+
+Name      : BluetoothUserService_9b96f
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k BthAppGroup -p
+
+Name      : CaptureService_9b96f
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalService -p
+
+Name      : cbdhsvc_9b96f
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k ClipboardSvcGroup -p
+
+Name      : CDPUserSvc_9b96f
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k UnistackSvcGroup
+
+Name      : CloudBackupRestoreSvc_9b96f
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k UnistackSvcGroup
+
+Name      : ConsentUxUserSvc_9b96f
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k DevicesFlow
+
+Name      : CredentialEnrollmentManagerUserSvc_9b96f
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\CredentialEnrollmentManager.exe
+
+Name      : DeviceAssociationBrokerSvc_9b96f
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k DevicesFlow -p
+
+Name      : DevicePickerUserSvc_9b96f
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k DevicesFlow
+
+Name      : DevicesFlowUserSvc_9b96f
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k DevicesFlow
+
+Name      : MessagingService_9b96f
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k UnistackSvcGroup
+
+Name      : NPSMSvc_9b96f
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalService -p
+
+Name      : OneSyncSvc_9b96f
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k UnistackSvcGroup
+
+Name      : P9RdrService_9b96f
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k P9RdrService -p
+
+Name      : PenService_9b96f
+State     : Stopped
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k PenService
+
+Name      : PimIndexMaintenanceSvc_9b96f
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k UnistackSvcGroup
+
+Name      : PrintWorkflowUserSvc_9b96f
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k PrintWorkflow
+
+Name      : UdkUserSvc_9b96f
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k UdkSvcGroup
+
+Name      : UnistoreSvc_9b96f
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\System32\svchost.exe -k UnistackSvcGroup
+
+Name      : UserDataSvc_9b96f
+State     : Running
+StartMode : Manual
+PathName  : C:\WINDOWS\system32\svchost.exe -k UnistackSvcGroup
+
+Name      : webthreatdefusersvc_9b96f
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k LocalSystemNetworkRestricted -p
+
+Name      : WpnUserService_9b96f
+State     : Running
+StartMode : Auto
+PathName  : C:\WINDOWS\system32\svchost.exe -k UnistackSvcGroup
+
+
+
+
+
+# stderr
