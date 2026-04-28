@@ -1,20 +1,6 @@
 # dokebicollector
 
-```text
-     dokebicollector
-     incident artifact collector
-
-       /\        /\
-      /  \______/  \
-       ____/   ^      ^   \____
-      /       (0)    (0)       \
-     |            __            |
-     |      ___  (__)  ___      |
-     |     /   \  --  /   \     |
-      \    \___/====\___/    /
-       `-.      \__/      .-'
-    `--.________.--'
-```
+![Cyber Dokebi Face](assets/dokebi.png)
 
 Rust 기반 침해사고 초동 대응 아티팩트 수집기.  
 Windows / Linux / macOS(Intel · Apple Silicon) 에서 단일 바이너리로 동작하며, 실행 결과를 SHA-256 해시와 함께 보존한다.
