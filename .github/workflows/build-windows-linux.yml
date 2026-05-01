@@ -1,4 +1,4 @@
-name: Build Windows and Linux
+name: Build Windows, Linux and macOS
 
 on:
   push:
@@ -33,6 +33,18 @@ jobs:
             artifact_name: dokebicollector-linux-x64-musl
             binary_path: target/x86_64-unknown-linux-musl/release/dokebicollector
             release_asset: dokebicollector-linux-x64-musl
+          - name: macos-intel
+            os: macos-latest
+            target: x86_64-apple-darwin
+            artifact_name: dokebicollector-macos-intel
+            binary_path: target/x86_64-apple-darwin/release/dokebicollector
+            release_asset: dokebicollector-macos-intel
+          - name: macos-apple-silicon
+            os: macos-latest
+            target: aarch64-apple-darwin
+            artifact_name: dokebicollector-macos-apple-silicon
+            binary_path: target/aarch64-apple-darwin/release/dokebicollector
+            release_asset: dokebicollector-macos-apple-silicon
 
     steps:
       - name: Checkout
@@ -57,6 +69,10 @@ jobs:
 
       - name: Prepare release asset (Linux)
         if: matrix.os == 'ubuntu-latest'
+        run: cp "${{ matrix.binary_path }}" "${{ matrix.release_asset }}"
+
+      - name: Prepare release asset (macOS)
+        if: matrix.os == 'macos-latest'
         run: cp "${{ matrix.binary_path }}" "${{ matrix.release_asset }}"
 
       - name: Upload artifact
