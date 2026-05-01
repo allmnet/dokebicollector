@@ -1,0 +1,18 @@
+# Rust build outputs (ignore all by default, allow deploy binaries only)
+target/*
+!target/release/
+target/release/*
+!target/release/dokebicollector.exe
+!target/*/
+!target/*/release/
+target/*/release/*
+!target/*/release/dokebicollector
+!target/*/release/dokebicollector.exe
+
+# Collector outputs and test artifacts
+collection-output/
+test-output/
+
+# Local/log artifacts
+*.log
+*.tmp

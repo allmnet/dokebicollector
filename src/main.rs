@@ -1,14 +1,19 @@
 use std::env;
 use std::fs::{self, File};
-use std::io::Read;
+#[cfg(target_os = "windows")]
+use std::io::{self, IsTerminal};
+use std::io::{Read, Write};
 use std::path::{Path, PathBuf};
 use std::process::Command;
 
 use chrono::Utc;
 use clap::Parser;
+use encoding_rs::EUC_KR;
 use serde::Serialize;
+use serde_json::json;
 use sha2::{Digest, Sha256};
 use walkdir::WalkDir;
+use zip::write::FileOptions;
 
 #[derive(Parser, Debug)]
 #[command(author, version, about = "Cross-platform incident artifact collector")]
@@ -18,6 +23,9 @@ struct Args {
 
     #[arg(short = 'n', long = "name", default_value = "default")]
     case_name: String,
+
+    #[arg(long, help = "Do not request Windows administrator elevation")]
+    no_elevate: bool,
 }
 
 #[derive(Debug, Serialize)]
@@ -36,6 +44,7 @@ struct Manifest {
     #[cfg(target_os = "windows")]
     registry_exports: Vec<ArtifactResult>,
     browser_artifacts: Vec<ArtifactResult>,
+    normalized_exports: Vec<ArtifactResult>,
     errors: Vec<String>,
 }
 
@@ -64,9 +73,17 @@ struct CommandSpec {
     shell: &'static str,
 }
 
+const DEVELOPER_SITE: &str = "https://dokebi.org";
+
 fn main() {
     let args = Args::parse();
+
+    #[cfg(target_os = "windows")]
+    maybe_request_windows_elevation(&args);
+
     let started_at = Utc::now();
+
+    print_startup_banner(&args, &started_at.to_rfc3339());
 
     // 관리자 권한 확인 후 경고 출력
     #[cfg(target_os = "windows")]
@@ -98,6 +115,8 @@ fn main() {
         std::process::exit(1);
     }
 
+    println!("[DOKEBI] Output directory: {}", base_dir.display());
+
     let command_dir = base_dir.join("commands");
     let artifact_dir = base_dir.join("artifacts");
     for dir in [&command_dir, &artifact_dir] {
@@ -107,11 +126,14 @@ fn main() {
         }
     }
 
+    println!("[DOKEBI] Collecting live command outputs...");
     let command_results = collect_commands(&command_dir, &mut errors);
+    println!("[DOKEBI] Copying filesystem artifacts...");
     let copied_artifacts = collect_artifacts(&artifact_dir, &mut errors);
 
     #[cfg(target_os = "windows")]
     let evtx_exports = {
+        println!("[DOKEBI] Exporting Windows event logs...");
         let evtx_dir = base_dir.join("evtx");
         if let Err(e) = fs::create_dir_all(&evtx_dir) {
             errors.push(format!("failed to create evtx dir: {}", e));
@@ -123,6 +145,7 @@ fn main() {
 
     #[cfg(target_os = "windows")]
     let registry_exports = {
+        println!("[DOKEBI] Saving Windows registry hives...");
         let reg_dir = base_dir.join("registry");
         if let Err(e) = fs::create_dir_all(&reg_dir) {
             errors.push(format!("failed to create registry dir: {}", e));
@@ -133,12 +156,47 @@ fn main() {
     };
 
     let browser_artifacts = {
+        println!("[DOKEBI] Collecting browser artifacts...");
         let browser_dir = base_dir.join("browser");
         if let Err(e) = fs::create_dir_all(&browser_dir) {
             errors.push(format!("failed to create browser dir: {}", e));
             Vec::new()
         } else {
             collect_browser_artifacts(&browser_dir, &mut errors)
+        }
+    };
+
+    println!("[DOKEBI] Writing normalized JSONL exports...");
+    let normalized_exports = {
+        let normalized_dir = base_dir.join("normalized");
+        if let Err(e) = fs::create_dir_all(&normalized_dir) {
+            errors.push(format!("failed to create normalized dir: {}", e));
+            Vec::new()
+        } else {
+            let exports = collect_normalized_outputs(
+                &normalized_dir,
+                &command_results,
+                &copied_artifacts,
+                &browser_artifacts,
+                &artifact_dir,
+                &mut errors,
+            );
+
+            #[cfg(target_os = "windows")]
+            {
+                let mut exports = exports;
+                let evtx_jsonl_dir = normalized_dir.join("evtx");
+                match fs::create_dir_all(&evtx_jsonl_dir) {
+                    Ok(_) => {
+                        exports.extend(collect_windows_evtx_jsonl(&evtx_jsonl_dir, &mut errors))
+                    }
+                    Err(e) => errors.push(format!("failed to create normalized evtx dir: {}", e)),
+                }
+                exports
+            }
+
+            #[cfg(not(target_os = "windows"))]
+            exports
         }
     };
 
@@ -159,10 +217,12 @@ fn main() {
         #[cfg(target_os = "windows")]
         registry_exports,
         browser_artifacts,
+        normalized_exports,
         errors,
     };
 
     let manifest_path = base_dir.join("collection_manifest.json");
+    println!("[DOKEBI] Writing collection manifest...");
     if let Err(e) = write_json(&manifest_path, &manifest) {
         eprintln!("failed to write manifest: {}", e);
         std::process::exit(1);
@@ -171,7 +231,10 @@ fn main() {
     let manifest_hash_path = base_dir.join("collection_manifest.sha256");
     match hash_file(&manifest_path) {
         Ok(hash) => {
-            if let Err(e) = fs::write(&manifest_hash_path, format!("{}  collection_manifest.json\n", hash)) {
+            if let Err(e) = fs::write(
+                &manifest_hash_path,
+                format!("{}  collection_manifest.json\n", hash),
+            ) {
                 eprintln!("failed to write manifest hash: {}", e);
                 std::process::exit(1);
             }
@@ -182,7 +245,54 @@ fn main() {
         }
     }
 
-    println!("collection completed: {}", base_dir.display());
+    println!("[DOKEBI] Compressing collection output...");
+    let archive_path = base_dir.with_extension("zip");
+    if let Err(e) = create_zip_archive(&base_dir, &archive_path) {
+        eprintln!("failed to create zip archive: {}", e);
+        std::process::exit(1);
+    }
+
+    let archive_hash_path = PathBuf::from(format!("{}.sha256", archive_path.to_string_lossy()));
+    match hash_file(&archive_path) {
+        Ok(hash) => {
+            let archive_name = archive_path
+                .file_name()
+                .map(|name| name.to_string_lossy().to_string())
+                .unwrap_or_else(|| archive_path.to_string_lossy().to_string());
+            if let Err(e) = fs::write(&archive_hash_path, format!("{}  {}\n", hash, archive_name)) {
+                eprintln!("failed to write zip archive hash: {}", e);
+                std::process::exit(1);
+            }
+        }
+        Err(e) => {
+            eprintln!("failed to hash zip archive: {}", e);
+            std::process::exit(1);
+        }
+    }
+
+    println!("[DOKEBI] Collection completed: {}", base_dir.display());
+    println!("[DOKEBI] Manifest: {}", manifest_path.display());
+    println!("[DOKEBI] Archive: {}", archive_path.display());
+    println!("[DOKEBI] Archive SHA-256: {}", archive_hash_path.display());
+    println!("[DOKEBI] Developer site: {}", DEVELOPER_SITE);
+}
+
+fn print_startup_banner(args: &Args, started_at_utc: &str) {
+    println!("============================================================");
+    println!("  DOKEBI Collector v{}", env!("CARGO_PKG_VERSION"));
+    println!("  Cross-platform incident artifact collector");
+    println!("  Developer site: {}", DEVELOPER_SITE);
+    println!("------------------------------------------------------------");
+    println!("  Case name : {}", args.case_name);
+    println!("  Output    : {}", args.output);
+    println!("  OS        : {}", env::consts::OS);
+    println!("  Started   : {}", started_at_utc);
+    println!("------------------------------------------------------------");
+    println!("  This tool collects live system state, logs, registry or");
+    println!("  platform artifacts, browser traces, and SHA-256 hashes for");
+    println!("  incident response triage. Run with elevated privileges for");
+    println!("  the most complete collection.");
+    println!("============================================================");
 }
 
 fn collect_commands(command_dir: &Path, errors: &mut Vec<String>) -> Vec<CommandResult> {
@@ -221,7 +331,11 @@ fn collect_commands(command_dir: &Path, errors: &mut Vec<String>) -> Vec<Command
                 }
 
                 let hash = hash_file(&output_file).ok();
-                let status = if code.unwrap_or(1) == 0 { "ok" } else { "command_error" };
+                let status = if code.unwrap_or(1) == 0 {
+                    "ok"
+                } else {
+                    "command_error"
+                };
 
                 results.push(CommandResult {
                     name: spec.name.to_string(),
@@ -265,7 +379,10 @@ fn collect_artifacts(artifact_dir: &Path, errors: &mut Vec<String>) -> Vec<Artif
 
         let dest = artifact_dir.join(flatten_source_path(&expanded));
         if src.is_file() {
-            let parent = dest.parent().map(Path::to_path_buf).unwrap_or_else(|| artifact_dir.to_path_buf());
+            let parent = dest
+                .parent()
+                .map(Path::to_path_buf)
+                .unwrap_or_else(|| artifact_dir.to_path_buf());
             if let Err(e) = fs::create_dir_all(parent) {
                 let msg = format!("failed to create destination for {}: {}", expanded, e);
                 errors.push(msg.clone());
@@ -304,7 +421,11 @@ fn collect_artifacts(artifact_dir: &Path, errors: &mut Vec<String>) -> Vec<Artif
             }
         } else if src.is_dir() {
             let mut copied_any = false;
-            for entry in WalkDir::new(&src).follow_links(false).into_iter().filter_map(Result::ok) {
+            for entry in WalkDir::new(&src)
+                .follow_links(false)
+                .into_iter()
+                .filter_map(Result::ok)
+            {
                 if !entry.file_type().is_file() {
                     continue;
                 }
@@ -334,7 +455,11 @@ fn collect_artifacts(artifact_dir: &Path, errors: &mut Vec<String>) -> Vec<Artif
             results.push(ArtifactResult {
                 source: expanded.clone(),
                 destination: dest.to_string_lossy().to_string(),
-                status: if copied_any { "ok".to_string() } else { "empty_or_unreadable".to_string() },
+                status: if copied_any {
+                    "ok".to_string()
+                } else {
+                    "empty_or_unreadable".to_string()
+                },
                 sha256: None,
                 error: None,
             });
@@ -347,6 +472,419 @@ fn collect_artifacts(artifact_dir: &Path, errors: &mut Vec<String>) -> Vec<Artif
 fn write_json<T: Serialize>(path: &Path, value: &T) -> Result<(), String> {
     let json = serde_json::to_string_pretty(value).map_err(|e| e.to_string())?;
     fs::write(path, json).map_err(|e| e.to_string())
+}
+
+fn collect_normalized_outputs(
+    normalized_dir: &Path,
+    command_results: &[CommandResult],
+    copied_artifacts: &[ArtifactResult],
+    browser_artifacts: &[ArtifactResult],
+    artifact_dir: &Path,
+    errors: &mut Vec<String>,
+) -> Vec<ArtifactResult> {
+    let mut results = Vec::new();
+
+    let commands_path = normalized_dir.join("commands.jsonl");
+    results.push(write_normalized_file(
+        "commands",
+        &commands_path,
+        errors,
+        |writer| write_command_lines_jsonl(writer, command_results),
+    ));
+
+    let items_path = normalized_dir.join("collection_items.jsonl");
+    results.push(write_normalized_file(
+        "collection_items",
+        &items_path,
+        errors,
+        |writer| {
+            write_collection_items_jsonl(
+                writer,
+                command_results,
+                copied_artifacts,
+                browser_artifacts,
+            )
+        },
+    ));
+
+    let file_lines_path = normalized_dir.join("file_lines.jsonl");
+    results.push(write_normalized_file(
+        "file_lines",
+        &file_lines_path,
+        errors,
+        |writer| write_text_artifact_lines_jsonl(writer, artifact_dir),
+    ));
+
+    results
+}
+
+fn write_normalized_file<F>(
+    source: &str,
+    path: &Path,
+    errors: &mut Vec<String>,
+    writer_fn: F,
+) -> ArtifactResult
+where
+    F: FnOnce(&mut File) -> Result<(), String>,
+{
+    let destination = path.to_string_lossy().to_string();
+    match File::create(path) {
+        Ok(mut file) => {
+            match writer_fn(&mut file).and_then(|_| file.flush().map_err(|e| e.to_string())) {
+                Ok(_) => ArtifactResult {
+                    source: source.to_string(),
+                    destination,
+                    status: "ok".to_string(),
+                    sha256: hash_file(path).ok(),
+                    error: None,
+                },
+                Err(e) => {
+                    let msg = format!("failed writing normalized {}: {}", source, e);
+                    errors.push(msg.clone());
+                    ArtifactResult {
+                        source: source.to_string(),
+                        destination,
+                        status: "write_error".to_string(),
+                        sha256: None,
+                        error: Some(msg),
+                    }
+                }
+            }
+        }
+        Err(e) => {
+            let msg = format!("failed creating normalized {}: {}", source, e);
+            errors.push(msg.clone());
+            ArtifactResult {
+                source: source.to_string(),
+                destination,
+                status: "write_error".to_string(),
+                sha256: None,
+                error: Some(msg),
+            }
+        }
+    }
+}
+
+fn write_command_lines_jsonl(
+    writer: &mut File,
+    command_results: &[CommandResult],
+) -> Result<(), String> {
+    for result in command_results {
+        let path = Path::new(&result.output_file);
+        if !path.exists() {
+            continue;
+        }
+
+        let bytes = fs::read(path).map_err(|e| e.to_string())?;
+        let content = decode_command_output(bytes);
+        for (index, line) in content.lines().enumerate() {
+            write_json_line(
+                writer,
+                json!({
+                    "schema": "dokebi.command_line.v1",
+                    "os": env::consts::OS,
+                    "source_type": "command",
+                    "source": result.name,
+                    "command": result.command,
+                    "status": result.status,
+                    "exit_code": result.exit_code,
+                    "output_file": result.output_file,
+                    "line_number": index + 1,
+                    "text": line,
+                }),
+            )?;
+        }
+    }
+    Ok(())
+}
+
+fn write_collection_items_jsonl(
+    writer: &mut File,
+    command_results: &[CommandResult],
+    copied_artifacts: &[ArtifactResult],
+    browser_artifacts: &[ArtifactResult],
+) -> Result<(), String> {
+    for result in command_results {
+        write_json_line(
+            writer,
+            json!({
+                "schema": "dokebi.collection_item.v1",
+                "os": env::consts::OS,
+                "source_type": "command",
+                "source": result.name,
+                "destination": result.output_file,
+                "status": result.status,
+                "sha256": result.sha256,
+                "error": result.error,
+            }),
+        )?;
+    }
+
+    for (source_type, artifacts) in [
+        ("artifact", copied_artifacts),
+        ("browser_artifact", browser_artifacts),
+    ] {
+        for artifact in artifacts {
+            write_json_line(
+                writer,
+                json!({
+                    "schema": "dokebi.collection_item.v1",
+                    "os": env::consts::OS,
+                    "source_type": source_type,
+                    "source": artifact.source,
+                    "destination": artifact.destination,
+                    "status": artifact.status,
+                    "sha256": artifact.sha256,
+                    "error": artifact.error,
+                }),
+            )?;
+        }
+    }
+
+    Ok(())
+}
+
+fn write_text_artifact_lines_jsonl(writer: &mut File, artifact_dir: &Path) -> Result<(), String> {
+    if !artifact_dir.exists() {
+        return Ok(());
+    }
+
+    for entry in WalkDir::new(artifact_dir).follow_links(false) {
+        let entry = entry.map_err(|e| e.to_string())?;
+        if !entry.file_type().is_file() {
+            continue;
+        }
+
+        let metadata = entry.metadata().map_err(|e| e.to_string())?;
+        if metadata.len() > 50 * 1024 * 1024 {
+            continue;
+        }
+
+        let bytes = fs::read(entry.path()).map_err(|e| e.to_string())?;
+        if !is_probably_text(&bytes) {
+            continue;
+        }
+
+        let content = decode_command_output(bytes);
+        let source = entry.path().to_string_lossy().to_string();
+        for (index, line) in content.lines().enumerate() {
+            write_json_line(
+                writer,
+                json!({
+                    "schema": "dokebi.file_line.v1",
+                    "os": env::consts::OS,
+                    "source_type": "artifact_file",
+                    "source": source,
+                    "line_number": index + 1,
+                    "text": line,
+                }),
+            )?;
+        }
+    }
+
+    Ok(())
+}
+
+fn is_probably_text(bytes: &[u8]) -> bool {
+    let sample_len = bytes.len().min(8192);
+    if sample_len == 0 {
+        return true;
+    }
+    let nul_count = bytes[..sample_len]
+        .iter()
+        .filter(|byte| **byte == 0)
+        .count();
+    nul_count == 0
+}
+
+fn write_json_line(writer: &mut File, value: serde_json::Value) -> Result<(), String> {
+    serde_json::to_writer(&mut *writer, &value).map_err(|e| e.to_string())?;
+    writer.write_all(b"\n").map_err(|e| e.to_string())
+}
+
+#[cfg(target_os = "windows")]
+fn collect_windows_evtx_jsonl(
+    evtx_jsonl_dir: &Path,
+    errors: &mut Vec<String>,
+) -> Vec<ArtifactResult> {
+    let mut results = Vec::new();
+    for (channel, filename) in evtx_channels() {
+        let path = evtx_jsonl_dir.join(format!("{}.jsonl", filename));
+        let destination = path.to_string_lossy().to_string();
+        let output = Command::new("wevtutil")
+            .args(["qe", channel, "/f:xml", "/rd:true"])
+            .output();
+
+        match output {
+            Ok(out) => {
+                let code = out.status.code().unwrap_or(-1);
+                if code == 0 {
+                    let xml = decode_command_output(out.stdout);
+                    let write_result = File::create(&path)
+                        .map_err(|e| e.to_string())
+                        .and_then(|mut file| write_evtx_xml_jsonl(&mut file, channel, &xml));
+
+                    match write_result {
+                        Ok(_) => results.push(ArtifactResult {
+                            source: channel.to_string(),
+                            destination,
+                            status: "ok".to_string(),
+                            sha256: hash_file(&path).ok(),
+                            error: None,
+                        }),
+                        Err(e) => {
+                            let msg = format!("failed writing normalized evtx {}: {}", channel, e);
+                            errors.push(msg.clone());
+                            results.push(ArtifactResult {
+                                source: channel.to_string(),
+                                destination,
+                                status: "write_error".to_string(),
+                                sha256: None,
+                                error: Some(msg),
+                            });
+                        }
+                    }
+                } else {
+                    let stderr = decode_command_output(out.stderr);
+                    let status = if stderr.contains("No events were found")
+                        || stderr.contains("cannot find")
+                        || stderr.contains("지정한 로그")
+                    {
+                        "not_found"
+                    } else {
+                        "error"
+                    };
+                    let msg = format!(
+                        "wevtutil qe {} failed (code {}): {}",
+                        channel,
+                        code,
+                        stderr.trim()
+                    );
+                    if status == "error" {
+                        errors.push(msg.clone());
+                    }
+                    results.push(ArtifactResult {
+                        source: channel.to_string(),
+                        destination,
+                        status: status.to_string(),
+                        sha256: None,
+                        error: Some(msg),
+                    });
+                }
+            }
+            Err(e) => {
+                let msg = format!("failed to run wevtutil qe for {}: {}", channel, e);
+                errors.push(msg.clone());
+                results.push(ArtifactResult {
+                    source: channel.to_string(),
+                    destination,
+                    status: "exec_error".to_string(),
+                    sha256: None,
+                    error: Some(msg),
+                });
+            }
+        }
+    }
+    results
+}
+
+#[cfg(target_os = "windows")]
+fn write_evtx_xml_jsonl(writer: &mut File, channel: &str, xml: &str) -> Result<(), String> {
+    for event in xml.split("<Event ").skip(1) {
+        let event = format!("<Event {}", event);
+        write_json_line(
+            writer,
+            json!({
+                "schema": "dokebi.event.v1",
+                "os": "windows",
+                "source_type": "evtx",
+                "source": channel,
+                "timestamp_utc": extract_xml_attr(&event, "TimeCreated", "SystemTime"),
+                "event_id": extract_xml_tag_text(&event, "EventID").and_then(|value| value.parse::<u32>().ok()),
+                "provider": extract_xml_attr(&event, "Provider", "Name"),
+                "level": extract_xml_tag_text(&event, "Level"),
+                "task": extract_xml_tag_text(&event, "Task"),
+                "opcode": extract_xml_tag_text(&event, "Opcode"),
+                "keywords": extract_xml_tag_text(&event, "Keywords"),
+                "record_id": extract_xml_tag_text(&event, "EventRecordID").and_then(|value| value.parse::<u64>().ok()),
+                "process_id": extract_xml_attr(&event, "Execution", "ProcessID").and_then(|value| value.parse::<u32>().ok()),
+                "thread_id": extract_xml_attr(&event, "Execution", "ThreadID").and_then(|value| value.parse::<u32>().ok()),
+                "computer": extract_xml_tag_text(&event, "Computer"),
+                "user_id": extract_xml_attr(&event, "Security", "UserID"),
+                "event_data": extract_event_data(&event),
+            }),
+        )?;
+    }
+    Ok(())
+}
+
+#[cfg(target_os = "windows")]
+fn extract_xml_tag_text(xml: &str, tag: &str) -> Option<String> {
+    let start_pattern = format!("<{}", tag);
+    let start = xml.find(&start_pattern)?;
+    let after_start = &xml[start..];
+    let text_start = after_start.find('>')? + 1;
+    let after_text_start = &after_start[text_start..];
+    let end_pattern = format!("</{}>", tag);
+    let end = after_text_start.find(&end_pattern)?;
+    Some(xml_unescape(after_text_start[..end].trim()))
+}
+
+#[cfg(target_os = "windows")]
+fn extract_xml_attr(xml: &str, tag: &str, attr: &str) -> Option<String> {
+    let tag_pattern = format!("<{}", tag);
+    let start = xml.find(&tag_pattern)?;
+    let after_start = &xml[start..];
+    let tag_end = after_start.find('>')?;
+    let tag_text = &after_start[..tag_end];
+    extract_attr_from_tag(tag_text, attr)
+}
+
+#[cfg(target_os = "windows")]
+fn extract_attr_from_tag(tag_text: &str, attr: &str) -> Option<String> {
+    let attr_pattern = format!("{}=", attr);
+    let start = tag_text.find(&attr_pattern)? + attr_pattern.len();
+    let quote = tag_text[start..].chars().next()?;
+    if quote != '\'' && quote != '"' {
+        return None;
+    }
+    let value_start = start + quote.len_utf8();
+    let value_end = tag_text[value_start..].find(quote)? + value_start;
+    Some(xml_unescape(&tag_text[value_start..value_end]))
+}
+
+#[cfg(target_os = "windows")]
+fn extract_event_data(xml: &str) -> Vec<serde_json::Value> {
+    let mut data = Vec::new();
+    let mut remaining = xml;
+    while let Some(start) = remaining.find("<Data") {
+        remaining = &remaining[start..];
+        let Some(tag_end) = remaining.find('>') else {
+            break;
+        };
+        let tag_text = &remaining[..tag_end];
+        let value_start = tag_end + 1;
+        let Some(value_end) = remaining[value_start..].find("</Data>") else {
+            break;
+        };
+        let value = xml_unescape(remaining[value_start..value_start + value_end].trim());
+        data.push(json!({
+            "name": extract_attr_from_tag(tag_text, "Name"),
+            "value": value,
+        }));
+        remaining = &remaining[value_start + value_end + "</Data>".len()..];
+    }
+    data
+}
+
+#[cfg(target_os = "windows")]
+fn xml_unescape(value: &str) -> String {
+    value
+        .replace("&lt;", "<")
+        .replace("&gt;", ">")
+        .replace("&quot;", "\"")
+        .replace("&apos;", "'")
+        .replace("&amp;", "&")
 }
 
 fn hash_file(path: &Path) -> Result<String, String> {
@@ -365,6 +903,55 @@ fn hash_file(path: &Path) -> Result<String, String> {
     Ok(format!("{:x}", hasher.finalize()))
 }
 
+fn create_zip_archive(source_dir: &Path, archive_path: &Path) -> Result<(), String> {
+    if archive_path.exists() {
+        fs::remove_file(archive_path).map_err(|e| e.to_string())?;
+    }
+
+    let archive_file = File::create(archive_path).map_err(|e| e.to_string())?;
+    let mut zip = zip::ZipWriter::new(archive_file);
+    let options = FileOptions::default()
+        .compression_method(zip::CompressionMethod::Deflated)
+        .unix_permissions(0o644);
+
+    let archive_root = source_dir.parent().unwrap_or(source_dir);
+    let mut buffer = Vec::new();
+
+    for entry in WalkDir::new(source_dir).follow_links(false) {
+        let entry = entry.map_err(|e| e.to_string())?;
+        let path = entry.path();
+        let name = path_to_zip_name(path.strip_prefix(archive_root).map_err(|e| e.to_string())?);
+
+        if entry.file_type().is_dir() {
+            if !name.is_empty() {
+                zip.add_directory(format!("{}/", name), options)
+                    .map_err(|e| e.to_string())?;
+            }
+            continue;
+        }
+
+        if !entry.file_type().is_file() {
+            continue;
+        }
+
+        zip.start_file(name, options).map_err(|e| e.to_string())?;
+        let mut file = File::open(path).map_err(|e| e.to_string())?;
+        file.read_to_end(&mut buffer).map_err(|e| e.to_string())?;
+        zip.write_all(&buffer).map_err(|e| e.to_string())?;
+        buffer.clear();
+    }
+
+    zip.finish().map_err(|e| e.to_string())?;
+    Ok(())
+}
+
+fn path_to_zip_name(path: &Path) -> String {
+    path.components()
+        .map(|component| component.as_os_str().to_string_lossy())
+        .collect::<Vec<_>>()
+        .join("/")
+}
+
 fn run_shell_command(command: &str) -> Result<(String, String, Option<i32>), String> {
     #[cfg(target_os = "windows")]
     let output = Command::new("powershell")
@@ -372,7 +959,7 @@ fn run_shell_command(command: &str) -> Result<(String, String, Option<i32>), Str
         .arg("-ExecutionPolicy")
         .arg("Bypass")
         .arg("-Command")
-        .arg(command)
+        .arg(windows_utf8_powershell_command(command))
         .output()
         .map_err(|e| e.to_string())?;
 
@@ -383,9 +970,45 @@ fn run_shell_command(command: &str) -> Result<(String, String, Option<i32>), Str
         .output()
         .map_err(|e| e.to_string())?;
 
-    let stdout = String::from_utf8_lossy(&output.stdout).to_string();
-    let stderr = String::from_utf8_lossy(&output.stderr).to_string();
+    let stdout = decode_command_output(output.stdout);
+    let stderr = decode_command_output(output.stderr);
     Ok((stdout, stderr, output.status.code()))
+}
+
+#[cfg(target_os = "windows")]
+fn windows_utf8_powershell_command(command: &str) -> String {
+    format!(
+        "[Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false); \
+         $OutputEncoding = [System.Text.UTF8Encoding]::new($false); \
+         {}",
+        command
+    )
+}
+
+fn decode_command_output(bytes: Vec<u8>) -> String {
+    if let Ok(value) = String::from_utf8(bytes.clone()) {
+        return value;
+    }
+
+    let mut decoded = String::new();
+    for segment in bytes.split_inclusive(|byte| *byte == b'\n') {
+        decoded.push_str(&decode_command_output_segment(segment));
+    }
+    decoded
+}
+
+fn decode_command_output_segment(bytes: &[u8]) -> String {
+    match std::str::from_utf8(bytes) {
+        Ok(value) => value.to_string(),
+        Err(_) => {
+            let (decoded, _, had_errors) = EUC_KR.decode(bytes);
+            if had_errors {
+                String::from_utf8_lossy(bytes).to_string()
+            } else {
+                decoded.into_owned()
+            }
+        }
+    }
 }
 
 fn sanitize_segment(input: &str) -> String {
@@ -474,20 +1097,41 @@ fn command_specs() -> Vec<CommandSpec> {
 fn evtx_channels() -> Vec<(&'static str, &'static str)> {
     // (채널명, 출력파일명)
     vec![
-        ("Security",                                                       "Security"),
-        ("System",                                                         "System"),
-        ("Application",                                                    "Application"),
-        ("Microsoft-Windows-Sysmon/Operational",                           "Sysmon_Operational"),
-        ("Microsoft-Windows-PowerShell/Operational",                       "PowerShell_Operational"),
-        ("Windows PowerShell",                                             "Windows_PowerShell"),
-        ("Microsoft-Windows-TaskScheduler/Operational",                    "TaskScheduler_Operational"),
-        ("Microsoft-Windows-WMI-Activity/Operational",                     "WMI_Operational"),
-        ("Microsoft-Windows-Windows Defender/Operational",                 "Defender_Operational"),
-        ("Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational", "RDP_RemoteConnectionManager"),
-        ("Microsoft-Windows-TerminalServices-LocalSessionManager/Operational",     "RDP_LocalSessionManager"),
-        ("Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational",          "RDP_CoreTS"),
-        ("Microsoft-Windows-Bits-Client/Operational",                      "BITS_Client"),
-        ("Microsoft-Windows-DNSClient/Operational",                        "DNS_Client"),
+        ("Security", "Security"),
+        ("System", "System"),
+        ("Application", "Application"),
+        ("Microsoft-Windows-Sysmon/Operational", "Sysmon_Operational"),
+        (
+            "Microsoft-Windows-PowerShell/Operational",
+            "PowerShell_Operational",
+        ),
+        ("Windows PowerShell", "Windows_PowerShell"),
+        (
+            "Microsoft-Windows-TaskScheduler/Operational",
+            "TaskScheduler_Operational",
+        ),
+        (
+            "Microsoft-Windows-WMI-Activity/Operational",
+            "WMI_Operational",
+        ),
+        (
+            "Microsoft-Windows-Windows Defender/Operational",
+            "Defender_Operational",
+        ),
+        (
+            "Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational",
+            "RDP_RemoteConnectionManager",
+        ),
+        (
+            "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational",
+            "RDP_LocalSessionManager",
+        ),
+        (
+            "Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational",
+            "RDP_CoreTS",
+        ),
+        ("Microsoft-Windows-Bits-Client/Operational", "BITS_Client"),
+        ("Microsoft-Windows-DNSClient/Operational", "DNS_Client"),
     ]
 }
 
@@ -528,9 +1172,19 @@ fn collect_windows_evtx(evtx_dir: &Path, errors: &mut Vec<String>) -> Vec<Artifa
                         error: Some("channel not found or not enabled on this system".to_string()),
                     });
                 } else {
-                    let stderr = String::from_utf8_lossy(&out.stderr).to_string();
-                    let hint = if code == 5 { " (requires Administrator)" } else { "" };
-                    let msg = format!("wevtutil epl {} failed (code {}){}: {}", channel, code, hint, stderr.trim());
+                    let stderr = decode_command_output(out.stderr);
+                    let hint = if code == 5 {
+                        " (requires Administrator)"
+                    } else {
+                        ""
+                    };
+                    let msg = format!(
+                        "wevtutil epl {} failed (code {}){}: {}",
+                        channel,
+                        code,
+                        hint,
+                        stderr.trim()
+                    );
                     errors.push(msg.clone());
                     results.push(ArtifactResult {
                         source: channel.to_string(),
@@ -561,8 +1215,8 @@ fn collect_windows_evtx(evtx_dir: &Path, errors: &mut Vec<String>) -> Vec<Artifa
 #[cfg(target_os = "windows")]
 fn collect_windows_registry(reg_dir: &Path, errors: &mut Vec<String>) -> Vec<ArtifactResult> {
     let hives = vec![
-        ("HKLM\\SAM",      "SAM"),
-        ("HKLM\\SYSTEM",   "SYSTEM"),
+        ("HKLM\\SAM", "SAM"),
+        ("HKLM\\SYSTEM", "SYSTEM"),
         ("HKLM\\SOFTWARE", "SOFTWARE"),
         ("HKLM\\SECURITY", "SECURITY"),
     ];
@@ -592,9 +1246,15 @@ fn collect_windows_registry(reg_dir: &Path, errors: &mut Vec<String>) -> Vec<Art
                         error: None,
                     });
                 } else {
-                    let stderr = String::from_utf8_lossy(&out.stderr).to_string();
-                    let stdout = String::from_utf8_lossy(&out.stdout).to_string();
-                    let msg = format!("reg save {} failed (code {}): {} {}", hive, code, stderr.trim(), stdout.trim());
+                    let stderr = decode_command_output(out.stderr);
+                    let stdout = decode_command_output(out.stdout);
+                    let msg = format!(
+                        "reg save {} failed (code {}): {} {}",
+                        hive,
+                        code,
+                        stderr.trim(),
+                        stdout.trim()
+                    );
                     errors.push(msg.clone());
                     results.push(ArtifactResult {
                         source: hive.to_string(),
@@ -624,29 +1284,99 @@ fn collect_windows_registry(reg_dir: &Path, errors: &mut Vec<String>) -> Vec<Art
 #[cfg(target_os = "linux")]
 fn command_specs() -> Vec<CommandSpec> {
     vec![
-        CommandSpec { name: "time_info",           shell: "date -u; timedatectl status 2>/dev/null || true" },
-        CommandSpec { name: "host_info",            shell: "uname -a; cat /etc/os-release 2>/dev/null; hostnamectl 2>/dev/null || true" },
-        CommandSpec { name: "uptime",               shell: "uptime" },
-        CommandSpec { name: "logged_in_users",      shell: "who; w" },
-        CommandSpec { name: "last_logins",          shell: "last | head -n 100" },
-        CommandSpec { name: "failed_logins",        shell: "lastb 2>/dev/null | head -n 100 || echo 'lastb unavailable'" },
-        CommandSpec { name: "processes",            shell: "ps auxwwf" },
-        CommandSpec { name: "open_files",           shell: "lsof -n -P 2>/dev/null | head -n 2000 || ss -pant" },
-        CommandSpec { name: "network_connections",  shell: "ss -pant" },
-        CommandSpec { name: "routes",               shell: "ip route" },
-        CommandSpec { name: "neighbors",            shell: "ip neigh" },
-        CommandSpec { name: "interfaces",           shell: "ip addr" },
-        CommandSpec { name: "iptables",             shell: "iptables -S 2>/dev/null || echo 'unavailable'" },
-        CommandSpec { name: "nftables",             shell: "nft list ruleset 2>/dev/null || echo 'unavailable'" },
-        CommandSpec { name: "systemd_units",        shell: "systemctl list-units --all 2>/dev/null || true" },
-        CommandSpec { name: "systemd_failed",       shell: "systemctl --failed 2>/dev/null || true" },
-        CommandSpec { name: "crontab_root",         shell: "crontab -l 2>/dev/null; ls -la /etc/cron* /var/spool/cron/ 2>/dev/null" },
-        CommandSpec { name: "sudoers",              shell: "cat /etc/sudoers 2>/dev/null; ls /etc/sudoers.d/ 2>/dev/null" },
-        CommandSpec { name: "passwd_shadow",        shell: "cat /etc/passwd; getent group" },
-        CommandSpec { name: "suid_sgid_files",      shell: "find / -xdev \\( -perm -4000 -o -perm -2000 \\) -type f 2>/dev/null | head -n 200" },
-        CommandSpec { name: "dmesg",                shell: "dmesg | tail -n 500" },
-        CommandSpec { name: "env_vars",             shell: "env" },
-        CommandSpec { name: "hosts_file",           shell: "cat /etc/hosts; cat /etc/resolv.conf 2>/dev/null" },
+        CommandSpec {
+            name: "time_info",
+            shell: "date -u; timedatectl status 2>/dev/null || true",
+        },
+        CommandSpec {
+            name: "host_info",
+            shell: "uname -a; cat /etc/os-release 2>/dev/null; hostnamectl 2>/dev/null || true",
+        },
+        CommandSpec {
+            name: "uptime",
+            shell: "uptime",
+        },
+        CommandSpec {
+            name: "logged_in_users",
+            shell: "who; w",
+        },
+        CommandSpec {
+            name: "last_logins",
+            shell: "last | head -n 100",
+        },
+        CommandSpec {
+            name: "failed_logins",
+            shell: "lastb 2>/dev/null | head -n 100 || echo 'lastb unavailable'",
+        },
+        CommandSpec {
+            name: "processes",
+            shell: "ps auxwwf",
+        },
+        CommandSpec {
+            name: "open_files",
+            shell: "lsof -n -P 2>/dev/null | head -n 2000 || ss -pant",
+        },
+        CommandSpec {
+            name: "network_connections",
+            shell: "ss -pant",
+        },
+        CommandSpec {
+            name: "routes",
+            shell: "ip route",
+        },
+        CommandSpec {
+            name: "neighbors",
+            shell: "ip neigh",
+        },
+        CommandSpec {
+            name: "interfaces",
+            shell: "ip addr",
+        },
+        CommandSpec {
+            name: "iptables",
+            shell: "iptables -S 2>/dev/null || echo 'unavailable'",
+        },
+        CommandSpec {
+            name: "nftables",
+            shell: "nft list ruleset 2>/dev/null || echo 'unavailable'",
+        },
+        CommandSpec {
+            name: "systemd_units",
+            shell: "systemctl list-units --all 2>/dev/null || true",
+        },
+        CommandSpec {
+            name: "systemd_failed",
+            shell: "systemctl --failed 2>/dev/null || true",
+        },
+        CommandSpec {
+            name: "crontab_root",
+            shell: "crontab -l 2>/dev/null; ls -la /etc/cron* /var/spool/cron/ 2>/dev/null",
+        },
+        CommandSpec {
+            name: "sudoers",
+            shell: "cat /etc/sudoers 2>/dev/null; ls /etc/sudoers.d/ 2>/dev/null",
+        },
+        CommandSpec {
+            name: "passwd_shadow",
+            shell: "cat /etc/passwd; getent group",
+        },
+        CommandSpec {
+            name: "suid_sgid_files",
+            shell:
+                "find / -xdev \\( -perm -4000 -o -perm -2000 \\) -type f 2>/dev/null | head -n 200",
+        },
+        CommandSpec {
+            name: "dmesg",
+            shell: "dmesg | tail -n 500",
+        },
+        CommandSpec {
+            name: "env_vars",
+            shell: "env",
+        },
+        CommandSpec {
+            name: "hosts_file",
+            shell: "cat /etc/hosts; cat /etc/resolv.conf 2>/dev/null",
+        },
     ]
 }
 
@@ -742,7 +1472,14 @@ fn browser_profiles() -> Vec<BrowserProfile> {
         BrowserProfile {
             browser: "Chrome",
             relative: r"AppData\Local\Google\Chrome\User Data\Default",
-            files: &["History", "Cookies", "Login Data", "Web Data", "Bookmarks", "Extensions"],
+            files: &[
+                "History",
+                "Cookies",
+                "Login Data",
+                "Web Data",
+                "Bookmarks",
+                "Extensions",
+            ],
         },
         BrowserProfile {
             browser: "Edge",
@@ -757,7 +1494,13 @@ fn browser_profiles() -> Vec<BrowserProfile> {
         BrowserProfile {
             browser: "Firefox",
             relative: r"AppData\Roaming\Mozilla\Firefox\Profiles",
-            files: &["places.sqlite", "cookies.sqlite", "downloads.sqlite", "logins.json", "key4.db"],
+            files: &[
+                "places.sqlite",
+                "cookies.sqlite",
+                "downloads.sqlite",
+                "logins.json",
+                "key4.db",
+            ],
         },
     ]
 }
@@ -814,7 +1557,13 @@ fn browser_profiles() -> Vec<BrowserProfile> {
         BrowserProfile {
             browser: "Safari",
             relative: "Library/Safari",
-            files: &["History.db", "History.db-wal", "History.db-shm", "Downloads.plist", "Bookmarks.plist"],
+            files: &[
+                "History.db",
+                "History.db-wal",
+                "History.db-shm",
+                "Downloads.plist",
+                "Bookmarks.plist",
+            ],
         },
     ]
 }
@@ -826,7 +1575,13 @@ fn enumerate_user_homes() -> Vec<(String, PathBuf)> {
     #[cfg(target_os = "windows")]
     {
         let users_dir = PathBuf::from(r"C:\Users");
-        let skip = ["Public", "Default", "Default User", "All Users", "desktop.ini"];
+        let skip = [
+            "Public",
+            "Default",
+            "Default User",
+            "All Users",
+            "desktop.ini",
+        ];
         if let Ok(entries) = fs::read_dir(&users_dir) {
             for entry in entries.filter_map(Result::ok) {
                 let name = entry.file_name().to_string_lossy().to_string();
@@ -845,7 +1600,10 @@ fn enumerate_user_homes() -> Vec<(String, PathBuf)> {
         if let Ok(entries) = fs::read_dir("/home") {
             for entry in entries.filter_map(Result::ok) {
                 if entry.path().is_dir() {
-                    homes.push((entry.file_name().to_string_lossy().to_string(), entry.path()));
+                    homes.push((
+                        entry.file_name().to_string_lossy().to_string(),
+                        entry.path(),
+                    ));
                 }
             }
         }
@@ -927,7 +1685,10 @@ fn collect_browser_artifacts(browser_dir: &Path, errors: &mut Vec<String>) -> Ve
                         .join(sanitize_segment(&profile_label));
 
                     if let Err(e) = fs::create_dir_all(&dest_dir) {
-                        let msg = format!("mkdir failed for browser {}/{}: {}", profile.browser, username, e);
+                        let msg = format!(
+                            "mkdir failed for browser {}/{}: {}",
+                            profile.browser, username, e
+                        );
                         errors.push(msg);
                         continue;
                     }
@@ -949,11 +1710,18 @@ fn collect_browser_artifacts(browser_dir: &Path, errors: &mut Vec<String>) -> Ve
                         }
                         Err(e) => {
                             // 브라우저 실행 중 잠금 여부 구분
-                            let (status, msg) = if e.raw_os_error() == Some(32) || e.raw_os_error() == Some(5) {
-                                ("locked", format!("browser file locked (browser may be running): {}", src_str))
-                            } else {
-                                ("copy_error", format!("failed to copy {}: {}", src_str, e))
-                            };
+                            let (status, msg) =
+                                if e.raw_os_error() == Some(32) || e.raw_os_error() == Some(5) {
+                                    (
+                                        "locked",
+                                        format!(
+                                            "browser file locked (browser may be running): {}",
+                                            src_str
+                                        ),
+                                    )
+                                } else {
+                                    ("copy_error", format!("failed to copy {}: {}", src_str, e))
+                                };
                             errors.push(msg.clone());
                             results.push(ArtifactResult {
                                 source: src_str,
@@ -973,6 +1741,142 @@ fn collect_browser_artifacts(browser_dir: &Path, errors: &mut Vec<String>) -> Ve
 }
 
 // ── 권한 확인 ──────────────────────────────────────────────────────────────
+
+#[cfg(target_os = "windows")]
+fn maybe_request_windows_elevation(args: &Args) {
+    if args.no_elevate || env::var("DOKEBI_SKIP_ELEVATION").ok().as_deref() == Some("1") {
+        return;
+    }
+    if is_elevated_windows() || !is_interactive_gui_session_windows() {
+        return;
+    }
+
+    println!("[DOKEBI] Administrator privileges are recommended for full Windows collection.");
+    println!(
+        "[DOKEBI] Security EVTX, registry hives, and Prefetch may be incomplete without elevation."
+    );
+
+    let should_request = if io::stdin().is_terminal() {
+        print!("[DOKEBI] Request administrator privileges with UAC now? [Y/n]: ");
+        let _ = io::stdout().flush();
+
+        let mut answer = String::new();
+        match io::stdin().read_line(&mut answer) {
+            Ok(_) => {
+                let answer = answer.trim().to_ascii_lowercase();
+                answer.is_empty() || answer == "y" || answer == "yes"
+            }
+            Err(_) => false,
+        }
+    } else {
+        true
+    };
+
+    if !should_request {
+        println!("[DOKEBI] Continuing without administrator privileges.");
+        return;
+    }
+
+    match relaunch_windows_as_admin() {
+        Ok(code) => std::process::exit(code),
+        Err(e) => {
+            eprintln!("[DOKEBI] Administrator elevation request failed: {}", e);
+            eprintln!("[DOKEBI] Continuing without administrator privileges.");
+        }
+    }
+}
+
+#[cfg(target_os = "windows")]
+fn is_interactive_gui_session_windows() -> bool {
+    if env::var("SESSIONNAME")
+        .map(|v| v.eq_ignore_ascii_case("services"))
+        .unwrap_or(false)
+    {
+        return false;
+    }
+
+    env::var("USERPROFILE").is_ok() && env::var("WINDIR").is_ok()
+}
+
+#[cfg(target_os = "windows")]
+fn relaunch_windows_as_admin() -> Result<i32, String> {
+    let exe = env::current_exe().map_err(|e| e.to_string())?;
+    let args = env::args_os()
+        .skip(1)
+        .map(|arg| windows_quote_arg(&arg.to_string_lossy()))
+        .collect::<Vec<_>>()
+        .join(" ");
+
+    let start_process = if args.is_empty() {
+        format!(
+            "Start-Process -FilePath {} -Verb RunAs -Wait -PassThru",
+            powershell_quote(&exe.to_string_lossy())
+        )
+    } else {
+        format!(
+            "Start-Process -FilePath {} -ArgumentList {} -Verb RunAs -Wait -PassThru",
+            powershell_quote(&exe.to_string_lossy()),
+            powershell_quote(&args)
+        )
+    };
+
+    let command = format!(
+        "$ErrorActionPreference = 'Stop'; try {{ $p = {}; if ($null -eq $p) {{ exit 1223 }}; exit $p.ExitCode }} catch {{ Write-Error $_; exit 1223 }}",
+        start_process
+    );
+
+    let status = Command::new("powershell")
+        .arg("-NoProfile")
+        .arg("-ExecutionPolicy")
+        .arg("Bypass")
+        .arg("-Command")
+        .arg(command)
+        .status()
+        .map_err(|e| e.to_string())?;
+
+    let code = status.code().unwrap_or(1);
+    if code == 1223 {
+        Err("UAC elevation was cancelled or could not be started".to_string())
+    } else {
+        Ok(code)
+    }
+}
+
+#[cfg(target_os = "windows")]
+fn powershell_quote(value: &str) -> String {
+    format!("'{}'", value.replace('\'', "''"))
+}
+
+#[cfg(target_os = "windows")]
+fn windows_quote_arg(value: &str) -> String {
+    if value.is_empty() {
+        return "\"\"".to_string();
+    }
+    if !value.chars().any(|c| c.is_whitespace() || c == '"') {
+        return value.to_string();
+    }
+
+    let mut quoted = String::from("\"");
+    let mut backslashes = 0;
+    for ch in value.chars() {
+        match ch {
+            '\\' => backslashes += 1,
+            '"' => {
+                quoted.push_str(&"\\".repeat(backslashes * 2 + 1));
+                quoted.push('"');
+                backslashes = 0;
+            }
+            _ => {
+                quoted.push_str(&"\\".repeat(backslashes));
+                backslashes = 0;
+                quoted.push(ch);
+            }
+        }
+    }
+    quoted.push_str(&"\\".repeat(backslashes * 2));
+    quoted.push('"');
+    quoted
+}
 
 #[cfg(target_os = "windows")]
 fn is_elevated_windows() -> bool {

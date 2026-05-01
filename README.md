@@ -1,9 +1,11 @@
 # dokebicollector
 
-![Cyber Dokebi Face](assets/dokebi.png)
+![Cute Dokebi Mascot Holding a Bat](assets/dokebi.png)
 
 Rust 기반 침해사고 초동 대응 아티팩트 수집기.  
 Windows / Linux / macOS(Intel · Apple Silicon) 에서 단일 바이너리로 동작하며, 실행 결과를 SHA-256 해시와 함께 보존한다.
+
+개발 사이트: <https://dokebi.org>
 
 ---
 
@@ -14,6 +16,21 @@ cargo build --release
 # 결과물: target/release/dokebicollector  (Linux/macOS)
 #         target/release/dokebicollector.exe  (Windows)
 ```
+
+Windows / Linux / macOS 3종 빌드를 한 번에 시도하려면 PowerShell에서 아래 스크립트를 실행한다.
+
+```powershell
+.\scripts\build-all.ps1
+```
+
+명령 프롬프트나 더블클릭용 BAT 파일도 제공한다.
+
+```bat
+build-all.bat
+```
+
+Windows 환경에서는 Windows release와 Linux x64 MUSL 바이너리를 빌드할 수 있다.  
+macOS Intel / Apple Silicon 바이너리는 Apple SDK/Xcode 링커가 필요하므로 Windows에서 링크 단계가 실패할 수 있으며, macOS 머신에서 실행하면 완료된다.
 
 ## 실행
 
@@ -29,8 +46,11 @@ sudo ./dokebicollector --output /cases --name case-001
 |---|---|---|
 | `-o, --output` | `collection-output` | 결과 저장 최상위 디렉터리 |
 | `-n, --name` | `default` | 케이스 이름 (하위 디렉터리명으로 사용) |
+| `--no-elevate` | `false` | Windows에서 관리자 권한 UAC 재실행 요청을 하지 않음 |
 
 > **권한 경고**  
+> Windows에서 관리자 권한이 아니고 GUI 세션으로 판단되면 UAC 관리자 권한 재실행을 요청한다.  
+> 요청을 거절하거나 `--no-elevate` 옵션을 사용하면 일반 권한으로 계속 실행한다.  
 > 관리자(Windows) 또는 root(Linux/macOS) 권한 없이 실행하면 시작 시 경고를 출력하고,  
 > 접근 불가 항목은 `collection_manifest.json` 의 `errors` 에 사유와 함께 기록된다.
 
@@ -49,8 +69,16 @@ sudo ./dokebicollector --output /cases --name case-001
 │   ├── Edge/<username>/<profile>/
 │   ├── Firefox/<username>/<profile>/
 │   └── ...
+├── normalized/             ← 분석용 정규화 JSONL
+│   ├── commands.jsonl
+│   ├── collection_items.jsonl
+│   ├── file_lines.jsonl
+│   └── evtx/*.jsonl        ← Windows EVTX 정규화 이벤트  [Windows 전용]
 ├── collection_manifest.json   ← 전체 수집 결과 + 각 파일 SHA-256
 └── collection_manifest.sha256 ← 매니페스트 파일 자체의 SHA-256
+
+<output>/<case-name>/<YYYYMMDDTHHMMSSZ>.zip        ← 수집 결과 폴더 압축본
+<output>/<case-name>/<YYYYMMDDTHHMMSSZ>.zip.sha256 ← 압축본 SHA-256
 ```
 
 ---
@@ -66,9 +94,13 @@ sudo ./dokebicollector --output /cases --name case-001
 ### 공통 동작
 
 - 각 OS별 라이브 명령 결과는 `commands/` 아래 `.txt` 파일로 저장한다.
+- Windows 명령 출력은 PowerShell 출력 인코딩을 UTF-8로 강제한 뒤 저장한다.
 - 직접 복사 가능한 파일/디렉터리는 `artifacts/` 아래에 저장한다.
 - 브라우저 아티팩트는 사용자 홈 디렉터리를 순회해 `browser/` 아래에 저장한다.
+- 분석 혼선을 줄이기 위해 원본과 별도로 `normalized/` 아래 JSONL 뷰를 생성한다.
+- Windows EVTX는 원본 `.evtx` export와 함께 `normalized/evtx/*.jsonl` 이벤트 뷰를 생성한다.
 - 수집된 파일과 매니페스트에는 SHA-256 해시를 기록한다. MD5/SHA1 해시는 생성하지 않는다.
+- 수집 종료 후 결과 폴더 전체를 ZIP으로 압축하고 ZIP 파일의 SHA-256도 별도 기록한다.
 - 접근 불가, 파일 잠금, 미존재 항목은 실행을 중단하지 않고 `collection_manifest.json` 에 상태와 사유를 기록한다.
 
 ### Windows
