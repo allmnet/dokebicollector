@@ -1,13 +1,5 @@
-# Rust build outputs (ignore all by default, allow deploy binaries only)
-target/*
-!target/release/
-target/release/*
-!target/release/dokebicollector.exe
-!target/*/
-!target/*/release/
-target/*/release/*
-!target/*/release/dokebicollector
-!target/*/release/dokebicollector.exe
+# Rust build outputs
+target/
 
 # Collector outputs and test artifacts
 collection-output/
