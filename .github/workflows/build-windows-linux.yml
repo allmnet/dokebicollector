@@ -6,6 +6,12 @@ on:
       - main
   pull_request:
   workflow_dispatch:
+  release:
+    types:
+      - published
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -20,11 +26,13 @@ jobs:
             target: x86_64-pc-windows-msvc
             artifact_name: dokebicollector-windows-x64
             binary_path: target/x86_64-pc-windows-msvc/release/dokebicollector.exe
+            release_asset: dokebicollector-windows-x64.exe
           - name: linux-x64-musl
             os: ubuntu-latest
             target: x86_64-unknown-linux-musl
             artifact_name: dokebicollector-linux-x64-musl
             binary_path: target/x86_64-unknown-linux-musl/release/dokebicollector
+            release_asset: dokebicollector-linux-x64-musl
 
     steps:
       - name: Checkout
@@ -42,9 +50,24 @@ jobs:
       - name: Build release
         run: cargo build --release --target ${{ matrix.target }}
 
+      - name: Prepare release asset (Windows)
+        if: matrix.os == 'windows-latest'
+        shell: pwsh
+        run: Copy-Item -Path "${{ matrix.binary_path }}" -Destination "${{ matrix.release_asset }}" -Force
+
+      - name: Prepare release asset (Linux)
+        if: matrix.os == 'ubuntu-latest'
+        run: cp "${{ matrix.binary_path }}" "${{ matrix.release_asset }}"
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.artifact_name }}
           path: ${{ matrix.binary_path }}
           if-no-files-found: error
+
+      - name: Upload release asset
+        if: github.event_name == 'release'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ matrix.release_asset }}
